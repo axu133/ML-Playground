@@ -9,8 +9,7 @@ class Activation:
         """
         Outputs Activation Function
         
-        :param self: Description
-        :param x: Description
+        :param x: Hidden State
         """
 
         self.input = x
@@ -21,8 +20,7 @@ class Activation:
         """
         Returns dZ
         
-        :param self: Description
-        :param z: Description
+        :param grad: Loss function gradient.
         """
         return grad * self.derivative()
     
@@ -64,6 +62,9 @@ class tanh(Activation):
     
 class Loss:
     def __init__(self):
+        """
+        Initiates Loss Function. Calling the loss function returns loss, calling backward returns gradient.
+        """
         pass
 
     def __call__(self, y_true, y_pred):
@@ -73,6 +74,9 @@ class Loss:
         raise NotImplementedError
     
 class MSE(Loss):
+    """
+    Mean Squared-Error
+    """
     def __init__(self):
         super().__init__()
 
@@ -81,3 +85,16 @@ class MSE(Loss):
     
     def backward(self, y_true, y_pred):
         return 2 * (y_pred - y_true)
+    
+class BCE(Loss): # Unfinished
+    """
+    Binary Cross-Entropy
+    """
+    def __init__(self):
+        super().__init__()
+
+    def __call__(self, y_true, y_pred):
+        return -(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
+    
+    def backward(self, y_true, y_pred):
+        return (y_pred - y_true)/(y_pred * (1 - y_pred))

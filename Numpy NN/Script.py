@@ -10,7 +10,7 @@ lr = 0.01
 x = np.array([[0,0], [0,1], [1,0], [1,1]])
 y = np.array([[0] , [1], [1], [0]])
 
-model = Model(Functions.MSE())
+model = Model(Functions.BCE())
 
 model.add(DenseLayer(2, 8, activation = Functions.ReLU()))
 model.add(DenseLayer(8, 1, activation = Functions.Sigmoid()))
@@ -22,4 +22,4 @@ for i in range(epochs):
     loss = model.loss(y, y_pred)
     model.backward(y, y_pred)
     model.update(lr, 0.9)
-    print(f"Epoch: {i+1:3d} | Loss: {loss:.3f}")
+    print(f"Epoch: {i+1:4d} | Loss: {loss:.3f}")
