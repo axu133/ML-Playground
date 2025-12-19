@@ -1,10 +1,10 @@
 import numpy as np
+import Functions
 
 class Model:
-    def __init__(self, loss, loss_derivative):
+    def __init__(self, loss):
         self.layers = []
         self.loss = loss
-        self.loss_derivative = loss_derivative
     
     def add(self, layer):
         self.layers.append(layer)
@@ -16,7 +16,7 @@ class Model:
         return output
     
     def backward(self, y_true, y_pred):
-        grad = self.loss_derivative(y_true, y_pred)
+        grad = self.loss.backward(y_true, y_pred)
         for layer in reversed(self.layers):
             grad = layer.backward(grad)
 
@@ -28,7 +28,7 @@ class Model:
         return self.forward(X)
 
 class DenseLayer:
-    def __init__(self, in_dim: int, out_dim:int, activation = lambda x: np.maximum(0, x), derivative = lambda x: np.where(x > 0, 1, 0)):
+    def __init__(self, in_dim: int, out_dim: int, activation: Functions.Activation | None = None):
         """
         Initializing Dense Layer in Neural Network
         
@@ -50,8 +50,8 @@ class DenseLayer:
         self.dW, self.vW = np.zeros_like(self.W), np.zeros_like(self.W)
         self.db, self.vb = np.zeros_like(self.b), np.zeros_like(self.b)
         
-        self.activation = activation
-        self.derivative = derivative
+        self.input = np.array(0)
+        self.activation = activation or Functions.ReLU()
 
     def forward(self, x):
         """
@@ -61,18 +61,17 @@ class DenseLayer:
         """
         self.input = x
         z = np.dot(x, self.W) + self.b
-        self.Z = z
         a = self.activation(z)
         return a
     
-    def backward(self, grad, ):
+    def backward(self, grad):
         """
         Backward Pass
         
         :param grad: Gradient of Loss Function
         :param derivative: Derivative of Activation Function (default: ReLU)
         """
-        dZ = grad * self.derivative(self.Z)
+        dZ = self.activation.backward(grad)
         self.dW = np.dot(self.input.T, dZ)
         self.db = np.sum(dZ, axis=0, keepdims=True)
         grad = np.dot(dZ, self.W.T)
