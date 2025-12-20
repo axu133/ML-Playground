@@ -1,6 +1,6 @@
 import numpy as np
 from NumpyNN import Model, DenseLayer
-import Functions
+import NNHelper
 
 sigmoid = lambda z: 1/(1 + np.exp(-z))
 
@@ -10,10 +10,10 @@ lr = 0.01
 x = np.array([[0,0], [0,1], [1,0], [1,1]])
 y = np.array([[0] , [1], [1], [0]])
 
-model = Model(Functions.BCE())
+model = Model(NNHelper.MSE())
 
-model.add(DenseLayer(2, 8, activation = Functions.ReLU()))
-model.add(DenseLayer(8, 1, activation = Functions.Sigmoid()))
+model.add(DenseLayer(2, 8, activation = NNHelper.ReLU()))
+model.add(DenseLayer(8, 1, activation = NNHelper.Sigmoid()))
 
 preds = []
 

@@ -1,5 +1,5 @@
 import numpy as np
-import Functions
+import NNHelper
 
 class Model:
     def __init__(self, loss):
@@ -28,7 +28,7 @@ class Model:
         return self.forward(X)
 
 class DenseLayer:
-    def __init__(self, in_dim: int, out_dim: int, activation: Functions.Activation | None = None):
+    def __init__(self, in_dim: int, out_dim: int, activation: NNHelper.Activation | None = None):
         """
         Initializing Dense Layer in Neural Network
         
@@ -51,7 +51,7 @@ class DenseLayer:
         self.db, self.vb = np.zeros_like(self.b), np.zeros_like(self.b)
         
         self.input = np.array(0)
-        self.activation = activation or Functions.ReLU()
+        self.activation = activation or NNHelper.ReLU()
 
     def forward(self, x):
         """
