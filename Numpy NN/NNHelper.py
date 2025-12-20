@@ -112,22 +112,20 @@ class Momentum(Optimizer):
         
         self.parameters = parameters
 
-        self.vW = []
-        self.vb = []
+        self.velocities = []
 
         # Gradients and Momenta
-        for i in range(len(parameters["weights"])):
-            self.vW.append(np.zeros_like(parameters["weights"][i][0]))
-            self.vb.append(np.zeros_like(parameters["bias"][i][0]))
+        for param in parameters:
+            self.velocities.append(np.zeros_like(param[0]))
         
         self.momentum = momentum
 
     def step(self):
-        for i in range(len(self.parameters["weights"])):
-            self.vW[i] = self.momentum * self.vW[i] - self.lr * self.parameters["weights"][i][1]
-            self.vb[i] = self.momentum * self.vb[i] - self.lr * self.parameters["bias"][i][1]
-            self.parameters["weights"][i][0] += self.vW[i]
-            self.parameters["bias"][i][0] += self.vb[i]
+        for param, velocity in zip(self.parameters, self.velocities):
+            unit = param[0]
+            dunit = param[1]
 
-            self.parameters["weights"][i][1].fill(0)
-            self.parameters["bias"][i][1].fill(0)
+            velocity = self.momentum * velocity - self.lr * dunit
+            unit += velocity
+
+            dunit.fill(0)

@@ -28,11 +28,10 @@ class Model:
         return self.forward(X)
     
     def parameters(self):
-        parameters = {"weights": [], "bias": []}
+        parameters = []
         for layer in self.layers:
             layer_params = layer.get_params()
-            parameters["weights"].append(layer_params[:2])
-            parameters["bias"].append(layer_params[2:])
+            parameters.extend(layer_params)
         return parameters
 
 class DenseLayer:
@@ -86,7 +85,7 @@ class DenseLayer:
         return grad
     
     def get_params(self):
-        return [self.W, self.dW, self.b, self.db]
+        return [[self.W, self.dW], [self.b, self.db]]
 
     def update(self, lr, momentum = 0):
         self.vW = momentum * self.vW - lr * self.dW

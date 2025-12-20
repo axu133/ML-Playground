@@ -4,9 +4,9 @@ import NNHelper
 
 sigmoid = lambda z: 1/(1 + np.exp(-z))
 
-epochs = 100
+epochs = 1000
 lr = 0.01
-momentum = 0.9
+momentum = 0
 
 x = np.array([[0,0], [0,1], [1,0], [1,1]])
 y = np.array([[0] , [1], [1], [0]])
