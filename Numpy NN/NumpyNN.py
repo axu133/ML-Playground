@@ -26,9 +26,17 @@ class Model:
     
     def predict(self, X): # Update for things such as binary classification etc.
         return self.forward(X)
+    
+    def parameters(self):
+        parameters = {"weights": [], "bias": []}
+        for layer in self.layers:
+            layer_params = layer.get_params()
+            parameters["weights"].append(layer_params[:2])
+            parameters["bias"].append(layer_params[2:])
+        return parameters
 
 class DenseLayer:
-    def __init__(self, in_dim: int, out_dim: int, activation: NNHelper.Activation | None = None):
+    def __init__(self, in_dim: int, out_dim: int, activation: NNHelper.Activation):
         """
         Initializing Dense Layer in Neural Network
         
@@ -45,13 +53,13 @@ class DenseLayer:
         # Weights and Biases
         self.W = rng.normal(loc = 0.0, scale = 1.0, size = (in_dim, out_dim))*np.sqrt(2/in_dim) # He Initialization
         self.b = rng.normal(loc = 0.0, scale = 1.0, size = (1, out_dim))*0.01 
-
-        # Gradients and Momenta
-        self.dW, self.vW = np.zeros_like(self.W), np.zeros_like(self.W)
-        self.db, self.vb = np.zeros_like(self.b), np.zeros_like(self.b)
         
+        self.dW = np.zeros_like(self.W)
+        self.db = np.zeros_like(self.b)
+
         self.input = np.array(0)
-        self.activation = activation or NNHelper.ReLU()
+
+        self.activation = activation
 
     def forward(self, x):
         """
@@ -77,6 +85,9 @@ class DenseLayer:
         grad = np.dot(dZ, self.W.T)
         return grad
     
+    def get_params(self):
+        return [self.W, self.dW, self.b, self.db]
+
     def update(self, lr, momentum = 0):
         self.vW = momentum * self.vW - lr * self.dW
         self.vb = momentum * self.vb - lr * self.db

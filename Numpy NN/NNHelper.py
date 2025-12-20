@@ -85,7 +85,7 @@ class MSE(Loss):
     
     def backward(self, y_true, y_pred):
         return 2 * (y_pred - y_true)
-    
+
 class BCE(Loss): # Unfinished
     """
     Binary Cross-Entropy
@@ -98,3 +98,36 @@ class BCE(Loss): # Unfinished
     
     def backward(self, y_true, y_pred):
         return (y_pred - y_true)/(y_pred * (1 - y_pred))
+    
+class Optimizer:
+    def __init__(self):
+        raise NotImplementedError
+    
+    def step(self):
+        raise NotImplementedError
+    
+class Momentum(Optimizer):
+    def __init__(self, parameters, lr, momentum = 0.9):
+        self.lr = lr
+        
+        self.parameters = parameters
+
+        self.vW = []
+        self.vb = []
+
+        # Gradients and Momenta
+        for i in range(len(parameters["weights"])):
+            self.vW.append(np.zeros_like(parameters["weights"][i][0]))
+            self.vb.append(np.zeros_like(parameters["bias"][i][0]))
+        
+        self.momentum = momentum
+
+    def step(self):
+        for i in range(len(self.parameters["weights"])):
+            self.vW[i] = self.momentum * self.vW[i] - self.lr * self.parameters["weights"][i][1]
+            self.vb[i] = self.momentum * self.vb[i] - self.lr * self.parameters["bias"][i][1]
+            self.parameters["weights"][i][0] += self.vW[i]
+            self.parameters["bias"][i][0] += self.vb[i]
+
+            self.parameters["weights"][i][1].fill(0)
+            self.parameters["bias"][i][1].fill(0)
