@@ -79,8 +79,8 @@ class DenseLayer:
         :param derivative: Derivative of Activation Function (default: ReLU)
         """
         dZ = self.activation.backward(grad)
-        self.dW = np.dot(self.input.T, dZ)
-        self.db = np.sum(dZ, axis=0, keepdims=True)
+        self.dW[:] = np.dot(self.input.T, dZ)
+        self.db[:] = np.sum(dZ, axis=0, keepdims=True)
         grad = np.dot(dZ, self.W.T)
         return grad
     

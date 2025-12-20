@@ -5,7 +5,7 @@ import NNHelper
 sigmoid = lambda z: 1/(1 + np.exp(-z))
 
 epochs = 1000
-lr = 0.01
+lr = 0.1
 momentum = 0
 
 x = np.array([[0,0], [0,1], [1,0], [1,1]])
@@ -23,6 +23,7 @@ preds = []
 for i in range(epochs):
     y_pred = model.forward(x)
     loss = model.loss(y, y_pred)
+    print("backward")
     model.backward(y, y_pred)
     optimizer.step()
     print(f"Epoch: {i+1:4d} | Loss: {loss:.3f}")

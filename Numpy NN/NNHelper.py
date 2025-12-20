@@ -125,7 +125,7 @@ class Momentum(Optimizer):
             unit = param[0]
             dunit = param[1]
 
-            velocity = self.momentum * velocity - self.lr * dunit
+            velocity[:] = self.momentum * velocity - self.lr * dunit
             unit += velocity
 
             dunit.fill(0)
