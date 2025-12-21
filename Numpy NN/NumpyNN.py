@@ -19,10 +19,6 @@ class Model:
         grad = self.loss.backward(y_true, y_pred)
         for layer in reversed(self.layers):
             grad = layer.backward(grad)
-
-    def update(self, lr, momentum=0.9): # Later replace w/ optimizer implementation
-        for layer in self.layers:
-            layer.update(lr, momentum)
     
     def predict(self, X): # Update for things such as binary classification etc.
         return self.forward(X)
@@ -86,12 +82,3 @@ class DenseLayer:
     
     def get_params(self):
         return [[self.W, self.dW], [self.b, self.db]]
-
-    def update(self, lr, momentum = 0):
-        self.vW = momentum * self.vW - lr * self.dW
-        self.vb = momentum * self.vb - lr * self.db
-        self.W += self.vW
-        self.b += self.vb
-
-        self.dW.fill(0)
-        self.db.fill(0)
