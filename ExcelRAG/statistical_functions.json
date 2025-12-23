@@ -1,6 +1,6 @@
 [
     {
-        "function": "AVEDEV function",
+        "function": "AVEDEV",
         "url": "https://support.microsoft.com/en-us/office/avedev-function-58fe8d65-2a84-4dc7-8052-f3f87b5c6639",
         "short_summary": "Returns the average of the absolute deviations of data points from their mean",
         "syntax_guide": "AVEDEV(number1, [number2], ...)\n\nThe AVEDEV function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want the average of the absolute deviations. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -10,7 +10,7 @@
         ]
     },
     {
-        "function": "AVERAGE function",
+        "function": "AVERAGE",
         "url": "https://support.microsoft.com/en-us/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6",
         "short_summary": "Returns the average of its arguments",
         "syntax_guide": "AVERAGE(number1, [number2], ...)\n\nThe AVERAGE function syntax has the following arguments:\n\nNumber1Required. The first number, cell reference, or range for which you want the average.Number2, ...Optional. Additional numbers, cell references or ranges for which you want the average, up to a maximum of 255.",
@@ -20,7 +20,7 @@
         ]
     },
     {
-        "function": "AVERAGEA function",
+        "function": "AVERAGEA",
         "url": "https://support.microsoft.com/en-us/office/averagea-function-f5f84098-d453-4f4c-bbba-3d2c66356091",
         "short_summary": "Returns the average of its arguments, including numbers, text, and logical values",
         "syntax_guide": "AVERAGEA(value1, [value2], ...)\n\nThe AVERAGEA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 cells, ranges of cells, or values for which you want the average.",
@@ -30,7 +30,7 @@
         ]
     },
     {
-        "function": "AVERAGEIF function",
+        "function": "AVERAGEIF",
         "url": "https://support.microsoft.com/en-us/office/averageif-function-faec8e2e-0dec-4308-af69-f5576d8ac642",
         "short_summary": "Returns the average (arithmetic mean) of all the cells in a range that meet a given criteria",
         "syntax_guide": "AVERAGEIF(range, criteria, [average_range])\n\nThe AVERAGEIF function syntax has the following arguments:\n\nRangeRequired. One or more cells to average, including numbers or names, arrays, or references that contain numbers.CriteriaRequired. The criteria in the form of a number, expression, cell reference, or text that defines which cells are averaged. For example, criteria can be expressed as 32, \"32\", \">32\", \"apples\", or B4.Average_rangeOptional. The actual set of cells to average. If omitted, range is used.",
@@ -41,7 +41,7 @@
         ]
     },
     {
-        "function": "AVERAGEIFS function",
+        "function": "AVERAGEIFS",
         "url": "https://support.microsoft.com/en-us/office/averageifs-function-48910c45-1fc0-4389-a028-f7c5c3001690",
         "short_summary": "Returns the average (arithmetic mean) of all cells that meet multiple criteria",
         "syntax_guide": "AVERAGEIFS(average_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)\n\nThe AVERAGEIFS function syntax has the following arguments:\n\nAverage_rangeRequired. One or more cells to average, including numbers or names, arrays, or references that contain numbers.Criteria_range1, criteria_range2, …Criteria_range1 is required, subsequent criteria_ranges are optional. 1 to 127 ranges in which to evaluate the associated criteria.Criteria1, criteria2, ...Criteria1 is required, subsequent criteria are optional. 1 to 127 criteria in the form of a number, expression, cell reference, or text that define which cells will be averaged. For example, criteria can be expressed as 32, \"32\", \">32\", \"apples\", or B4.",
@@ -52,7 +52,7 @@
         ]
     },
     {
-        "function": "BETA.DIST function",
+        "function": "BETA.DIST",
         "url": "https://support.microsoft.com/en-us/office/beta-dist-function-11188c9c-780a-42c7-ba43-9ecb5a878d31",
         "short_summary": "Returns the beta cumulative distribution function",
         "syntax_guide": "BETA.DIST(x,alpha,beta,cumulative,[A],[B])\n\nThe BETA.DIST function syntax has the following arguments:\n\nXRequired. The value between A and B at which to evaluate the functionAlphaRequired. A parameter of the distribution.BetaRequired. A parameter of the distribution.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, BETA.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.AOptional. A lower bound to the interval of x.BOptional. An upper bound to the interval of x.",
@@ -62,7 +62,7 @@
         ]
     },
     {
-        "function": "BETA.INV function",
+        "function": "BETA.INV",
         "url": "https://support.microsoft.com/en-us/office/beta-inv-function-e84cb8aa-8df0-4cf6-9892-83a341d252eb",
         "short_summary": "Returns the inverse of the cumulative distribution function for a specified beta distribution",
         "syntax_guide": "BETA.INV(probability,alpha,beta,[A],[B])\n\nThe BETA.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the beta distribution.AlphaRequired. A parameter of the distribution.BetaRequired. A parameter the distribution.AOptional. A lower bound to the interval of x.BOptional. An upper bound to the interval of x.",
@@ -72,7 +72,7 @@
         ]
     },
     {
-        "function": "BINOM.DIST function",
+        "function": "BINOM.DIST",
         "url": "https://support.microsoft.com/en-us/office/binom-dist-function-c5ae37b6-f39c-4be2-94c2-509a1480770c",
         "short_summary": "Returns the individual term binomial distribution probability",
         "syntax_guide": "BINOM.DIST(number_s,trials,probability_s,cumulative)\n\nThe BINOM.DIST function syntax has the following arguments:\n\nNumber_sRequired. The number of successes in trials.TrialsRequired. The number of independent trials.Probability_sRequired. The probability of success on each trial.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, then BINOM.DIST returns the cumulative distribution function, which is the probability that there are at most number_s successes; if FALSE, it returns the probability mass function, which is the probability that there are number_s successes.",
@@ -82,7 +82,7 @@
         ]
     },
     {
-        "function": "BINOM.DIST.RANGE function",
+        "function": "BINOM.DIST.RANGE",
         "url": "https://support.microsoft.com/en-us/office/binom-dist-range-function-17331329-74c7-4053-bb4c-6653a7421595",
         "short_summary": "Returns the probability of a trial result using a binomial distribution",
         "syntax_guide": "BINOM.DIST.RANGE(trials,probability_s,number_s,[number_s2])\n\nThe BINOM.DIST.RANGE function syntax has the following arguments.\n\nTrialsRequired. The number of independent trials. Must be greater than or equal to 0.Probability_sRequired. The probability of success in each trial. Must be greater than or equal to 0 and less than or equal to 1.Number_sRequired. The number of successes in trials. Must be greater than or equal to 0 and less than or equal to Trials.Number_s2Optional. If provided, returns the probability that the number of successful trials will fall between Number_s and number_s2. Must be greater than or equal to Number_s and less than or equal to Trials.",
@@ -93,7 +93,7 @@
         ]
     },
     {
-        "function": "BINOM.INV function",
+        "function": "BINOM.INV",
         "url": "https://support.microsoft.com/en-us/office/binom-inv-function-80a0370c-ada6-49b4-83e7-05a91ba77ac9",
         "short_summary": "Returns the smallest value for which the cumulative binomial distribution is less than or equal to a criterion value",
         "syntax_guide": "BINOM.INV(trials,probability_s,alpha)\n\nThe BINOM.INV function syntax has the following arguments:\n\nTrialsRequired. The number of Bernoulli trials.Probability_sRequired. The probability of a success on each trial.AlphaRequired. The criterion value.",
@@ -103,7 +103,7 @@
         ]
     },
     {
-        "function": "CHISQ.DIST function",
+        "function": "CHISQ.DIST",
         "url": "https://support.microsoft.com/en-us/office/chisq-dist-function-8486b05e-5c05-4942-a9ea-f6b341518732",
         "short_summary": "Returns the cumulative beta probability density function",
         "syntax_guide": "CHISQ.DIST(x,deg_freedom,cumulative)\n\nThe CHISQ.DIST function syntax has the following arguments:\n\nXRequired. The value at which you want to evaluate the distribution.Deg_freedomRequired. The number of degrees of freedom.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, CHISQ.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -113,7 +113,7 @@
         ]
     },
     {
-        "function": "CHISQ.DIST.RT function",
+        "function": "CHISQ.DIST.RT",
         "url": "https://support.microsoft.com/en-us/office/chisq-dist-rt-function-dc4832e8-ed2b-49ae-8d7c-b28d5804c0f2",
         "short_summary": "Returns the one-tailed probability of the chi-squared distribution",
         "syntax_guide": "CHISQ.DIST.RT(x,deg_freedom)\n\nThe CHISQ.DIST.RT function syntax has the following arguments:\n\nXRequired. The value at which you want to evaluate the distribution.Deg_freedomRequired. The number of degrees of freedom.",
@@ -123,7 +123,7 @@
         ]
     },
     {
-        "function": "CHISQ.INV function",
+        "function": "CHISQ.INV",
         "url": "https://support.microsoft.com/en-us/office/chisq-inv-function-400db556-62b3-472d-80b3-254723e7092f",
         "short_summary": "Returns the cumulative beta probability density function",
         "syntax_guide": "CHISQ.INV(probability,deg_freedom)\n\nThe CHISQ.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the chi-squared distribution.Deg_freedomRequired. The number of degrees of freedom.",
@@ -134,7 +134,7 @@
         ]
     },
     {
-        "function": "CHISQ.INV.RT function",
+        "function": "CHISQ.INV.RT",
         "url": "https://support.microsoft.com/en-us/office/chisq-inv-rt-function-435b5ed8-98d5-4da6-823f-293e2cbc94fe",
         "short_summary": "Returns the inverse of the one-tailed probability of the chi-squared distribution",
         "syntax_guide": "CHISQ.INV.RT(probability,deg_freedom)\n\nThe CHISQ.INV.RT function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the chi-squared distribution.Deg_freedomRequired. The number of degrees of freedom.",
@@ -144,7 +144,7 @@
         ]
     },
     {
-        "function": "CHISQ.TEST function",
+        "function": "CHISQ.TEST",
         "url": "https://support.microsoft.com/en-us/office/chisq-test-function-2e8a7861-b14a-4985-aa93-fb88de3f260f",
         "short_summary": "Returns the test for independence",
         "syntax_guide": "CHISQ.TEST(actual_range,expected_range)\n\nThe CHISQ.TEST function syntax has the following arguments:\n\nActual_rangeRequired. The range of data that contains observations to test against expected values.Expected_rangeRequired. The range of data that contains the ratio of the product of row totals and column totals to the grand total.",
@@ -154,7 +154,7 @@
         ]
     },
     {
-        "function": "CONFIDENCE.NORM function",
+        "function": "CONFIDENCE.NORM",
         "url": "https://support.microsoft.com/en-us/office/confidence-norm-function-7cec58a6-85bb-488d-91c3-63828d4fbfd4",
         "short_summary": "Returns the confidence interval for a population mean",
         "syntax_guide": "CONFIDENCE.NORM(alpha,standard_dev,size)\n\nThe CONFIDENCE.NORM function syntax has the following arguments:\n\nAlphaRequired. The significance level used to compute the confidence level. The confidence level equals 100*(1 - alpha)%, or in other words, an alpha of 0.05 indicates a 95 percent confidence level.Standard_devRequired. The population standard deviation for the data range and is assumed to be known.SizeRequired. The sample size.",
@@ -164,7 +164,7 @@
         ]
     },
     {
-        "function": "CONFIDENCE.T function",
+        "function": "CONFIDENCE.T",
         "url": "https://support.microsoft.com/en-us/office/confidence-t-function-e8eca395-6c3a-4ba9-9003-79ccc61d3c53",
         "short_summary": "Returns the confidence interval for a population mean, using a Student's t distribution",
         "syntax_guide": "CONFIDENCE.T(alpha,standard_dev,size)\n\nThe CONFIDENCE.T function syntax has the following arguments:\n\nAlphaRequired. The significance level used to compute the confidence level. The confidence level equals 100*(1 - alpha)%, or in other words, an alpha of 0.05 indicates a 95 percent confidence level.Standard_devRequired. The population standard deviation for the data range and is assumed to be known.SizeRequired. The sample size.",
@@ -174,7 +174,7 @@
         ]
     },
     {
-        "function": "CORREL function",
+        "function": "CORREL",
         "url": "https://support.microsoft.com/en-us/office/correl-function-995dcef7-0c0a-4bed-a3fb-239d7b68ca92",
         "short_summary": "Returns the correlation coefficient between two data sets",
         "syntax_guide": "CORREL(array1, array2)\n\nThe CORREL function syntax has the following arguments:\n\narray1Required. A range of cell values.array2Required. A second range of cell values.",
@@ -183,7 +183,7 @@
         ]
     },
     {
-        "function": "COUNT function",
+        "function": "COUNT",
         "url": "https://support.microsoft.com/en-us/office/count-function-a59cd7fc-b623-4d93-87a4-d23bf411294c",
         "short_summary": "Counts how many numbers are in the list of arguments",
         "syntax_guide": "COUNT(value1, [value2], ...)\n\nThe COUNT function syntax has the following arguments:\n\nvalue1Required. The first item, cell reference, or range within which you want to count numbers.value2, ...Optional. Up to 255 additional items, cell references, or ranges within which you want to count numbers.\n\nNote:The arguments can contain or refer to a variety of different types of data, but only numbers are counted.",
@@ -193,7 +193,7 @@
         ]
     },
     {
-        "function": "COUNTA function",
+        "function": "COUNTA",
         "url": "https://support.microsoft.com/en-us/office/counta-function-7dc98875-d5c1-46f1-9a82-53f3219e2509",
         "short_summary": "Counts how many values are in the list of arguments",
         "syntax_guide": "COUNTA(value1, [value2], ...)\n\nThe COUNTA function syntax has the following arguments:\n\nvalue1Required. The first argument representing the values that you want to count.value2, ...Optional. Additional arguments representing the values that you want to count, up to a maximum of 255 arguments.",
@@ -203,7 +203,7 @@
         ]
     },
     {
-        "function": "COUNTBLANK function",
+        "function": "COUNTBLANK",
         "url": "https://support.microsoft.com/en-us/office/countblank-function-6a92d772-675c-4bee-b346-24af6bd3ac22",
         "short_summary": "Counts the number of blank cells within a range",
         "syntax_guide": "COUNTBLANK(range)\n\nTheCOUNTBLANKfunction syntax has the following arguments:\n\nRangeRequired. The range from which you want to count the blank cells.",
@@ -214,7 +214,7 @@
         ]
     },
     {
-        "function": "COUNTIF function",
+        "function": "COUNTIF",
         "url": "https://support.microsoft.com/en-us/office/use-the-countif-function-in-microsoft-excel-e0de10c6-f885-4e71-abb4-1f464816df34",
         "short_summary": "Counts the number of cells within a range that meet the given criteria",
         "syntax_guide": "COUNTIF(range, criteria)Argument nameDescriptionrange(required)The group of cells you want to count.Rangecan contain numbers, arrays, a named range, or references that contain numbers. Blank and text values are ignored.Learn how toselect ranges in a worksheet.criteria(required)A number, expression, cell reference, or text string that determines which cells will be counted.For example, you can use a number like 32, a comparison like \">32\", a cell like B4, or a word like \"apples\".COUNTIF uses only a single criteria. UseCOUNTIFSif you want to use multiple criteria.",
@@ -224,7 +224,7 @@
         ]
     },
     {
-        "function": "COUNTIFS function",
+        "function": "COUNTIFS",
         "url": "https://support.microsoft.com/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842",
         "short_summary": "Counts the number of cells within a range that meet multiple criteria",
         "syntax_guide": "COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2]…)\n\nThe COUNTIFS function syntax has the following arguments:\n\ncriteria_range1Required. The first range in which to evaluate the associated criteria.criteria1Required. The criteria in the form of a number, expression, cell reference, or text that define which cells will be counted. For example, criteria can be expressed as 32, \">32\", B4, \"apples\", or \"32\".criteria_range2, criteria2, ...Optional. Additional ranges and their associated criteria. Up to 127 range/criteria pairs are allowed.\n\nImportant:Each additional range must have the same number of rows and columns as thecriteria_range1argument. The ranges do not have to be adjacent to each other.",
@@ -234,7 +234,7 @@
         ]
     },
     {
-        "function": "COVARIANCE.P function",
+        "function": "COVARIANCE.P",
         "url": "https://support.microsoft.com/en-us/office/covariance-p-function-6f0e1e6d-956d-4e4b-9943-cfef0bf9edfc",
         "short_summary": "Returns covariance, the average of the products of paired deviations",
         "syntax_guide": "COVARIANCE.P(array1,array2)\n\nThe COVARIANCE.P function syntax has the following arguments:\n\nArray1Required. The first cell range of integers.Array2Required. The second cell range of integers.",
@@ -244,7 +244,7 @@
         ]
     },
     {
-        "function": "COVARIANCE.S function",
+        "function": "COVARIANCE.S",
         "url": "https://support.microsoft.com/en-us/office/covariance-s-function-0a539b74-7371-42aa-a18f-1f5320314977",
         "short_summary": "Returns the sample covariance, the average of the products deviations for each data point pair in two data sets",
         "syntax_guide": "COVARIANCE.S(array1,array2)\n\nThe COVARIANCE.S function syntax has the following arguments:\n\nArray1Required. The first cell range of integers.Array2Required. The second cell range of integers.",
@@ -255,7 +255,7 @@
         ]
     },
     {
-        "function": "DEVSQ function",
+        "function": "DEVSQ",
         "url": "https://support.microsoft.com/en-us/office/devsq-function-8b739616-8376-4df5-8bd0-cfe0a6caf444",
         "short_summary": "Returns the sum of squares of deviations",
         "syntax_guide": "DEVSQ(number1, [number2], ...)\n\nThe DEVSQ function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate the sum of squared deviations. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -265,7 +265,7 @@
         ]
     },
     {
-        "function": "EXPON.DIST function",
+        "function": "EXPON.DIST",
         "url": "https://support.microsoft.com/en-us/office/expon-dist-function-4c12ae24-e563-4155-bf3e-8b78b6ae140e",
         "short_summary": "Returns the exponential distribution",
         "syntax_guide": "EXPON.DIST(x,lambda,cumulative)\n\nThe EXPON.DIST function syntax has the following arguments:\n\nXRequired. The value of the function.LambdaRequired. The parameter value.CumulativeRequired. A logical value that indicates which form of the exponential function to provide. If cumulative is TRUE, EXPON.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -275,7 +275,7 @@
         ]
     },
     {
-        "function": "F.DIST function",
+        "function": "F.DIST",
         "url": "https://support.microsoft.com/en-us/office/f-dist-function-a887efdc-7c8e-46cb-a74a-f884cd29b25d",
         "short_summary": "Returns the F probability distribution",
         "syntax_guide": "F.DIST(x,deg_freedom1,deg_freedom2,cumulative)\n\nThe F.DIST function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, F.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -286,7 +286,7 @@
         ]
     },
     {
-        "function": "F.DIST.RT function",
+        "function": "F.DIST.RT",
         "url": "https://support.microsoft.com/en-us/office/f-dist-rt-function-d74cbb00-6017-4ac9-b7d7-6049badc0520",
         "short_summary": "Returns the F probability distribution",
         "syntax_guide": "F.DIST.RT(x,deg_freedom1,deg_freedom2)\n\nThe F.DIST.RT function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.",
@@ -296,7 +296,7 @@
         ]
     },
     {
-        "function": "F.INV function",
+        "function": "F.INV",
         "url": "https://support.microsoft.com/en-us/office/f-inv-function-0dda0cf9-4ea0-42fd-8c3c-417a1ff30dbe",
         "short_summary": "Returns the inverse of the F probability distribution",
         "syntax_guide": "F.INV(probability,deg_freedom1,deg_freedom2)\n\nThe F.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the F cumulative distribution.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.",
@@ -307,7 +307,7 @@
         ]
     },
     {
-        "function": "F.INV.RT function",
+        "function": "F.INV.RT",
         "url": "https://support.microsoft.com/en-us/office/f-inv-rt-function-d371aa8f-b0b1-40ef-9cc2-496f0693ac00",
         "short_summary": "Returns the inverse of the F probability distribution",
         "syntax_guide": "F.INV.RT(probability,deg_freedom1,deg_freedom2)\n\nThe F.INV.RT function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the F cumulative distribution.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.",
@@ -317,7 +317,7 @@
         ]
     },
     {
-        "function": "F.TEST function",
+        "function": "F.TEST",
         "url": "https://support.microsoft.com/en-us/office/f-test-function-100a59e7-4108-46f8-8443-78ffacb6c0a7",
         "short_summary": "Returns the result of an F-test",
         "syntax_guide": "F.TEST(array1,array2)\n\nThe F.TEST function syntax has the following arguments:\n\nArray1Required. The first array or range of data.Array2Required. The second array or range of data.",
@@ -327,7 +327,7 @@
         ]
     },
     {
-        "function": "FISHER function",
+        "function": "FISHER",
         "url": "https://support.microsoft.com/en-us/office/fisher-function-d656523c-5076-4f95-b87b-7741bf236c69",
         "short_summary": "Returns the Fisher transformation",
         "syntax_guide": "FISHER(x)\n\nThe FISHER function syntax has the following arguments:\n\nXRequired. A numeric value for which you want the transformation.",
@@ -337,7 +337,7 @@
         ]
     },
     {
-        "function": "FISHERINV function",
+        "function": "FISHERINV",
         "url": "https://support.microsoft.com/en-us/office/fisherinv-function-62504b39-415a-4284-a285-19c8e82f86bb",
         "short_summary": "Returns the inverse of the Fisher transformation",
         "syntax_guide": "FISHERINV(y)\n\nThe FISHERINV function syntax has the following arguments:\n\nYRequired. The value for which you want to perform the inverse of the transformation.",
@@ -347,7 +347,7 @@
         ]
     },
     {
-        "function": "FORECAST function",
+        "function": "FORECAST",
         "url": "https://support.microsoft.com/en-us/office/forecast-and-forecast-linear-functions-50ca49c9-7b40-4892-94e4-7ad38bbeda99",
         "short_summary": "Returns a value along a linear trendNote:In Excel 2016, this function is replaced withFORECAST.LINEARas part of the newForecasting functions, but it's still available for compatibility with earlier versions.",
         "syntax_guide": "FORECAST.LINEAR(x, known_y's, known_x's)\n\n- or -\n\nFORECAST(x, known_y's, known_x's)\n\nThe FORECAST/FORECAST.LINEAR function syntax has the following arguments:\n\nArgument | Required | Refers to\nx | yes | The data point for which you want to predict a value.\nknown_y's | yes | The dependent array or range of data.\nknown_x's | yes | The independent array or range of data.",
@@ -357,49 +357,49 @@
         ]
     },
     {
-        "function": "FORECAST.ETS function",
+        "function": "FORECAST.ETS",
         "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS",
         "short_summary": "Returns a future value based on existing (historical) values by using the AAA version of the Exponential Smoothing (ETS) algorithm",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "FORECAST.ETS.CONFINT function",
+        "function": "FORECAST.ETS.CONFINT",
         "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS.CONFINT",
         "short_summary": "Returns a confidence interval for the forecast value at the specified target date",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "FORECAST.ETS.SEASONALITY function",
+        "function": "FORECAST.ETS.SEASONALITY",
         "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS.SEASONALITY",
         "short_summary": "Returns the length of the repetitive pattern Excel detects for the specified time series",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "FORECAST.ETS.STAT function",
+        "function": "FORECAST.ETS.STAT",
         "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS.STAT",
         "short_summary": "Returns a statistical value as a result of time series forecasting",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "FORECAST.LINEAR function",
+        "function": "FORECAST.LINEAR",
         "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.LINEAR",
         "short_summary": "Returns a future value based on existing values",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "FREQUENCY function",
+        "function": "FREQUENCY",
         "url": "https://support.microsoft.com/en-us/office/frequency-function-44e3be2b-eca0-42cd-a3f7-fd9ea898fdb9",
         "short_summary": "Returns a frequency distribution as a vertical array",
         "syntax_guide": "FREQUENCY(data_array, bins_array)The FREQUENCY function syntax has the following arguments:data_arrayRequired. An array of or reference to a set of values for which you want to count frequencies. If data_array contains no values, FREQUENCY returns an array of zeros.bins_arrayRequired. An array of or reference to intervals into which you want to group the values in data_array. If bins_array contains no values, FREQUENCY returns the number of elements in data_array.",
         "usage_examples": []
     },
     {
-        "function": "GAMMA function",
+        "function": "GAMMA",
         "url": "https://support.microsoft.com/en-us/office/gamma-function-ce1702b1-cf55-471d-8307-f83be0fc5297",
         "short_summary": "Returns the gamma function value",
         "syntax_guide": "GAMMA(number)\n\nThe GAMMA function syntax has the following arguments.\n\nNumberRequired. Returns a number.",
@@ -410,7 +410,7 @@
         ]
     },
     {
-        "function": "GAMMA.DIST function",
+        "function": "GAMMA.DIST",
         "url": "https://support.microsoft.com/en-us/office/gamma-dist-function-9b6f1538-d11c-4d5f-8966-21f6a2201def",
         "short_summary": "Returns the gamma distribution",
         "syntax_guide": "GAMMA.DIST(x,alpha,beta,cumulative)\n\nThe GAMMA.DIST function syntax has the following arguments:\n\nXRequired. The value at which you want to evaluate the distribution.AlphaRequired. A parameter to the distribution.BetaRequired. A parameter to the distribution. If beta = 1, GAMMA.DIST returns the standard gamma distribution.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, GAMMA.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -420,7 +420,7 @@
         ]
     },
     {
-        "function": "GAMMA.INV function",
+        "function": "GAMMA.INV",
         "url": "https://support.microsoft.com/en-us/office/gamma-inv-function-74991443-c2b0-4be5-aaab-1aa4d71fbb18",
         "short_summary": "Returns the inverse of the gamma cumulative distribution",
         "syntax_guide": "GAMMA.INV(probability,alpha,beta)\n\nThe GAMMA.INV function syntax has the following arguments:\n\nProbabilityRequired. The probability associated with the gamma distribution.AlphaRequired. A parameter to the distribution.BetaRequired. A parameter to the distribution. If beta = 1, GAMMA.INV returns the standard gamma distribution.",
@@ -430,14 +430,14 @@
         ]
     },
     {
-        "function": "GAMMALN function",
+        "function": "GAMMALN",
         "url": "https://support.microsoft.com/en-us/office/gammaln-function-b838c48b-c65f-484f-9e1d-141c55470eb9",
         "short_summary": "Returns the natural logarithm of the gamma function, Γ(x)",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "GAMMALN.PRECISE function",
+        "function": "GAMMALN.PRECISE",
         "url": "https://support.microsoft.com/en-us/office/gammaln-precise-function-5cdfe601-4e1e-4189-9d74-241ef1caa599",
         "short_summary": "Returns the natural logarithm of the gamma function, Γ(x)",
         "syntax_guide": "GAMMALN.PRECISE(x)\n\nThe GAMMALN.PRECISE function syntax has the following arguments:\n\nXRequired. The value for which you want to calculate GAMMALN.PRECISE.",
@@ -447,7 +447,7 @@
         ]
     },
     {
-        "function": "GAUSS function",
+        "function": "GAUSS",
         "url": "https://support.microsoft.com/en-us/office/gauss-function-069f1b4e-7dee-4d6a-a71f-4b69044a6b33",
         "short_summary": "Returns 0.5 less than the standard normal cumulative distribution",
         "syntax_guide": "GAUSS(z)\n\nThe GAUSS function syntax has the following arguments.\n\nZRequired. Returns a number.",
@@ -458,7 +458,7 @@
         ]
     },
     {
-        "function": "GEOMEAN function",
+        "function": "GEOMEAN",
         "url": "https://support.microsoft.com/en-us/office/geomean-function-db1ac48d-25a5-40a0-ab83-0b38980e40d5",
         "short_summary": "Returns the geometric mean",
         "syntax_guide": "GEOMEAN(number1, [number2], ...)\n\nThe GEOMEAN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate the mean. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -468,7 +468,7 @@
         ]
     },
     {
-        "function": "GROWTH function",
+        "function": "GROWTH",
         "url": "https://support.microsoft.com/en-us/office/growth-function-541a91dc-3d5e-437d-b156-21324e68b80d",
         "short_summary": "Returns values along an exponential trend",
         "syntax_guide": "GROWTH(known_y's, [known_x's], [new_x's], [const])\n\nThe GROWTH function syntax has the following arguments:\n\nKnown_y'sRequired. The set of y-values you already know in the relationship y = b*m^x.If the array known_y's is in a single column, then each column of known_x's is interpreted as a separate variable.If the array known_y's is in a single row, then each row of known_x's is interpreted as a separate variable.If any of the numbers in known_y's is 0 or negative, GROWTH returns the #NUM! error value.Known_x'sOptional. An optional set of x-values that you may already know in the relationship y = b*m^x.The array known_x's can include one or more sets of variables. If only one variable is used, known_y's and known_x's can be ranges of any shape, as long as they have equal dimensions. If more than one variable is used, known_y's must be a vector (that is, a range with a height of one row or a width of one column).If known_x's is omitted, it is assumed to be the array {1,2,3,...} that is the same size as known_y's.New_x'sOptional. Are new x-values for which you want GROWTH to return corresponding y-values.New_x's must include a column (or row) for each independent variable, just as known_x's does. So, if known_y's is in a single column, known_x's and new_x's must have the same number of columns. If known_y's is in a single row, known_x's and new_x's must have the same number of rows.If new_x's is omitted, it is assumed to be the same as known_x's.If both known_x's and new_x's are omitted, they are assumed to be the array {1,2,3,...} that is the same size as known_y's.ConstOptional. A logical value specifying whether to force the constant b to equal 1.If const is TRUE or omitted, b is calculated normally.If const is FALSE, b is set equal to 1 and the m-values are adjusted so that y = m^x.",
@@ -478,7 +478,7 @@
         ]
     },
     {
-        "function": "HARMEAN function",
+        "function": "HARMEAN",
         "url": "https://support.microsoft.com/en-us/office/harmean-function-5efd9184-fab5-42f9-b1d3-57883a1d3bc6",
         "short_summary": "Returns the harmonic mean",
         "syntax_guide": "HARMEAN(number1, [number2], ...)\n\nThe HARMEAN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate the mean. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -488,7 +488,7 @@
         ]
     },
     {
-        "function": "HYPGEOM.DIST function",
+        "function": "HYPGEOM.DIST",
         "url": "https://support.microsoft.com/en-us/office/hypgeom-dist-function-6dbd547f-1d12-4b1f-8ae5-b0d9e3d22fbf",
         "short_summary": "Returns the hypergeometric distribution",
         "syntax_guide": "HYPGEOM.DIST(sample_s,number_sample,population_s,number_pop,cumulative)\n\nThe HYPGEOM.DIST function syntax has the following arguments:\n\nSample_sRequired. The number of successes in the sample.Number_sampleRequired. The size of the sample.Population_sRequired. The number of successes in the population.Number_popRequired. The population size.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, then HYPGEOM.DIST returns the cumulative distribution function; if FALSE, it returns the probability mass function.",
@@ -498,7 +498,7 @@
         ]
     },
     {
-        "function": "INTERCEPT function",
+        "function": "INTERCEPT",
         "url": "https://support.microsoft.com/en-us/office/intercept-function-2a9b74e2-9d47-4772-b663-3bca70bf63ef",
         "short_summary": "Returns the intercept of the linear regression line",
         "syntax_guide": "INTERCEPT(known_y's, known_x's)\n\nThe INTERCEPT function syntax has the following arguments:\n\nKnown_y'sRequired. The dependent set of observations or data.Known_x'sRequired. The independent set of observations or data.",
@@ -508,7 +508,7 @@
         ]
     },
     {
-        "function": "KURT function",
+        "function": "KURT",
         "url": "https://support.microsoft.com/en-us/office/kurt-function-bc3a265c-5da4-4dcb-b7fd-c237789095ab",
         "short_summary": "Returns the kurtosis of a data set",
         "syntax_guide": "KURT(number1, [number2], ...)\n\nThe KURT function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate kurtosis. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -518,7 +518,7 @@
         ]
     },
     {
-        "function": "LARGE function",
+        "function": "LARGE",
         "url": "https://support.microsoft.com/en-us/office/large-function-3af0af19-1190-42bb-bb8b-01672ec00a64",
         "short_summary": "Returns the k-th largest value in a data set",
         "syntax_guide": "LARGE(array, k)\n\nThe LARGE function syntax has the following arguments:\n\nArrayRequired. The array or range of data for which you want to determine the k-th largest value.KRequired. The position (from the largest) in the array or cell range of data to return.",
@@ -528,7 +528,7 @@
         ]
     },
     {
-        "function": "LINEST function",
+        "function": "LINEST",
         "url": "https://support.microsoft.com/en-us/office/linest-function-84d7d0d9-6e50-4101-977a-fa7abf772b6d",
         "short_summary": "Returns the parameters of a linear trend",
         "syntax_guide": "LINEST(known_y's, [known_x's], [const], [stats])\n\nThe LINEST function syntax has the following arguments:",
@@ -541,7 +541,7 @@
         ]
     },
     {
-        "function": "LOGEST function",
+        "function": "LOGEST",
         "url": "https://support.microsoft.com/en-us/office/logest-function-f27462d8-3657-4030-866b-a272c1d18b4b",
         "short_summary": "Returns the parameters of an exponential trend",
         "syntax_guide": "LOGEST(known_y's, [known_x's], [const], [stats])The LOGEST function syntax has the following arguments:known_y'sRequired. The set of y-values you already know in the relationship y = b*m^x.If the array known_y's is in a single column, then each column of known_x's is interpreted as a separate variable.If the array known_y's is in a single row, then each row of known_x's is interpreted as a separate variable.known_x'sOptional. An optional set of x-values that you may already know in the relationship y = b*m^x.The array known_x's can include one or more sets of variables. If only one variable is used, known_y's and known_x's can be ranges of any shape, as long as they have equal dimensions. If more than one variable is used, known_y's must be a range of cells with a height of one row or a width of one column (which is also known as a vector).If known_x's is omitted, it is assumed to be the array {1,2,3,...} that is the same size as known_y's.constOptional. A logical value specifying whether to force the constant b to equal 1.If const is TRUE or omitted, b is calculated normally.If const is FALSE, b is set equal to 1, and the m-values are fitted to y = m^x.statsOptional. A logical value specifying whether to return additional regression statistics.If stats is TRUE, LOGEST returns the additional regression statistics, so the returned array is {mn,mn-1,...,m1,b;sen,sen-1,...,se1,seb;r 2,sey; F,df;ssreg,ssresid}.If stats is FALSE or omitted, LOGEST returns only the m-coefficients and the constant b.For more information about additional regression statistics, see theLINEST function.",
@@ -550,7 +550,7 @@
         ]
     },
     {
-        "function": "LOGNORM.DIST function",
+        "function": "LOGNORM.DIST",
         "url": "https://support.microsoft.com/en-us/office/lognorm-dist-function-eb60d00b-48a9-4217-be2b-6074aee6b070",
         "short_summary": "Returns the cumulative lognormal distribution",
         "syntax_guide": "LOGNORM.DIST(x,mean,standard_dev,cumulative)\n\nThe LOGNORM.DIST function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.MeanRequired. The mean of ln(x).Standard_devRequired. The standard deviation of ln(x).CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, LOGNORM.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -560,7 +560,7 @@
         ]
     },
     {
-        "function": "LOGNORM.INV function",
+        "function": "LOGNORM.INV",
         "url": "https://support.microsoft.com/en-us/office/lognorm-inv-function-fe79751a-f1f2-4af8-a0a1-e151b2d4f600",
         "short_summary": "Returns the inverse of the lognormal cumulative distribution",
         "syntax_guide": "LOGNORM.INV(probability, mean, standard_dev)\n\nThe LOGNORM.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the lognormal distribution.MeanRequired. The mean of ln(x).Standard_devRequired. The standard deviation of ln(x).",
@@ -570,7 +570,7 @@
         ]
     },
     {
-        "function": "MAX function",
+        "function": "MAX",
         "url": "https://support.microsoft.com/en-us/office/max-function-e0012414-9ac8-4b34-9a47-73e662c08098",
         "short_summary": "Returns the maximum value in a list of arguments",
         "syntax_guide": "MAX(number1, [number2], ...)\n\nTheMAXfunction syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 numbers for which you want to find the maximum value.",
@@ -580,7 +580,7 @@
         ]
     },
     {
-        "function": "MAXA function",
+        "function": "MAXA",
         "url": "https://support.microsoft.com/en-us/office/maxa-function-814bda1e-3840-4bff-9365-2f59ac2ee62d",
         "short_summary": "Returns the maximum value in a list of arguments, including numbers, text, and logical values",
         "syntax_guide": "MAXA(value1,[value2],...)\n\nThe MAXA function syntax has the following arguments:\n\nValue1Required. The first number argument for which you want to find the largest value.Value2,...Optional. Number arguments 2 to 255 for which you want to find the largest value.",
@@ -590,7 +590,7 @@
         ]
     },
     {
-        "function": "MAXIFS function",
+        "function": "MAXIFS",
         "url": "https://support.microsoft.com/en-us/office/maxifs-function-dfd611e6-da2c-488a-919b-9b6376b28883",
         "short_summary": "Returns the maximum value among cells specified by a given set of conditions or criteria",
         "syntax_guide": "MAXIFS(max_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)\n\nArgument | Description\nmax_range(required) | The actual range of cells in which the maximum will be determined.\ncriteria_range1(required) | Is the set of cells to evaluate with the criteria.\ncriteria1(required) | Is the criteria in the form of a number, expression, or text that defines which cells will be evaluated as maximum. The same set of criteria works for theMINIFS,SUMIFS, andAVERAGEIFSfunctions.\ncriteria_range2,criteria2, ...(optional) | Additional ranges and their associated criteria. You can enter up to 126 range/criteria pairs.",
@@ -611,7 +611,7 @@
         ]
     },
     {
-        "function": "MEDIAN function",
+        "function": "MEDIAN",
         "url": "https://support.microsoft.com/en-us/office/median-function-d0916313-4753-414c-8537-ce85bdd967d2",
         "short_summary": "Returns the median of the given numbers",
         "syntax_guide": "MEDIAN(number1, [number2], ...)\n\nThe MEDIAN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 numbers for which you want the median.",
@@ -621,7 +621,7 @@
         ]
     },
     {
-        "function": "MIN function",
+        "function": "MIN",
         "url": "https://support.microsoft.com/en-us/office/min-function-61635d12-920f-4ce2-a70f-96f202dcc152",
         "short_summary": "Returns the minimum value in a list of arguments",
         "syntax_guide": "MIN(number1, [number2], ...)\n\nThe MIN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is optional, subsequent numbers are optional. 1 to 255 numbers for which you want to find the minimum value.",
@@ -631,7 +631,7 @@
         ]
     },
     {
-        "function": "MINIFS function",
+        "function": "MINIFS",
         "url": "https://support.microsoft.com/en-us/office/minifs-function-6ca1ddaa-079b-4e74-80cc-72eef32e6599",
         "short_summary": "Returns the minimum value among cells specified by a given set of conditions or criteria.",
         "syntax_guide": "MINIFS(min_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)\n\nArgument | Description\nmin_range(required) | The actual range of cells in which the minimum value will be determined.\ncriteria_range1(required) | Is the set of cells to evaluate with the criteria.\ncriteria1(required) | Is the criteria in the form of a number, expression, or text that defines which cells will be evaluated as minimum. The same set of criteria works for theMAXIFS,SUMIFSandAVERAGEIFSfunctions.\ncriteria_range2,criteria2, ...(optional) | Additional ranges and their associated criteria. You can enter up to 126 range/criteria pairs.",
@@ -652,7 +652,7 @@
         ]
     },
     {
-        "function": "MINA function",
+        "function": "MINA",
         "url": "https://support.microsoft.com/en-us/office/mina-function-245a6f46-7ca5-4dc7-ab49-805341bc31d3",
         "short_summary": "Returns the smallest value in a list of arguments, including numbers, text, and logical values",
         "syntax_guide": "MINA(value1, [value2], ...)\n\nThe MINA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 values for which you want to find the smallest value.",
@@ -662,14 +662,14 @@
         ]
     },
     {
-        "function": "MODE.MULT function",
+        "function": "MODE.MULT",
         "url": "https://support.microsoft.com/en-us/office/mode-mult-function-50fd9464-b2ba-4191-b57a-39446689ae8c",
         "short_summary": "Returns a vertical array of the most frequently occurring, or repetitive values in an array or range of data",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "MODE.SNGL function",
+        "function": "MODE.SNGL",
         "url": "https://support.microsoft.com/en-us/office/mode-sngl-function-f1267c16-66c6-4386-959f-8fba5f8bb7f8",
         "short_summary": "Returns the most common value in a data set",
         "syntax_guide": "MODE.SNGL(number1,[number2],...)\n\nThe MODE.SNGL function syntax has the following arguments:\n\nNumber1Required. The first argument for which you want to calculate the mode.Number2, ...Optional. Arguments 2 to 254 for which you want to calculate the mode. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -679,7 +679,7 @@
         ]
     },
     {
-        "function": "NEGBINOM.DIST function",
+        "function": "NEGBINOM.DIST",
         "url": "https://support.microsoft.com/en-us/office/negbinom-dist-function-c8239f89-c2d0-45bd-b6af-172e570f8599",
         "short_summary": "Returns the negative binomial distribution",
         "syntax_guide": "NEGBINOM.DIST(number_f,number_s,probability_s,cumulative)\n\nThe NEGBINOM.DIST function syntax has the following arguments:\n\nNumber_fRequired. The number of failures.Number_sRequired. The threshold number of successes.Probability_sRequired. The probability of a success.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, NEGBINOM.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -689,7 +689,7 @@
         ]
     },
     {
-        "function": "NORM.DIST function",
+        "function": "NORM.DIST",
         "url": "https://support.microsoft.com/en-us/office/norm-dist-function-edb1cc14-a21c-4e53-839d-8082074c9f8d",
         "short_summary": "Returns the normal cumulative distribution",
         "syntax_guide": "NORM.DIST(x,mean,standard_dev,cumulative)\n\nThe NORM.DIST function syntax has the following arguments:\n\nXRequired. The value for which you want the distribution.MeanRequired. The arithmetic mean of the distribution.Standard_devRequired. The standard deviation of the distribution.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, NORM.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -699,14 +699,14 @@
         ]
     },
     {
-        "function": "NORM.INV function",
+        "function": "NORM.INV",
         "url": "https://support.microsoft.com/en-us/office/norm-inv-function-54b30935-fee7-493c-bedb-2278a9db7e13",
         "short_summary": "Returns the inverse of the normal cumulative distribution",
         "syntax_guide": "",
         "usage_examples": []
     },
     {
-        "function": "NORM.S.DIST function",
+        "function": "NORM.S.DIST",
         "url": "https://support.microsoft.com/en-us/office/norm-s-dist-function-1e787282-3832-4520-a9ae-bd2a8d99ba88",
         "short_summary": "Returns the standard normal cumulative distribution",
         "syntax_guide": "For a standard normal distribution, this is the syntax:\n\nNORM.S.DIST(z,cumulative)\n\nThis function syntax uses the following arguments:\n\nzRequired. This is the value for which you want the distribution.cumulativeRequired. Thecumulativeargument can be eitherTRUEorFALSE. This logical value determines the form of the function. If cumulative is TRUE then NORM.S.DIST returns thecumulativedistributionfunction. If it is FALSE, it returns theprobability massfunction.",
@@ -716,7 +716,7 @@
         ]
     },
     {
-        "function": "NORM.S.INV function",
+        "function": "NORM.S.INV",
         "url": "https://support.microsoft.com/en-us/office/norm-s-inv-function-d6d556b4-ab7f-49cd-b526-5a20918452b1",
         "short_summary": "Returns the inverse of the standard normal cumulative distribution",
         "syntax_guide": "NORM.S.INV(probability)\n\nThe NORM.S.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability corresponding to the normal distribution.",
@@ -726,7 +726,7 @@
         ]
     },
     {
-        "function": "PEARSON function",
+        "function": "PEARSON",
         "url": "https://support.microsoft.com/en-us/office/pearson-function-0c3e30fc-e5af-49c4-808a-3ef66e034c18",
         "short_summary": "Returns the Pearson product moment correlation coefficient",
         "syntax_guide": "PEARSON(array1, array2)\n\nThe PEARSON function syntax has the following arguments:\n\nArray1Required. A set of independent values.Array2Required. A set of dependent values.",
@@ -736,14 +736,14 @@
         ]
     },
     {
-        "function": "PERCENTILE.EXC function",
+        "function": "PERCENTILE.EXC",
         "url": "https://support.microsoft.com/en-us/office/percentile-exc-function-bbaa7204-e9e1-4010-85bf-c31dc5dce4ba",
         "short_summary": "Returns the k-th percentile of values in a range, where k is in the range 0 to 1, exclusive.",
         "syntax_guide": "=PERCENTILE.EXC(array,k)The PERCENTILE.EXC function syntax has the following arguments:ArgumentDescriptionarrayRequiredThe array or range of data that defines relative standing.kRequiredThe array or range of data that defines relative standing.",
         "usage_examples": []
     },
     {
-        "function": "PERCENTILE.INC function",
+        "function": "PERCENTILE.INC",
         "url": "https://support.microsoft.com/en-us/office/percentile-inc-function-680f9539-45eb-410b-9a5e-c1355e5fe2ed",
         "short_summary": "Returns the k-th percentile of values in a range",
         "syntax_guide": "PERCENTILE.INC(array,k)\n\nThe PERCENTILE.INC function syntax has the following arguments:\n\nArrayRequired. The array or range of data that defines relative standing.KRequired. The percentile value in the range 0 to 1, inclusive.",
@@ -753,7 +753,7 @@
         ]
     },
     {
-        "function": "PERCENTRANK.EXC function",
+        "function": "PERCENTRANK.EXC",
         "url": "https://support.microsoft.com/en-us/office/percentrank-exc-function-d8afee96-b7e2-4a2f-8c01-8fcdedaa6314",
         "short_summary": "Returns the rank of a value in a data set as a percentage (0 to 1, exclusive) of the data set",
         "syntax_guide": "PERCENTRANK.EXC(array,x,[significance])\n\nThe PERCENTRANK.EXC function syntax has the following arguments:\n\nArrayRequired. The array or range of data with numeric values that defines relative standingXRequired. The value for which you want to know the rank.SignificanceOptional. A value that identifies the number of significant digits for the returned percentage value. If omitted, PERCENTRANK.EXC uses three digits (0.xxx).",
@@ -763,7 +763,7 @@
         ]
     },
     {
-        "function": "PERCENTRANK.INC function",
+        "function": "PERCENTRANK.INC",
         "url": "https://support.microsoft.com/en-us/office/percentrank-inc-function-149592c9-00c0-49ba-86c1-c1f45b80463a",
         "short_summary": "Returns the percentage rank of a value in a data set",
         "syntax_guide": "PERCENTRANK.INC(array,x,[significance])\n\nThe PERCENTRANK.INC function syntax has the following arguments:\n\nArrayRequired. The array or range of data with numeric values that defines relative standing.XRequired. The value for which you want to know the rank.SignificanceOptional. A value that identifies the number of significant digits for the returned percentage value. If omitted, PERCENTRANK.INC uses three digits (0.xxx).",
@@ -773,7 +773,7 @@
         ]
     },
     {
-        "function": "PERMUT function",
+        "function": "PERMUT",
         "url": "https://support.microsoft.com/en-us/office/permut-function-3bd1cb9a-2880-41ab-a197-f246a7a602d3",
         "short_summary": "Returns the number of permutations for a given number of objects",
         "syntax_guide": "PERMUT(number, number_chosen)\n\nThe PERMUT function syntax has the following arguments:\n\nNumberRequired. An integer that describes the number of objects.Number_chosenRequired. An integer that describes the number of objects in each permutation.",
@@ -783,7 +783,7 @@
         ]
     },
     {
-        "function": "PERMUTATIONA function",
+        "function": "PERMUTATIONA",
         "url": "https://support.microsoft.com/en-us/office/permutationa-function-6c7d7fdc-d657-44e6-aa19-2857b25cae4e",
         "short_summary": "Returns the number of permutations for a given number of objects (with repetitions) that can be selected from the total objects",
         "syntax_guide": "PERMUTATIONA(number, number-chosen)\n\nThe PERMUTATIONA function syntax has the following arguments:\n\nNumberRequired. An integer that describes the total number of objects.Number_chosenRequired. An integer that describes the number of objects in each permutation.\n\nPERMUTATIONA uses the following equation:",
@@ -794,7 +794,7 @@
         ]
     },
     {
-        "function": "PHI function",
+        "function": "PHI",
         "url": "https://support.microsoft.com/en-us/office/phi-function-23e49bc6-a8e8-402d-98d3-9ded87f6295c",
         "short_summary": "Returns the value of the density function for a standard normal distribution",
         "syntax_guide": "PHI(x)\n\nThe PHI function syntax has the following arguments.\n\nXRequired. X is the number for which you want the density of the standard normal distribution.",
@@ -805,7 +805,7 @@
         ]
     },
     {
-        "function": "POISSON.DIST function",
+        "function": "POISSON.DIST",
         "url": "https://support.microsoft.com/en-us/office/poisson-dist-function-8fe148ff-39a2-46cb-abf3-7772695d9636",
         "short_summary": "Returns the Poisson distribution",
         "syntax_guide": "POISSON.DIST(x,mean,cumulative)\n\nThe POISSON.DIST function syntax has the following arguments:\n\nXRequired. The number of events.MeanRequired. The expected numeric value.CumulativeRequired. A logical value that determines the form of the probability distribution returned. If cumulative is TRUE, POISSON.DIST returns the cumulative Poisson probability that the number of random events occurring will be between zero and x inclusive; if FALSE, it returns the Poisson probability mass function that the number of events occurring will be exactly x.",
@@ -815,7 +815,7 @@
         ]
     },
     {
-        "function": "PROB function",
+        "function": "PROB",
         "url": "https://support.microsoft.com/en-us/office/prob-function-9ac30561-c81c-4259-8253-34f0a238fc49",
         "short_summary": "Returns the probability that values in a range are between two limits",
         "syntax_guide": "PROB(x_range, prob_range, [lower_limit], [upper_limit])\n\nThe PROB function syntax has the following arguments:\n\nX_rangeRequired. The range of numeric values of x with which there are associated probabilities.Prob_rangeRequired. A set of probabilities associated with values in x_range.Lower_limitOptional. The lower bound on the value for which you want a probability.Upper_limitOptional. The optional upper bound on the value for which you want a probability.",
@@ -825,7 +825,7 @@
         ]
     },
     {
-        "function": "QUARTILE.EXC function",
+        "function": "QUARTILE.EXC",
         "url": "https://support.microsoft.com/en-us/office/quartile-exc-function-5a355b7a-840b-4a01-b0f1-f538c2864cad",
         "short_summary": "Returns the quartile of the data set, based on percentile values from 0 to 1, exclusive",
         "syntax_guide": "QUARTILE.EXC(array, quart)\n\nThe QUARTILE.EXC function syntax has the following arguments:\n\nArrayRequired. The array or cell range of numeric values for which you want the quartile value.QuartRequired. Indicates which value to return.",
@@ -835,7 +835,7 @@
         ]
     },
     {
-        "function": "QUARTILE.INC function",
+        "function": "QUARTILE.INC",
         "url": "https://support.microsoft.com/en-us/office/quartile-inc-function-1bbacc80-5075-42f1-aed6-47d735c4819d",
         "short_summary": "Returns the quartile of a data set",
         "syntax_guide": "QUARTILE.INC(array,quart)\n\nThe QUARTILE.INC function syntax has the following arguments:\n\nArrayRequired. The array or cell range of numeric values for which you want the quartile value.QuartRequired. Indicates which value to return.",
@@ -845,7 +845,7 @@
         ]
     },
     {
-        "function": "RANK.AVG function",
+        "function": "RANK.AVG",
         "url": "https://support.microsoft.com/en-us/office/rank-avg-function-bd406a6f-eb38-4d73-aa8e-6d1c3c72e83a",
         "short_summary": "Returns the rank of a number in a list of numbers",
         "syntax_guide": "RANK.AVG(number,ref,[order])\n\nThe RANK.AVG function syntax has the following arguments:\n\nNumberRequired. The number whose rank you want to find.RefRequired. An array of, or a reference to, a list of numbers. Nonnumeric values in Ref are ignored.OrderOptional. A number specifying how to rank number.",
@@ -855,7 +855,7 @@
         ]
     },
     {
-        "function": "RANK.EQ function",
+        "function": "RANK.EQ",
         "url": "https://support.microsoft.com/en-us/office/rank-eq-function-284858ce-8ef6-450e-b662-26245be04a40",
         "short_summary": "Returns the rank of a number in a list of numbers",
         "syntax_guide": "RANK.EQ(number,ref,[order])\n\nThe RANK.EQ function syntax has the following arguments:\n\nNumberRequired. The number whose rank you want to find.RefRequired. An array of, or a reference to, a list of numbers. Non-numeric values in Ref are ignored.OrderOptional. A number specifying how to rank number.",
@@ -865,7 +865,7 @@
         ]
     },
     {
-        "function": "RSQ function",
+        "function": "RSQ",
         "url": "https://support.microsoft.com/en-us/office/rsq-function-d7161715-250d-4a01-b80d-a8364f2be08f",
         "short_summary": "Returns the square of the Pearson product moment correlation coefficient",
         "syntax_guide": "RSQ(known_y's,known_x's)\n\nThe RSQ function syntax has the following arguments:\n\nKnown_y'sRequired. An array or range of data points.Known_x'sRequired. An array or range of data points.",
@@ -875,7 +875,7 @@
         ]
     },
     {
-        "function": "SKEW function",
+        "function": "SKEW",
         "url": "https://support.microsoft.com/en-us/office/skew-function-bdf49d86-b1ef-4804-a046-28eaea69c9fa",
         "short_summary": "Returns the skewness of a distribution",
         "syntax_guide": "SKEW(number1, [number2], ...)\n\nThe SKEW function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate skewness. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -885,7 +885,7 @@
         ]
     },
     {
-        "function": "SKEW.P function",
+        "function": "SKEW.P",
         "url": "https://support.microsoft.com/en-us/office/skew-p-function-76530a5c-99b9-48a1-8392-26632d542fcb",
         "short_summary": "Returns the skewness of a distribution based on a population: a characterization of the degree of asymmetry of a distribution around its mean",
         "syntax_guide": "SKEW.P(number 1, [number 2],…)\n\nThe SKEW.P function syntax has the following arguments.\n\nNumber 1, number 2,…Number 1 is required, subsequent numbers are optional. Number 1, number 2,… are 1 to 254 numbers or names, arrays, or reference that contain numbers for which you want the population skewness.\n\nSKEW.P uses the following equation:",
@@ -896,7 +896,7 @@
         ]
     },
     {
-        "function": "SLOPE function",
+        "function": "SLOPE",
         "url": "https://support.microsoft.com/en-us/office/slope-function-11fb8f97-3117-4813-98aa-61d7e01276b9",
         "short_summary": "Returns the slope of the linear regression line",
         "syntax_guide": "SLOPE(known_y's, known_x's)\n\nThe SLOPE function syntax has the following arguments:\n\nKnown_y'sRequired. An array or cell range of numeric dependent data points.Known_x'sRequired. The set of independent data points.",
@@ -906,7 +906,7 @@
         ]
     },
     {
-        "function": "SMALL function",
+        "function": "SMALL",
         "url": "https://support.microsoft.com/en-us/office/small-function-17da8222-7c82-42b2-961b-14c45384df07",
         "short_summary": "Returns the k-th smallest value in a data set",
         "syntax_guide": "SMALL(array, k)\n\nThe SMALL function syntax has the following arguments:\n\nArrayRequired. An array or range of numerical data for which you want to determine the k-th smallest value.KRequired. The position (from the smallest) in the array or range of data to return.",
@@ -916,7 +916,7 @@
         ]
     },
     {
-        "function": "STANDARDIZE function",
+        "function": "STANDARDIZE",
         "url": "https://support.microsoft.com/en-us/office/standardize-function-81d66554-2d54-40ec-ba83-6437108ee775",
         "short_summary": "Returns a normalized value",
         "syntax_guide": "STANDARDIZE(x, mean, standard_dev)\n\nThe STANDARDIZE function syntax has the following arguments:\n\nXRequired. The value you want to normalize.MeanRequired. The arithmetic mean of the distribution.Standard_devRequired. The standard deviation of the distribution.",
@@ -926,7 +926,7 @@
         ]
     },
     {
-        "function": "STDEV.P function",
+        "function": "STDEV.P",
         "url": "https://support.microsoft.com/en-us/office/stdev-p-function-6e917c05-31a0-496f-ade7-4f4e7462f285",
         "short_summary": "Calculates standard deviation based on the entire population",
         "syntax_guide": "STDEV.P(number1,[number2],...)\n\nThe STDEV.P function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a population.Number2, ...Optional. Number arguments 2 to 254 corresponding to a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -936,7 +936,7 @@
         ]
     },
     {
-        "function": "STDEV.S function",
+        "function": "STDEV.S",
         "url": "https://support.microsoft.com/en-us/office/stdev-s-function-7d69cf97-0c1f-4acf-be27-f3e83904cc23",
         "short_summary": "Estimates standard deviation based on a sample",
         "syntax_guide": "STDEV.S(number1,[number2],...)\n\nThe STDEV.S function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.Number2, ...Optional. Number arguments 2 to 254 corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -946,7 +946,7 @@
         ]
     },
     {
-        "function": "STDEVA function",
+        "function": "STDEVA",
         "url": "https://support.microsoft.com/en-us/office/stdeva-function-5ff38888-7ea5-48de-9a6d-11ed73b29e9d",
         "short_summary": "Estimates standard deviation based on a sample, including numbers, text, and logical values",
         "syntax_guide": "STDEVA(value1, [value2], ...)\n\nThe STDEVA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 values corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -956,7 +956,7 @@
         ]
     },
     {
-        "function": "STDEVPA function",
+        "function": "STDEVPA",
         "url": "https://support.microsoft.com/en-us/office/stdevpa-function-5578d4d6-455a-4308-9991-d405afe2c28c",
         "short_summary": "Calculates standard deviation based on the entire population, including numbers, text, and logical values",
         "syntax_guide": "STDEVPA(value1, [value2], ...)\n\nThe STDEVPA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 values corresponding to a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
@@ -966,7 +966,7 @@
         ]
     },
     {
-        "function": "STEYX function",
+        "function": "STEYX",
         "url": "https://support.microsoft.com/en-us/office/steyx-function-6ce74b2c-449d-4a6e-b9ac-f9cef5ba48ab",
         "short_summary": "Returns the standard error of the predicted y-value for each x in the regression",
         "syntax_guide": "STEYX(known_y's, known_x's)\n\nThe STEYX function syntax has the following arguments:\n\nKnown_y'sRequired. An array or range of dependent data points.Known_x'sRequired. An array or range of independent data points.",
@@ -976,7 +976,7 @@
         ]
     },
     {
-        "function": "T.DIST function",
+        "function": "T.DIST",
         "url": "https://support.microsoft.com/en-us/office/t-dist-function-4329459f-ae91-48c2-bba8-1ead1c6c21b2",
         "short_summary": "Returns the Percentage Points (probability) for the Student t-distribution",
         "syntax_guide": "T.DIST(x,deg_freedom, cumulative)\n\nThe T.DIST function syntax has the following arguments:\n\nXRequired. The numeric value at which to evaluate the distributionDeg_freedomRequired. An integer indicating the number of degrees of freedom.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, T.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
@@ -987,7 +987,7 @@
         ]
     },
     {
-        "function": "T.DIST.2T function",
+        "function": "T.DIST.2T",
         "url": "https://support.microsoft.com/en-us/office/t-dist-2t-function-198e9340-e360-4230-bd21-f52f22ff5c28",
         "short_summary": "Returns the Percentage Points (probability) for the Student t-distribution",
         "syntax_guide": "T.DIST.2T(x,deg_freedom)\n\nThe T.DIST.2T function syntax has the following arguments:\n\nXRequired. The numeric value at which to evaluate the distribution.Deg_freedomRequired. An integer indicating the number of degrees of freedom.",
@@ -997,7 +997,7 @@
         ]
     },
     {
-        "function": "T.DIST.RT function",
+        "function": "T.DIST.RT",
         "url": "https://support.microsoft.com/en-us/office/t-dist-rt-function-20a30020-86f9-4b35-af1f-7ef6ae683eda",
         "short_summary": "Returns the Student's t-distribution",
         "syntax_guide": "T.DIST.RT(x,deg_freedom)\n\nThe T.DIST.RT function syntax has the following arguments:\n\nXRequired. The numeric value at which to evaluate the distribution.Deg_freedomRequired. An integer indicating the number of degrees of freedom.",
@@ -1007,7 +1007,7 @@
         ]
     },
     {
-        "function": "T.INV function",
+        "function": "T.INV",
         "url": "https://support.microsoft.com/en-us/office/t-inv-function-2908272b-4e61-4942-9df9-a25fec9b0e2e",
         "short_summary": "Returns the t-value of the Student's t-distribution as a function of the probability and the degrees of freedom",
         "syntax_guide": "T.INV(probability,deg_freedom)\n\nThe T.INV function syntax has the following arguments:\n\nProbabilityRequired. The probability associated with the Student's t-distribution.Deg_freedomRequired. The number of degrees of freedom with which to characterize the distribution.",
@@ -1017,7 +1017,7 @@
         ]
     },
     {
-        "function": "T.INV.2T function",
+        "function": "T.INV.2T",
         "url": "https://support.microsoft.com/en-us/office/t-inv-2t-function-ce72ea19-ec6c-4be7-bed2-b9baf2264f17",
         "short_summary": "Returns the inverse of the Student's t-distribution",
         "syntax_guide": "T.INV.2T(probability,deg_freedom)\n\nThe T.INV.2T function syntax has the following arguments:\n\nProbabilityRequired. The probability associated with the Student's t-distribution.Deg_freedomRequired. The number of degrees of freedom with which to characterize the distribution.",
@@ -1027,7 +1027,7 @@
         ]
     },
     {
-        "function": "T.TEST function",
+        "function": "T.TEST",
         "url": "https://support.microsoft.com/en-us/office/t-test-function-d4e08ec3-c545-485f-962e-276f7cbed055",
         "short_summary": "Returns the probability associated with a Student's t-test",
         "syntax_guide": "T.TEST(array1,array2,tails,type)\n\nThe T.TEST function syntax has the following arguments:\n\nArray1Required. The first data set.Array2Required. The second data set.TailsRequired. Specifies the number of distribution tails. If tails = 1, T.TEST uses the one-tailed distribution. If tails = 2, T.TEST uses the two-tailed distribution.TypeRequired. The kind of t-Test to perform.",
@@ -1037,14 +1037,14 @@
         ]
     },
     {
-        "function": "TREND function",
+        "function": "TREND",
         "url": "https://support.microsoft.com/en-us/office/trend-function-e2f135f0-8827-4096-9873-9a7cf7b51ef1",
         "short_summary": "Returns values along a linear trend",
         "syntax_guide": "=TREND(known_y's, [known_x's], [new_x's], [const])The TREND function syntax has the following arguments:ArgumentDescriptionknown_y'sRequiredThe set of y-values you already know in the relationship y = mx + bIf the array known_y's is in a single column, then each column of known_x's is interpreted as a separate variable.If the array known_y's is in a single row, then each row of known_x's is interpreted as a separate variable.known_x'sOptionalAn optional set of x-values that you may already know in the relationship y = mx + bThe array known_x's can include one or more sets of variables. If only one variable is used, known_y's and known_x's can be ranges of any shape, as long as they have equal dimensions. If more than one variable is used, known_y's must be a vector (that is, a range with a height of one row or a width of one column).If known_x's is omitted, it is assumed to be the array {1,2,3,...} that is the same size as known_y's.new_x'sOptionalNew x-values for which you want TREND to return corresponding y-valuesNew_x's must include a column (or row) for each independent variable, just as known_x's does. So, if known_y's is in a single column, known_x's and new_x's must have the same number of columns. If known_y's is in a single row, known_x's and new_x's must have the same number of rows.If you omit new_x's, it is assumed to be the same as known_x's.If you omit both known_x's and new_x's, they are assumed to be the array {1,2,3,...} that is the same size as known_y's.constOptionalA logical value specifying whether to force the constant b to equal 0If const is TRUE or omitted, b is calculated normally.If const is FALSE, b is set equal to 0 (zero), and the m-values are adjusted so that y = mx.",
         "usage_examples": []
     },
     {
-        "function": "TRIMMEAN function",
+        "function": "TRIMMEAN",
         "url": "https://support.microsoft.com/en-us/office/trimmean-function-d90c9878-a119-4746-88fa-63d988f511d3",
         "short_summary": "Returns the mean of the interior of a data set",
         "syntax_guide": "TRIMMEAN(array, percent)\n\nThe TRIMMEAN function syntax has the following arguments:\n\nArrayRequired. The array or range of values to trim and average.PercentRequired. The fractional number of data points to exclude from the calculation. For example, if percent = 0.2, 4 points are trimmed from a data set of 20 points (20 x 0.2): 2 from the top and 2 from the bottom of the set.",
@@ -1054,7 +1054,7 @@
         ]
     },
     {
-        "function": "VAR.P function",
+        "function": "VAR.P",
         "url": "https://support.microsoft.com/en-us/office/var-p-function-73d1285c-108c-4843-ba5d-a51f90656f3a",
         "short_summary": "Calculates variance based on the entire population",
         "syntax_guide": "VAR.P(number1,[number2],...)\n\nThe VAR.P function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a population.Number2, ...Optional. Number arguments 2 to 254 corresponding to a population.",
@@ -1064,7 +1064,7 @@
         ]
     },
     {
-        "function": "VAR.S function",
+        "function": "VAR.S",
         "url": "https://support.microsoft.com/en-us/office/var-s-function-913633de-136b-449d-813e-65a00b2b990b",
         "short_summary": "Estimates variance based on a sample",
         "syntax_guide": "VAR.S(number1,[number2],...)\n\nThe VAR.S function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a sample of a population.Number2, ...Optional. Number arguments 2 to 254 corresponding to a sample of a population.",
@@ -1074,7 +1074,7 @@
         ]
     },
     {
-        "function": "VARA function",
+        "function": "VARA",
         "url": "https://support.microsoft.com/en-us/office/vara-function-3de77469-fa3a-47b4-85fd-81758a1e1d07",
         "short_summary": "Estimates variance based on a sample, including numbers, text, and logical values",
         "syntax_guide": "VARA(value1, [value2], ...)\n\nThe VARA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 value arguments corresponding to a sample of a population.",
@@ -1084,7 +1084,7 @@
         ]
     },
     {
-        "function": "VARPA function",
+        "function": "VARPA",
         "url": "https://support.microsoft.com/en-us/office/varpa-function-59a62635-4e89-4fad-88ac-ce4dc0513b96",
         "short_summary": "Calculates variance based on the entire population, including numbers, text, and logical values",
         "syntax_guide": "VARPA(value1, [value2], ...)\n\nThe VARPA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 value arguments corresponding to a population.",
@@ -1094,7 +1094,7 @@
         ]
     },
     {
-        "function": "WEIBULL.DIST function",
+        "function": "WEIBULL.DIST",
         "url": "https://support.microsoft.com/en-us/office/weibull-dist-function-4e783c39-9325-49be-bbc9-a83ef82b45db",
         "short_summary": "Returns the Weibull distribution",
         "syntax_guide": "WEIBULL.DIST(x,alpha,beta,cumulative)\n\nThe WEIBULL.DIST function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.AlphaRequired. A parameter to the distribution.BetaRequired. A parameter to the distribution.CumulativeRequired. Determines the form of the function.",
@@ -1104,7 +1104,7 @@
         ]
     },
     {
-        "function": "Z.TEST function",
+        "function": "Z.TEST",
         "url": "https://support.microsoft.com/en-us/office/z-test-function-d633d5a3-2031-4614-a016-92180ad82bee",
         "short_summary": "Returns the one-tailed probability-value of a z-test",
         "syntax_guide": "Z.TEST(array,x,[sigma])\n\nThe Z.TEST function syntax has the following arguments:\n\nArrayRequired. The array or range of data against which to test x.xRequired. The value to test.SigmaOptional. The population (known) standard deviation. If omitted, the sample standard deviation is used.",
