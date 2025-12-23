@@ -1,0 +1,1116 @@
+[
+    {
+        "function": "AVEDEV function",
+        "url": "https://support.microsoft.com/en-us/office/avedev-function-58fe8d65-2a84-4dc7-8052-f3f87b5c6639",
+        "short_summary": "Returns the average of the absolute deviations of data points from their mean",
+        "syntax_guide": "AVEDEV(number1, [number2], ...)\n\nThe AVEDEV function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want the average of the absolute deviations. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description\n4 | Average of the absolute deviations of the numbers in cells A2:A8 from their mean (1.020408)\n5 | \n6 | \n7 | \n5 | \n4 | \n3 | \nFormula | Result\n=AVEDEV(A2:A8) | 1.020408"
+        ]
+    },
+    {
+        "function": "AVERAGE function",
+        "url": "https://support.microsoft.com/en-us/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6",
+        "short_summary": "Returns the average of its arguments",
+        "syntax_guide": "AVERAGE(number1, [number2], ...)\n\nThe AVERAGE function syntax has the following arguments:\n\nNumber1Required. The first number, cell reference, or range for which you want the average.Number2, ...Optional. Additional numbers, cell references or ranges for which you want the average, up to a maximum of 255.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n10 | 15 | 32\n7 |  | \n9 |  | \n27 |  | \n2 |  | \nFormula | Description | Result\n=AVERAGE(A2:A6) | Average of the numbers in cells A2 through A6. | 11\n=AVERAGE(A2:A6, 5) | Average of the numbers in cells A2 through A6 and the number 5. | 10\n=AVERAGE(A2:C2) | Average of the numbers in cells A2 through C2. | 19"
+        ]
+    },
+    {
+        "function": "AVERAGEA function",
+        "url": "https://support.microsoft.com/en-us/office/averagea-function-f5f84098-d453-4f4c-bbba-3d2c66356091",
+        "short_summary": "Returns the average of its arguments, including numbers, text, and logical values",
+        "syntax_guide": "AVERAGEA(value1, [value2], ...)\n\nThe AVERAGEA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 cells, ranges of cells, or values for which you want the average.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n10 |  | \n7 |  | \n9 |  | \n2 |  | \nNot available |  | \nFormula | Description | Result\n=AVERAGEA(A2:A6) | Average of the numbers above, and the text \"Not Available\". The cell with the text \"Not available\" is used in the calculation. | 5.6\n=AVERAGEA(A2:A5,A7) | Average of the numbers above, and the empty cell. | 5.6"
+        ]
+    },
+    {
+        "function": "AVERAGEIF function",
+        "url": "https://support.microsoft.com/en-us/office/averageif-function-faec8e2e-0dec-4308-af69-f5576d8ac642",
+        "short_summary": "Returns the average (arithmetic mean) of all the cells in a range that meet a given criteria",
+        "syntax_guide": "AVERAGEIF(range, criteria, [average_range])\n\nThe AVERAGEIF function syntax has the following arguments:\n\nRangeRequired. One or more cells to average, including numbers or names, arrays, or references that contain numbers.CriteriaRequired. The criteria in the form of a number, expression, cell reference, or text that defines which cells are averaged. For example, criteria can be expressed as 32, \"32\", \">32\", \"apples\", or B4.Average_rangeOptional. The actual set of cells to average. If omitted, range is used.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nProperty Value | Commission | \n100000 | 7000 | \n200000 | 14000 | \n300000 | 21000 | \n400000 | 28000 | \nFormula | Description | Result\n=AVERAGEIF(B2:B5,\"<23000\") | Average of all commissions less than 23000. Three of the four commissions meet this condition, and their total is 42000. | 14000\n=AVERAGEIF(A2:A5,\"<250000\") | Average of all property values less than 250000. Two of the four property values meet this condition, and their total is 300000. | 150000\n=AVERAGEIF(A2:A5,\"<95000\") | Average of all property values less than 95000. Because there are 0 property values that meet this condition, the AVERAGEIF function returns the #DIV/0! error because it tries to divide by 0. | #DIV/0!\n=AVERAGEIF(A2:A5,\">250000\",B2:B5) | Average of all commissions with a property value greater than 250000. Two commissions meet this condition, and their total is 49000. | 24500",
+            "Example 2RegionProfits (Thousands)East45678West23789North-4789South (New Office)0MidWest9678FormulaDescriptionResult=AVERAGEIF(A2:A6,\"=*West\",B2:B6)Average of all profits for the West and MidWest regions.16733.5=AVERAGEIF(A2:A6,\"<>*(New Office)\",B2:B6)Average of all profits for all regions excluding new offices.18589"
+        ]
+    },
+    {
+        "function": "AVERAGEIFS function",
+        "url": "https://support.microsoft.com/en-us/office/averageifs-function-48910c45-1fc0-4389-a028-f7c5c3001690",
+        "short_summary": "Returns the average (arithmetic mean) of all cells that meet multiple criteria",
+        "syntax_guide": "AVERAGEIFS(average_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)\n\nThe AVERAGEIFS function syntax has the following arguments:\n\nAverage_rangeRequired. One or more cells to average, including numbers or names, arrays, or references that contain numbers.Criteria_range1, criteria_range2, …Criteria_range1 is required, subsequent criteria_ranges are optional. 1 to 127 ranges in which to evaluate the associated criteria.Criteria1, criteria2, ...Criteria1 is required, subsequent criteria are optional. 1 to 127 criteria in the form of a number, expression, cell reference, or text that define which cells will be averaged. For example, criteria can be expressed as 32, \"32\", \">32\", \"apples\", or B4.",
+        "usage_examples": [
+            "Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nStudent | First | Second | Final\n | Quiz | Quiz | Exam\n | Grade | Grade | Grade\nEmilio | 75 | 85 | 87\nJulie | 94 | 80 | 88\nHans | 86 | 93 | Incomplete\nFrederique | Incomplete | 75 | 75\nFormula | Description | Result | \n=AVERAGEIFS(B2:B5, B2:B5, \">70\", B2:B5, \"<90\") | Average first quiz grade that falls between 70 and 90 for all students (80.5). The score marked \"Incomplete\" is not included in the calculation because it is not a numerical value. | 75 | \n=AVERAGEIFS(C2:C5, C2:C5, \">95\") | Average second quiz grade that is greater than 95 for all students. Because there are no scores greater than 95, #DIV0! is returned. | #DIV/0! | \n=AVERAGEIFS(D2:D5, D2:D5, \"<>Incomplete\", D2:D5, \">80\") | Average final exam grade that is greater than 80 for all students (87.5). The score marked \"Incomplete\" is not included in the calculation because it is not a numerical value. | 87.5 | ",
+            "Example 2TypePriceTownNumber of BedroomsGarage?Cozy Rambler230000Issaquah3NoSnug Bungalow197000Bellevue2YesCool Cape Codder345678Bellevue4YesSplendid Split Level321900Issaquah2YesExclusive Tudor450000Bellevue5YesClassy Colonial395000Bellevue4NoFormulaDescriptionResult=AVERAGEIFS(B2:B7, C2:C7, \"Bellevue\", D2:D7, \">2\",E2:E7, \"Yes\")Average price of a home in Bellevue that has at least 3 bedrooms and a garage397839=AVERAGEIFS(B2:B7, C2:C7, \"Issaquah\", D2:D7, \"<=3\",E2:E7, \"No\")Average price of a home in Issaquah that has up to 3 bedrooms and no garage230000"
+        ]
+    },
+    {
+        "function": "BETA.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/beta-dist-function-11188c9c-780a-42c7-ba43-9ecb5a878d31",
+        "short_summary": "Returns the beta cumulative distribution function",
+        "syntax_guide": "BETA.DIST(x,alpha,beta,cumulative,[A],[B])\n\nThe BETA.DIST function syntax has the following arguments:\n\nXRequired. The value between A and B at which to evaluate the functionAlphaRequired. A parameter of the distribution.BetaRequired. A parameter of the distribution.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, BETA.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.AOptional. A lower bound to the interval of x.BOptional. An upper bound to the interval of x.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n2 | Value at which to evaluate the function | \n8 | Parameter of the distribution | \n10 | Parameter of the distribution | \n1 | Lower bound | \n3 | Upper bound | \nFormula | Description | Result\n=BETA.DIST(A2,A3,A4,TRUE,A5,A6) | Cumulative beta probability density function, for the above parameters | 0.6854706\n=BETA.DIST(A2,A3,A4,FALSE,A5,A6) | Beta probability density function, for the above parameters | 1.4837646"
+        ]
+    },
+    {
+        "function": "BETA.INV function",
+        "url": "https://support.microsoft.com/en-us/office/beta-inv-function-e84cb8aa-8df0-4cf6-9892-83a341d252eb",
+        "short_summary": "Returns the inverse of the cumulative distribution function for a specified beta distribution",
+        "syntax_guide": "BETA.INV(probability,alpha,beta,[A],[B])\n\nThe BETA.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the beta distribution.AlphaRequired. A parameter of the distribution.BetaRequired. A parameter the distribution.AOptional. A lower bound to the interval of x.BOptional. An upper bound to the interval of x.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.685470581 | Probability associated with the beta distribution | \n8 | Parameter of the distribution | \n10 | Parameter of the distribution | \n1 | Lower bound | \n3 | Upper bound | \nFormula | Description | Result\n=BETA.INV(A2,A3,A4,A5,A6) | Inverse of the cumulative beta probability density function for the parameters above. | 2"
+        ]
+    },
+    {
+        "function": "BINOM.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/binom-dist-function-c5ae37b6-f39c-4be2-94c2-509a1480770c",
+        "short_summary": "Returns the individual term binomial distribution probability",
+        "syntax_guide": "BINOM.DIST(number_s,trials,probability_s,cumulative)\n\nThe BINOM.DIST function syntax has the following arguments:\n\nNumber_sRequired. The number of successes in trials.TrialsRequired. The number of independent trials.Probability_sRequired. The probability of success on each trial.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, then BINOM.DIST returns the cumulative distribution function, which is the probability that there are at most number_s successes; if FALSE, it returns the probability mass function, which is the probability that there are number_s successes.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n6 | Number of successes in trials | \n10 | Number of independent trials | \n0.5 | Probability of success on each trial | \nFormula | Description | Result\n=BINOM.DIST(A2,A3,A4,FALSE) | Probability of exactly 6 of 10 trials being successful. | 0.2050781"
+        ]
+    },
+    {
+        "function": "BINOM.DIST.RANGE function",
+        "url": "https://support.microsoft.com/en-us/office/binom-dist-range-function-17331329-74c7-4053-bb4c-6653a7421595",
+        "short_summary": "Returns the probability of a trial result using a binomial distribution",
+        "syntax_guide": "BINOM.DIST.RANGE(trials,probability_s,number_s,[number_s2])\n\nThe BINOM.DIST.RANGE function syntax has the following arguments.\n\nTrialsRequired. The number of independent trials. Must be greater than or equal to 0.Probability_sRequired. The probability of success in each trial. Must be greater than or equal to 0 and less than or equal to 1.Number_sRequired. The number of successes in trials. Must be greater than or equal to 0 and less than or equal to Trials.Number_s2Optional. If provided, returns the probability that the number of successful trials will fall between Number_s and number_s2. Must be greater than or equal to Number_s and less than or equal to Trials.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=BINOM.DIST.RANGE(60,0.75,48) | Returns the binomial distribution based on the probability of 48 successes in 60 trials and a 75% probability of success (0.084, or 8.4%). | 0.084\n |  | \n=BINOM.DIST.RANGE(60,0.75,45,50) | Returns the binomial distribution based on the probability of between 45 and 50 successes (inclusive) in 60 trials and a 75% probability of success (0.524, or 52.4%). | 0.524",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "BINOM.INV function",
+        "url": "https://support.microsoft.com/en-us/office/binom-inv-function-80a0370c-ada6-49b4-83e7-05a91ba77ac9",
+        "short_summary": "Returns the smallest value for which the cumulative binomial distribution is less than or equal to a criterion value",
+        "syntax_guide": "BINOM.INV(trials,probability_s,alpha)\n\nThe BINOM.INV function syntax has the following arguments:\n\nTrialsRequired. The number of Bernoulli trials.Probability_sRequired. The probability of a success on each trial.AlphaRequired. The criterion value.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n6 | Number of Bernoulli trials | \n0.5 | Probability of a success on each trial | \n0.75 | Criterion value | \nFormula | Description | Result\n=BINOM.INV(A2,A3,A4) | Smallest value for which the cumulative binomial distribution is greater than or equal to a criterion value. | 4"
+        ]
+    },
+    {
+        "function": "CHISQ.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/chisq-dist-function-8486b05e-5c05-4942-a9ea-f6b341518732",
+        "short_summary": "Returns the cumulative beta probability density function",
+        "syntax_guide": "CHISQ.DIST(x,deg_freedom,cumulative)\n\nThe CHISQ.DIST function syntax has the following arguments:\n\nXRequired. The value at which you want to evaluate the distribution.Deg_freedomRequired. The number of degrees of freedom.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, CHISQ.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=CHISQ.DIST(0.5,1,TRUE) | The chi-squared distribution for 0.5, returned as the cumulative distribution function, using 1 degree of freedom. | 0.52049988\n=CHISQ.DIST(2,3,FALSE) | The chi-squared distribution for 2, returned as the probability density function, using 3 degrees of freedom. | 0.20755375"
+        ]
+    },
+    {
+        "function": "CHISQ.DIST.RT function",
+        "url": "https://support.microsoft.com/en-us/office/chisq-dist-rt-function-dc4832e8-ed2b-49ae-8d7c-b28d5804c0f2",
+        "short_summary": "Returns the one-tailed probability of the chi-squared distribution",
+        "syntax_guide": "CHISQ.DIST.RT(x,deg_freedom)\n\nThe CHISQ.DIST.RT function syntax has the following arguments:\n\nXRequired. The value at which you want to evaluate the distribution.Deg_freedomRequired. The number of degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n18.307 | Value at which you want to evaluate the distribution | \n10 | Degrees of freedom | \nFormula | Description | Result\n=CHISQ.DIST.RT(A2,A3) | One-tailed probability of the chi-squared distribution, for the arguments specified in A2 and A3. | 0.0500006"
+        ]
+    },
+    {
+        "function": "CHISQ.INV function",
+        "url": "https://support.microsoft.com/en-us/office/chisq-inv-function-400db556-62b3-472d-80b3-254723e7092f",
+        "short_summary": "Returns the cumulative beta probability density function",
+        "syntax_guide": "CHISQ.INV(probability,deg_freedom)\n\nThe CHISQ.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the chi-squared distribution.Deg_freedomRequired. The number of degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=CHISQ.INV(0.93,1) | Inverse of the left-tailed probability of the chi-squared distribution for 0.93, using 1 degree of freedom. | 3.283020286\n=CHISQ.INV(0.6,2) | Inverse of the left-tailed probability of the chi-squared distribution for 0.6, using 2 degrees of freedom. | 1.832581464",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "CHISQ.INV.RT function",
+        "url": "https://support.microsoft.com/en-us/office/chisq-inv-rt-function-435b5ed8-98d5-4da6-823f-293e2cbc94fe",
+        "short_summary": "Returns the inverse of the one-tailed probability of the chi-squared distribution",
+        "syntax_guide": "CHISQ.INV.RT(probability,deg_freedom)\n\nThe CHISQ.INV.RT function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the chi-squared distribution.Deg_freedomRequired. The number of degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.050001 | Probability associated with the chi-squared distribution | \n10 | Degrees of freedom | \nFormula | Description | Result\n=CHISQ.INV.RT(A2,A3) | Inverse of the one-tailed probability of the chi-squared distribution | 18.306973"
+        ]
+    },
+    {
+        "function": "CHISQ.TEST function",
+        "url": "https://support.microsoft.com/en-us/office/chisq-test-function-2e8a7861-b14a-4985-aa93-fb88de3f260f",
+        "short_summary": "Returns the test for independence",
+        "syntax_guide": "CHISQ.TEST(actual_range,expected_range)\n\nThe CHISQ.TEST function syntax has the following arguments:\n\nActual_rangeRequired. The range of data that contains observations to test against expected values.Expected_rangeRequired. The range of data that contains the ratio of the product of row totals and column totals to the grand total.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nMen (Actual) | Women (Actual) | Description\n58 | 35 | Agree\n11 | 25 | Neutral\n10 | 23 | Disagree\nMen (Expected) | Women (Expected) | Description\n45.35 | 47.65 | Agree\n17.56 | 18.44 | Neutral\n16.09 | 16.91 | Disagree\nFormula | Description | Result\n=CHISQ.TEST(A2:B4,A6:B8) | The χ2 statistic for the data above is 16.16957 with 2 degrees of freedom | 0.0003082"
+        ]
+    },
+    {
+        "function": "CONFIDENCE.NORM function",
+        "url": "https://support.microsoft.com/en-us/office/confidence-norm-function-7cec58a6-85bb-488d-91c3-63828d4fbfd4",
+        "short_summary": "Returns the confidence interval for a population mean",
+        "syntax_guide": "CONFIDENCE.NORM(alpha,standard_dev,size)\n\nThe CONFIDENCE.NORM function syntax has the following arguments:\n\nAlphaRequired. The significance level used to compute the confidence level. The confidence level equals 100*(1 - alpha)%, or in other words, an alpha of 0.05 indicates a 95 percent confidence level.Standard_devRequired. The population standard deviation for the data range and is assumed to be known.SizeRequired. The sample size.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.05 | Significance level | \n2.5 | Standard deviation of the population | \n50 | Sample size | \nFormula | Description | Result\n=CONFIDENCE.NORM(A2,A3,A4) | Confidence interval for a population mean. In other words, the confidence interval for the underlying population mean for travel to work equals 30 ± 0.692952 minutes, or 29.3 to 30.7 minutes. | 0.692952"
+        ]
+    },
+    {
+        "function": "CONFIDENCE.T function",
+        "url": "https://support.microsoft.com/en-us/office/confidence-t-function-e8eca395-6c3a-4ba9-9003-79ccc61d3c53",
+        "short_summary": "Returns the confidence interval for a population mean, using a Student's t distribution",
+        "syntax_guide": "CONFIDENCE.T(alpha,standard_dev,size)\n\nThe CONFIDENCE.T function syntax has the following arguments:\n\nAlphaRequired. The significance level used to compute the confidence level. The confidence level equals 100*(1 - alpha)%, or in other words, an alpha of 0.05 indicates a 95 percent confidence level.Standard_devRequired. The population standard deviation for the data range and is assumed to be known.SizeRequired. The sample size.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=CONFIDENCE.T(0.05,1,50) | Confidence interval for the mean of a population based on a sample size of 50, with a 5% significance level and a standard deviation of 1. This is based on a Student's t-distribution. | 0.284196855"
+        ]
+    },
+    {
+        "function": "CORREL function",
+        "url": "https://support.microsoft.com/en-us/office/correl-function-995dcef7-0c0a-4bed-a3fb-239d7b68ca92",
+        "short_summary": "Returns the correlation coefficient between two data sets",
+        "syntax_guide": "CORREL(array1, array2)\n\nThe CORREL function syntax has the following arguments:\n\narray1Required. A range of cell values.array2Required. A second range of cell values.",
+        "usage_examples": [
+            "The following example returns the correlation coefficient of the two data sets in columns A and B."
+        ]
+    },
+    {
+        "function": "COUNT function",
+        "url": "https://support.microsoft.com/en-us/office/count-function-a59cd7fc-b623-4d93-87a4-d23bf411294c",
+        "short_summary": "Counts how many numbers are in the list of arguments",
+        "syntax_guide": "COUNT(value1, [value2], ...)\n\nThe COUNT function syntax has the following arguments:\n\nvalue1Required. The first item, cell reference, or range within which you want to count numbers.value2, ...Optional. Up to 255 additional items, cell references, or ranges within which you want to count numbers.\n\nNote:The arguments can contain or refer to a variety of different types of data, but only numbers are counted.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n12/8/08 |  | \n |  | \n19 |  | \n22.24 |  | \nTRUE |  | \n#DIV/0! |  | \nFormula | Description | Result\n=COUNT(A2:A6) | Counts the number of cells that contain numbers in cells A2 through A7. | 3\n=COUNT(A5:A6) | Counts the number of cells that contain numbers in cells A5 through A7. | 1\n=COUNT(A2:A6,2) | Counts the number of cells that contain numbers in cells A2 through A7, and the value 2 | 4"
+        ]
+    },
+    {
+        "function": "COUNTA function",
+        "url": "https://support.microsoft.com/en-us/office/counta-function-7dc98875-d5c1-46f1-9a82-53f3219e2509",
+        "short_summary": "Counts how many values are in the list of arguments",
+        "syntax_guide": "COUNTA(value1, [value2], ...)\n\nThe COUNTA function syntax has the following arguments:\n\nvalue1Required. The first argument representing the values that you want to count.value2, ...Optional. Additional arguments representing the values that you want to count, up to a maximum of 255 arguments.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n39790 |  | \n |  | \n19 |  | \n22.24 |  | \nTRUE |  | \n#DIV/0! |  | \nFormula | Description | Result\n=COUNTA(A2:A6) | Counts the number of nonblank cells in cells A2 through A6. | 5"
+        ]
+    },
+    {
+        "function": "COUNTBLANK function",
+        "url": "https://support.microsoft.com/en-us/office/countblank-function-6a92d772-675c-4bee-b346-24af6bd3ac22",
+        "short_summary": "Counts the number of blank cells within a range",
+        "syntax_guide": "COUNTBLANK(range)\n\nTheCOUNTBLANKfunction syntax has the following arguments:\n\nRangeRequired. The range from which you want to count the blank cells.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet.",
+            "Table:\nData | Data | \n |  | \n6 |  | \n | 27 | \n4 | 34 | \nFormula | Description | Result\n=COUNTBLANK(A2:B4) | Counts empty cells in the range above. | 2\n |  | ",
+            "Note:Copying from some browsers may add an apostrophe to the beginning of the formula when it's pasted in Excel. If the formula does not show a result, select that cell, pressF2, delete the apostrophe, and then pressEnter."
+        ]
+    },
+    {
+        "function": "COUNTIF function",
+        "url": "https://support.microsoft.com/en-us/office/use-the-countif-function-in-microsoft-excel-e0de10c6-f885-4e71-abb4-1f464816df34",
+        "short_summary": "Counts the number of cells within a range that meet the given criteria",
+        "syntax_guide": "COUNTIF(range, criteria)Argument nameDescriptionrange(required)The group of cells you want to count.Rangecan contain numbers, arrays, a named range, or references that contain numbers. Blank and text values are ignored.Learn how toselect ranges in a worksheet.criteria(required)A number, expression, cell reference, or text string that determines which cells will be counted.For example, you can use a number like 32, a comparison like \">32\", a cell like B4, or a word like \"apples\".COUNTIF uses only a single criteria. UseCOUNTIFSif you want to use multiple criteria.",
+        "usage_examples": [
+            "To use these examples in Excel, copy the data in the table below, and paste it in cell A1 of a new worksheet.",
+            "Table:\nData | Data\napples | 32\noranges | 54\npeaches | 75\napples | 86\nFormula | Description\n=COUNTIF(A2:A5,\"apples\") | Counts the number of cells with apples in cells A2 through A5. The result is 2.\n=COUNTIF(A2:A5,A4) | Counts the number of cells with peaches (the value in A4) in cells A2 through A5. The result is 1.\n=COUNTIF(A2:A5,A2)+COUNTIF(A2:A5,A3) | Counts the number of apples (the value in A2), and oranges (the value in A3) in cells A2 through A5. The result is 3. This formula uses COUNTIF twice to specify multiple criteria, one criteria per expression. You could also use theCOUNTIFSfunction.\n=COUNTIF(B2:B5,\">55\") | Counts the number of cells with a value greater than 55 in cells B2 through B5. The result is 2.\n=COUNTIF(B2:B5,\"<>\"&B4) | Counts the number of cells with a value not equal to 75 in cells B2 through B5. The ampersand (&) merges the comparison operator for not equal to (<>) and the value in B4 to read =COUNTIF(B2:B5,\"<>75\"). The result is 3.\n=COUNTIF(B2:B5,\">=32\")-COUNTIF(B2:B5,\"<=85\") | Counts the number of cells with a value greater than (>) or equal to (=) 32 and less than (<) or equal to (=) 85 in cells B2 through B5. The result is 1.\n=COUNTIF(A2:A5,\"*\") | Counts the number of cells containing any text in cells A2 through A5. The asterisk (*) is used as the wildcard character to match any character. The result is 4.\n=COUNTIF(A2:A5,\"?????es\") | Counts the number of cells that have exactly 7 characters, and end with the letters \"es\" in cells A2 through A5. The question mark (?) is used as the wildcard character to match individual characters. The result is 2."
+        ]
+    },
+    {
+        "function": "COUNTIFS function",
+        "url": "https://support.microsoft.com/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842",
+        "short_summary": "Counts the number of cells within a range that meet multiple criteria",
+        "syntax_guide": "COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2]…)\n\nThe COUNTIFS function syntax has the following arguments:\n\ncriteria_range1Required. The first range in which to evaluate the associated criteria.criteria1Required. The criteria in the form of a number, expression, cell reference, or text that define which cells will be counted. For example, criteria can be expressed as 32, \">32\", B4, \"apples\", or \"32\".criteria_range2, criteria2, ...Optional. Additional ranges and their associated criteria. Up to 127 range/criteria pairs are allowed.\n\nImportant:Each additional range must have the same number of rows and columns as thecriteria_range1argument. The ranges do not have to be adjacent to each other.",
+        "usage_examples": [
+            "Copy the example data in the following tables, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nSalesperson | Exceeded Q1 quota | Exceeded Q2 quota | Exceeded Q3 quota\nDavidoski | Yes | No | No\nBurke | Yes | Yes | No\nSundaram | Yes | Yes | Yes\nLevitan | No | Yes | Yes\nFormula | Description | Result | \n=COUNTIFS(B2:D2,\"=Yes\") | Counts how many times Davidoski exceeded a sales quota for periods Q1, Q2, and Q3 (only in Q1). | 1 | \n=COUNTIFS(B2:B5,\"=Yes\",C2:C5,\"=Yes\") | Counts how many salespeople exceeded both their Q1 and Q2 quotas (Burke and Sundaram). | 2 | \n=COUNTIFS(B5:D5,\"=Yes\",B3:D3,\"=Yes\") | Counts how many times Levitan and Burke exceeded the same quota for periods Q1, Q2, and Q3 (only in Q2). | 1 | "
+        ]
+    },
+    {
+        "function": "COVARIANCE.P function",
+        "url": "https://support.microsoft.com/en-us/office/covariance-p-function-6f0e1e6d-956d-4e4b-9943-cfef0bf9edfc",
+        "short_summary": "Returns covariance, the average of the products of paired deviations",
+        "syntax_guide": "COVARIANCE.P(array1,array2)\n\nThe COVARIANCE.P function syntax has the following arguments:\n\nArray1Required. The first cell range of integers.Array2Required. The second cell range of integers.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData1 | Data2 | \n3 | 9 | \n2 | 7 | \n4 | 12 | \n5 | 15 | \n6 | 17 | \nFormula | Description | Result\n=COVARIANCE.P(A2:A6, B2:B6) | Covariance, the average of the products of deviations for each data point pair above | 5.2"
+        ]
+    },
+    {
+        "function": "COVARIANCE.S function",
+        "url": "https://support.microsoft.com/en-us/office/covariance-s-function-0a539b74-7371-42aa-a18f-1f5320314977",
+        "short_summary": "Returns the sample covariance, the average of the products deviations for each data point pair in two data sets",
+        "syntax_guide": "COVARIANCE.S(array1,array2)\n\nThe COVARIANCE.S function syntax has the following arguments:\n\nArray1Required. The first cell range of integers.Array2Required. The second cell range of integers.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=COVARIANCE.S({2,4,8},{5,11,12}) | Sample covariance for the data points entered as an array in the function. | 9.666666667\n2 | 5 | \n4 | 11 | \n8 | 12 | \nFormula | Description | Result\n=COVARIANCE.S(A3:A5,B3:B5) | Sample covariance for the identical data points, but entered as cell ranges in the function. | 9.666666667",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "DEVSQ function",
+        "url": "https://support.microsoft.com/en-us/office/devsq-function-8b739616-8376-4df5-8bd0-cfe0a6caf444",
+        "short_summary": "Returns the sum of squares of deviations",
+        "syntax_guide": "DEVSQ(number1, [number2], ...)\n\nThe DEVSQ function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate the sum of squared deviations. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n4 |  | \n5 |  | \n8 |  | \n7 |  | \n11 |  | \n4 |  | \n3 |  | \nFormula | Description | Result\n=DEVSQ(A2:A8) | Sum of squares of deviations of data above from their sample mean. | 48"
+        ]
+    },
+    {
+        "function": "EXPON.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/expon-dist-function-4c12ae24-e563-4155-bf3e-8b78b6ae140e",
+        "short_summary": "Returns the exponential distribution",
+        "syntax_guide": "EXPON.DIST(x,lambda,cumulative)\n\nThe EXPON.DIST function syntax has the following arguments:\n\nXRequired. The value of the function.LambdaRequired. The parameter value.CumulativeRequired. A logical value that indicates which form of the exponential function to provide. If cumulative is TRUE, EXPON.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.2 | Value of the function | \n10 | Parameter value | \nFormula | Description | Result\n=EXPON.DIST(A2,A3,TRUE) | Cumulative exponential distribution function | 0.86466472\n=EXPON.DIST(0.2,10,FALSE) | Probability exponential distribution function | 1.35335283"
+        ]
+    },
+    {
+        "function": "F.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/f-dist-function-a887efdc-7c8e-46cb-a74a-f884cd29b25d",
+        "short_summary": "Returns the F probability distribution",
+        "syntax_guide": "F.DIST(x,deg_freedom1,deg_freedom2,cumulative)\n\nThe F.DIST function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, F.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n15.2069 | Value at which to evaluate the function | \n6 | Numerator degrees of freedom | \n4 | Denominator degrees of freedom | \nFormula | Description | Result\n=F.DIST(A2,A3,A4,TRUE) | F probability using the cumulative distribution function (TRUE cumulative argument). | 0.99\n=F.DIST(A2,A3,A4,FALSE) | F probability using the probability density function (FALSE cumulative argument). | 0.0012238",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "F.DIST.RT function",
+        "url": "https://support.microsoft.com/en-us/office/f-dist-rt-function-d74cbb00-6017-4ac9-b7d7-6049badc0520",
+        "short_summary": "Returns the F probability distribution",
+        "syntax_guide": "F.DIST.RT(x,deg_freedom1,deg_freedom2)\n\nThe F.DIST.RT function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n15.2068649 | Value at which to evaluate the function | \n6 | Numerator degrees of freedom | \n4 | Denominator degrees of freedom | \nFormula | Description | Result\n=F.DIST.RT(A2,A3,A4) | F probability distribution for the terms above. | 0.01"
+        ]
+    },
+    {
+        "function": "F.INV function",
+        "url": "https://support.microsoft.com/en-us/office/f-inv-function-0dda0cf9-4ea0-42fd-8c3c-417a1ff30dbe",
+        "short_summary": "Returns the inverse of the F probability distribution",
+        "syntax_guide": "F.INV(probability,deg_freedom1,deg_freedom2)\n\nThe F.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the F cumulative distribution.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.01 | Probability associated with the F cumulative distribution | \n6 | Numerator degrees of freedom | \n4 | Denominator degrees of freedom | \nFormula | Description | Result\n=F.INV(A2,A3,A4) | Inverse of the F probability distribution for the terms above | 0.10930991",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "F.INV.RT function",
+        "url": "https://support.microsoft.com/en-us/office/f-inv-rt-function-d371aa8f-b0b1-40ef-9cc2-496f0693ac00",
+        "short_summary": "Returns the inverse of the F probability distribution",
+        "syntax_guide": "F.INV.RT(probability,deg_freedom1,deg_freedom2)\n\nThe F.INV.RT function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the F cumulative distribution.Deg_freedom1Required. The numerator degrees of freedom.Deg_freedom2Required. The denominator degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.01 | Probability associated with the F cumulative distribution | \n6 | Numerator degrees of freedom | \n4 | Denominator degrees of freedom | \nFormula | Description | Result\n=F.INV.RT(A2,A3,A4) | Inverse of the F probability distribution for the terms above | 15.20686"
+        ]
+    },
+    {
+        "function": "F.TEST function",
+        "url": "https://support.microsoft.com/en-us/office/f-test-function-100a59e7-4108-46f8-8443-78ffacb6c0a7",
+        "short_summary": "Returns the result of an F-test",
+        "syntax_guide": "F.TEST(array1,array2)\n\nThe F.TEST function syntax has the following arguments:\n\nArray1Required. The first array or range of data.Array2Required. The second array or range of data.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData1 | Data2 | \n6 | 20 | \n7 | 28 | \n9 | 31 | \n15 | 38 | \n21 | 40 | \nFormula | Description | Result\n=F.TEST(A2:A6,B2:B6) | F-test for the data sets in A2:A6 and B2:B6. | 0.64831785"
+        ]
+    },
+    {
+        "function": "FISHER function",
+        "url": "https://support.microsoft.com/en-us/office/fisher-function-d656523c-5076-4f95-b87b-7741bf236c69",
+        "short_summary": "Returns the Fisher transformation",
+        "syntax_guide": "FISHER(x)\n\nThe FISHER function syntax has the following arguments:\n\nXRequired. A numeric value for which you want the transformation.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=FISHER(0.75) | Fisher transformation at 0.75 | 0.9729551"
+        ]
+    },
+    {
+        "function": "FISHERINV function",
+        "url": "https://support.microsoft.com/en-us/office/fisherinv-function-62504b39-415a-4284-a285-19c8e82f86bb",
+        "short_summary": "Returns the inverse of the Fisher transformation",
+        "syntax_guide": "FISHERINV(y)\n\nThe FISHERINV function syntax has the following arguments:\n\nYRequired. The value for which you want to perform the inverse of the transformation.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=FISHERINV(0.972955) | Inverse of the Fisher transformation at 0.972955 | 0.75"
+        ]
+    },
+    {
+        "function": "FORECAST function",
+        "url": "https://support.microsoft.com/en-us/office/forecast-and-forecast-linear-functions-50ca49c9-7b40-4892-94e4-7ad38bbeda99",
+        "short_summary": "Returns a value along a linear trendNote:In Excel 2016, this function is replaced withFORECAST.LINEARas part of the newForecasting functions, but it's still available for compatibility with earlier versions.",
+        "syntax_guide": "FORECAST.LINEAR(x, known_y's, known_x's)\n\n- or -\n\nFORECAST(x, known_y's, known_x's)\n\nThe FORECAST/FORECAST.LINEAR function syntax has the following arguments:\n\nArgument | Required | Refers to\nx | yes | The data point for which you want to predict a value.\nknown_y's | yes | The dependent array or range of data.\nknown_x's | yes | The independent array or range of data.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nKnown Y | Known X | \n6 | 20 | \n7 | 28 | \n9 | 31 | \n15 | 38 | \n21 | 40 | \nFormula | Description | Result\n=FORECAST.LINEAR(30,A2:A6,B2:B6) | Predicts a value for y given an x value of 30 | 10.607253"
+        ]
+    },
+    {
+        "function": "FORECAST.ETS function",
+        "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS",
+        "short_summary": "Returns a future value based on existing (historical) values by using the AAA version of the Exponential Smoothing (ETS) algorithm",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "FORECAST.ETS.CONFINT function",
+        "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS.CONFINT",
+        "short_summary": "Returns a confidence interval for the forecast value at the specified target date",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "FORECAST.ETS.SEASONALITY function",
+        "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS.SEASONALITY",
+        "short_summary": "Returns the length of the repetitive pattern Excel detects for the specified time series",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "FORECAST.ETS.STAT function",
+        "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.ETS.STAT",
+        "short_summary": "Returns a statistical value as a result of time series forecasting",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "FORECAST.LINEAR function",
+        "url": "https://support.microsoft.com/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e#_FORECAST.LINEAR",
+        "short_summary": "Returns a future value based on existing values",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "FREQUENCY function",
+        "url": "https://support.microsoft.com/en-us/office/frequency-function-44e3be2b-eca0-42cd-a3f7-fd9ea898fdb9",
+        "short_summary": "Returns a frequency distribution as a vertical array",
+        "syntax_guide": "FREQUENCY(data_array, bins_array)The FREQUENCY function syntax has the following arguments:data_arrayRequired. An array of or reference to a set of values for which you want to count frequencies. If data_array contains no values, FREQUENCY returns an array of zeros.bins_arrayRequired. An array of or reference to intervals into which you want to group the values in data_array. If bins_array contains no values, FREQUENCY returns the number of elements in data_array.",
+        "usage_examples": []
+    },
+    {
+        "function": "GAMMA function",
+        "url": "https://support.microsoft.com/en-us/office/gamma-function-ce1702b1-cf55-471d-8307-f83be0fc5297",
+        "short_summary": "Returns the gamma function value",
+        "syntax_guide": "GAMMA(number)\n\nThe GAMMA function syntax has the following arguments.\n\nNumberRequired. Returns a number.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=GAMMA(2.5) | Returns the gamma function value of 2.5 (1.329). | 1.329\n=GAMMA(-3.75) | Returns the gamma function value of -3.75 (0.268). | 0.268\n=GAMMA(0) | Returns the #NUM! error value, because 0 is not a valid argument. | #NUM!\n=GAMMA(-2) | Returns the #NUM! error value, because a negative integer is not a valid argument. | #NUM!",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "GAMMA.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/gamma-dist-function-9b6f1538-d11c-4d5f-8966-21f6a2201def",
+        "short_summary": "Returns the gamma distribution",
+        "syntax_guide": "GAMMA.DIST(x,alpha,beta,cumulative)\n\nThe GAMMA.DIST function syntax has the following arguments:\n\nXRequired. The value at which you want to evaluate the distribution.AlphaRequired. A parameter to the distribution.BetaRequired. A parameter to the distribution. If beta = 1, GAMMA.DIST returns the standard gamma distribution.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, GAMMA.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n10.00001131 | Value at which you want to evaluate the distribution | \n9 | Alpha parameter to the distribution | \n2 | Beta parameter to the distribution | \nFormula | Description | Result\n=GAMMA.DIST(A2,A3,A4,FALSE) | Probability density using the x, alpha, and beta values in A2, A3, A4, with FALSE cumulative argument. | 0.032639\n=GAMMA.DIST(A2,A3,A4,TRUE) | Cumulative distributuion using the x, alpha, and beta values in A2, A3, A4, with TRUE cumulative argument. | 0.068094"
+        ]
+    },
+    {
+        "function": "GAMMA.INV function",
+        "url": "https://support.microsoft.com/en-us/office/gamma-inv-function-74991443-c2b0-4be5-aaab-1aa4d71fbb18",
+        "short_summary": "Returns the inverse of the gamma cumulative distribution",
+        "syntax_guide": "GAMMA.INV(probability,alpha,beta)\n\nThe GAMMA.INV function syntax has the following arguments:\n\nProbabilityRequired. The probability associated with the gamma distribution.AlphaRequired. A parameter to the distribution.BetaRequired. A parameter to the distribution. If beta = 1, GAMMA.INV returns the standard gamma distribution.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.068094 | Probability associated with the gamma distribution | \n9 | Alpha parameter to the distribution | \n2 | Beta parameter to the distribution | \nFormula | Description | Result\n=GAMMA.INV(A2,A3,A4) | Inverse of the gamma cumulative distribution for the probability, alpha, and beta arguments in A2, A3, and A4. | 10.0000112"
+        ]
+    },
+    {
+        "function": "GAMMALN function",
+        "url": "https://support.microsoft.com/en-us/office/gammaln-function-b838c48b-c65f-484f-9e1d-141c55470eb9",
+        "short_summary": "Returns the natural logarithm of the gamma function, Γ(x)",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "GAMMALN.PRECISE function",
+        "url": "https://support.microsoft.com/en-us/office/gammaln-precise-function-5cdfe601-4e1e-4189-9d74-241ef1caa599",
+        "short_summary": "Returns the natural logarithm of the gamma function, Γ(x)",
+        "syntax_guide": "GAMMALN.PRECISE(x)\n\nThe GAMMALN.PRECISE function syntax has the following arguments:\n\nXRequired. The value for which you want to calculate GAMMALN.PRECISE.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=GAMMALN.PRECISE(4) | Natural logarithm of the gamma function at 4 | 1.7917595"
+        ]
+    },
+    {
+        "function": "GAUSS function",
+        "url": "https://support.microsoft.com/en-us/office/gauss-function-069f1b4e-7dee-4d6a-a71f-4b69044a6b33",
+        "short_summary": "Returns 0.5 less than the standard normal cumulative distribution",
+        "syntax_guide": "GAUSS(z)\n\nThe GAUSS function syntax has the following arguments.\n\nZRequired. Returns a number.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n'=GAUSS(2) | Probability that a member of a standard normal population will fall between the mean and 2 standard deviations from the mean (result is 0.47725). | =GAUSS(2)",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "GEOMEAN function",
+        "url": "https://support.microsoft.com/en-us/office/geomean-function-db1ac48d-25a5-40a0-ab83-0b38980e40d5",
+        "short_summary": "Returns the geometric mean",
+        "syntax_guide": "GEOMEAN(number1, [number2], ...)\n\nThe GEOMEAN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate the mean. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n4 |  | \n5 |  | \n8 |  | \n7 |  | \n11 |  | \n4 |  | \n3 |  | \nFormula | Description | Result\n=GEOMEAN(A2:A8) | Geometric mean of the data set contained in A2:A8. | 5.476987"
+        ]
+    },
+    {
+        "function": "GROWTH function",
+        "url": "https://support.microsoft.com/en-us/office/growth-function-541a91dc-3d5e-437d-b156-21324e68b80d",
+        "short_summary": "Returns values along an exponential trend",
+        "syntax_guide": "GROWTH(known_y's, [known_x's], [new_x's], [const])\n\nThe GROWTH function syntax has the following arguments:\n\nKnown_y'sRequired. The set of y-values you already know in the relationship y = b*m^x.If the array known_y's is in a single column, then each column of known_x's is interpreted as a separate variable.If the array known_y's is in a single row, then each row of known_x's is interpreted as a separate variable.If any of the numbers in known_y's is 0 or negative, GROWTH returns the #NUM! error value.Known_x'sOptional. An optional set of x-values that you may already know in the relationship y = b*m^x.The array known_x's can include one or more sets of variables. If only one variable is used, known_y's and known_x's can be ranges of any shape, as long as they have equal dimensions. If more than one variable is used, known_y's must be a vector (that is, a range with a height of one row or a width of one column).If known_x's is omitted, it is assumed to be the array {1,2,3,...} that is the same size as known_y's.New_x'sOptional. Are new x-values for which you want GROWTH to return corresponding y-values.New_x's must include a column (or row) for each independent variable, just as known_x's does. So, if known_y's is in a single column, known_x's and new_x's must have the same number of columns. If known_y's is in a single row, known_x's and new_x's must have the same number of rows.If new_x's is omitted, it is assumed to be the same as known_x's.If both known_x's and new_x's are omitted, they are assumed to be the array {1,2,3,...} that is the same size as known_y's.ConstOptional. A logical value specifying whether to force the constant b to equal 1.If const is TRUE or omitted, b is calculated normally.If const is FALSE, b is set equal to 1 and the m-values are adjusted so that y = m^x.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nMonth | Units | Formula (Corresponding Units) | \n11 | 33,100 | 32,618 | \n12 | 47,300 | 47,729 | \n13 | 69,000 | 69,841 | \n14 | 102,000 | 102,197 | \n15 | 150,000 | 149,542 | \n16 | 220,000 | 218,822 | \nMonth | Formula (Predicted Units) | Formula used in C2:C7 array above | \n17 | 320,197 | =GROWTH(B2:B7,A2:A7)\n18 | 468,536 |  | \n | Formula used in B9:B10 array above |  | \n | =GROWTH(B2:B7,A2:A7,A9:A10) | "
+        ]
+    },
+    {
+        "function": "HARMEAN function",
+        "url": "https://support.microsoft.com/en-us/office/harmean-function-5efd9184-fab5-42f9-b1d3-57883a1d3bc6",
+        "short_summary": "Returns the harmonic mean",
+        "syntax_guide": "HARMEAN(number1, [number2], ...)\n\nThe HARMEAN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate the mean. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n4 |  | \n5 |  | \n8 |  | \n7 |  | \n11 |  | \n4 |  | \n3 |  | \nFormula | Description | Result\n=HARMEAN(A2:A8) | Harmonic mean of the data set in A2:A8. | 5.028376"
+        ]
+    },
+    {
+        "function": "HYPGEOM.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/hypgeom-dist-function-6dbd547f-1d12-4b1f-8ae5-b0d9e3d22fbf",
+        "short_summary": "Returns the hypergeometric distribution",
+        "syntax_guide": "HYPGEOM.DIST(sample_s,number_sample,population_s,number_pop,cumulative)\n\nThe HYPGEOM.DIST function syntax has the following arguments:\n\nSample_sRequired. The number of successes in the sample.Number_sampleRequired. The size of the sample.Population_sRequired. The number of successes in the population.Number_popRequired. The population size.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, then HYPGEOM.DIST returns the cumulative distribution function; if FALSE, it returns the probability mass function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | Result\n1 | Number of successes in the sample | \n4 | Sample size | \n8 | Number of successes in the population | \n20 | Population size | \nFormula | Description (Result) | \n=HYPGEOM.DIST(A2,A3,A4,A5,TRUE) | Cumulative hypergeometric distribution function, for sample and population in cells A2 through A5. | 0.4654\n |  | \n=HYPGEOM.DIST(A2,A3,A4,A5,FALSE) | Probability hypergeometric distribution function, for sample and in cells A2 through A5. | 0.3633"
+        ]
+    },
+    {
+        "function": "INTERCEPT function",
+        "url": "https://support.microsoft.com/en-us/office/intercept-function-2a9b74e2-9d47-4772-b663-3bca70bf63ef",
+        "short_summary": "Returns the intercept of the linear regression line",
+        "syntax_guide": "INTERCEPT(known_y's, known_x's)\n\nThe INTERCEPT function syntax has the following arguments:\n\nKnown_y'sRequired. The dependent set of observations or data.Known_x'sRequired. The independent set of observations or data.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nKnown y | Known x | \n2 | 6 | \n3 | 5 | \n9 | 11 | \n1 | 7 | \n8 | 5 | \nFormula | Description | Result\n=INTERCEPT(A2:A6, B2:B6) | Point at which a line will intersect the y-axis by using the x-values and y-values above | 0.0483871"
+        ]
+    },
+    {
+        "function": "KURT function",
+        "url": "https://support.microsoft.com/en-us/office/kurt-function-bc3a265c-5da4-4dcb-b7fd-c237789095ab",
+        "short_summary": "Returns the kurtosis of a data set",
+        "syntax_guide": "KURT(number1, [number2], ...)\n\nThe KURT function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate kurtosis. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n3 |  | \n4 |  | \n5 |  | \n2 |  | \n3 |  | \n4 |  | \n5 |  | \n6 |  | \n4 |  | \n7 |  | \nFormula | Description | Result\n=KURT(A2:A11) | Kurtosis of the data set above | -0.151799637"
+        ]
+    },
+    {
+        "function": "LARGE function",
+        "url": "https://support.microsoft.com/en-us/office/large-function-3af0af19-1190-42bb-bb8b-01672ec00a64",
+        "short_summary": "Returns the k-th largest value in a data set",
+        "syntax_guide": "LARGE(array, k)\n\nThe LARGE function syntax has the following arguments:\n\nArrayRequired. The array or range of data for which you want to determine the k-th largest value.KRequired. The position (from the largest) in the array or cell range of data to return.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Data | \n3 | 4 | \n5 | 2 | \n3 | 4 | \n5 | 6 | \n4 | 7 | \nFormula | Description | Result\n=LARGE(A2:B6,3) | 3rd largest number in the numbers above | 5\n=LARGE(A2:B6,7) | 7th largest number in the numbers above | 4"
+        ]
+    },
+    {
+        "function": "LINEST function",
+        "url": "https://support.microsoft.com/en-us/office/linest-function-84d7d0d9-6e50-4101-977a-fa7abf772b6d",
+        "short_summary": "Returns the parameters of a linear trend",
+        "syntax_guide": "LINEST(known_y's, [known_x's], [const], [stats])\n\nThe LINEST function syntax has the following arguments:",
+        "usage_examples": [
+            "Example 1 - Slope and Y-InterceptCopy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.Known yKnown x10945273Result (slope)Result (y-intercept)21Formula (array formula in cells A7:B7)=LINEST(A2:A5,B2:B5,,FALSE)",
+            "Example 2 - Simple Linear RegressionCopy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.MonthSales1$3,1002$4,5003$4,4004$5,4005$7,5006$8,100FormulaResult=SUM(LINEST(B1:B6, A1:A6)*{9,1})$11,000Calculates the estimate of the sales in the ninth month, based on sales in months 1 through 6.",
+            "Example 3 - Multiple Linear RegressionCopy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.Floor space (x1)Offices (x2)Entrances (x3)Age (x4)Assessed value (y)23102220$142,00023332212$144,000235631.533$151,00023793243$150,00024022353$139,00024254223$169,000244821.599$126,00024712234$142,90024943323$163,00025174455$169,00025402322$149,000-234.237164513.268011480.996747993459.75367421732393319Formula (dynamic array formula entered in A19)=LINEST(E2:E12,A2:D12,TRUE,TRUE)",
+            "Example 4 - Using the F and r2StatisticsIn the preceding example, the coefficient of determination, or r2, is 0.99675 (see cell A17 in the output forLINEST), which would indicate a strong relationship between the independent variables and the sale price. You can use the F statistic to determine whether these results, with such a high r2 value, occurred by chance.Assume for the moment that in fact there is no relationship among the variables, but that you have drawn a rare sample of 11 office buildings that causes the statistical analysis to demonstrate a strong relationship. The term \"Alpha\" is used for the probability of erroneously concluding that there is a relationship.The F and df values in output from theLINESTfunction can be used to assess the likelihood of a higher F value occurring by chance. F can be compared with critical values in published F-distribution tables or theFDISTfunction in Excel can be used to calculate the probability of a larger F value occurring by chance. The appropriate F distribution has v1 and v2 degrees of freedom. If n is the number of data points and const = TRUE or omitted, then v1 = n – df – 1 and v2 = df. (If const = FALSE, then v1 = n – df and v2 = df.) TheFDISTfunction — with the syntaxFDIST(F,v1,v2) — will return the probability of a higher F value occurring by chance. In this example, df = 6 (cell B18) and F = 459.753674 (cell A18).Assuming an Alpha value of 0.05, v1 = 11 – 6 – 1 = 4 and v2 = 6, the critical level of F is 4.53. Since F = 459.753674 is much higher than 4.53, it is extremely unlikely that an F value this high occurred by chance. (With Alpha = 0.05, the hypothesis that there is no relationship betweenknown_y’sandknown_x’sis to be rejected when F exceeds the critical level, 4.53.) You can use theFDISTfunction in Excel to obtain the probability that an F value this high occurred by chance. For example,FDIST(459.753674, 4, 6) = 1.37E-7, an extremely small probability. You can conclude, either by finding the critical level of F in a table or by using theFDISTfunction, that the regression equation is useful in predicting the assessed value of office buildings in this area. Remember that it is critical to use the correct values of v1 and v2 that were computed in the preceding paragraph.",
+            "Example 5 - Calculating the t-StatisticsAnother hypothesis test will determine whether each slope coefficient is useful in estimating the assessed value of an office building inExample 3. For example, to test the age coefficient for statistical significance, divide -234.24 (age slope coefficient) by 13.268 (the estimated standard error of age coefficients in cell A15). The following is the t-observed value:t = m4 ÷ se4 = -234.24 ÷ 13.268 = -17.7If the absolute value of t is sufficiently high, it can be concluded that the slope coefficient is useful in estimating the assessed value of an office building inExample 3. The following table shows the absolute values of the 4 t-observed values.If you consult a table in a statistics manual, you will find that t-critical, two tailed, with 6 degrees of freedom and Alpha = 0.05 is 2.447. This critical value can also be found by using theTINVfunction in Excel.TINV(0.05,6) = 2.447. Because the absolute value of t (17.7) is greater than 2.447, age is an important variable when estimating the assessed value of an office building. Each of the other independent variables can be tested for statistical significance in a similar manner. The following are the t-observed values for each of the independent variables.Variablet-observed valueFloor space5.1Number of offices31.3Number of entrances4.8Age17.7These values all have an absolute value greater than 2.447; therefore, all the variables used in the regression equation are useful in predicting the assessed value of office buildings in this area."
+        ]
+    },
+    {
+        "function": "LOGEST function",
+        "url": "https://support.microsoft.com/en-us/office/logest-function-f27462d8-3657-4030-866b-a272c1d18b4b",
+        "short_summary": "Returns the parameters of an exponential trend",
+        "syntax_guide": "LOGEST(known_y's, [known_x's], [const], [stats])The LOGEST function syntax has the following arguments:known_y'sRequired. The set of y-values you already know in the relationship y = b*m^x.If the array known_y's is in a single column, then each column of known_x's is interpreted as a separate variable.If the array known_y's is in a single row, then each row of known_x's is interpreted as a separate variable.known_x'sOptional. An optional set of x-values that you may already know in the relationship y = b*m^x.The array known_x's can include one or more sets of variables. If only one variable is used, known_y's and known_x's can be ranges of any shape, as long as they have equal dimensions. If more than one variable is used, known_y's must be a range of cells with a height of one row or a width of one column (which is also known as a vector).If known_x's is omitted, it is assumed to be the array {1,2,3,...} that is the same size as known_y's.constOptional. A logical value specifying whether to force the constant b to equal 1.If const is TRUE or omitted, b is calculated normally.If const is FALSE, b is set equal to 1, and the m-values are fitted to y = m^x.statsOptional. A logical value specifying whether to return additional regression statistics.If stats is TRUE, LOGEST returns the additional regression statistics, so the returned array is {mn,mn-1,...,m1,b;sen,sen-1,...,se1,seb;r 2,sey; F,df;ssreg,ssresid}.If stats is FALSE or omitted, LOGEST returns only the m-coefficients and the constant b.For more information about additional regression statistics, see theLINEST function.",
+        "usage_examples": [
+            "You must enter the above formula as an array formula in Excel for it to work correctly. After you enter the formula, pressEnterif you have a current Microsoft 365 subscription; otherwise pressCtrl+Shift+Enter. If the formula is not entered as an array formula, the single result is 1.4633."
+        ]
+    },
+    {
+        "function": "LOGNORM.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/lognorm-dist-function-eb60d00b-48a9-4217-be2b-6074aee6b070",
+        "short_summary": "Returns the cumulative lognormal distribution",
+        "syntax_guide": "LOGNORM.DIST(x,mean,standard_dev,cumulative)\n\nThe LOGNORM.DIST function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.MeanRequired. The mean of ln(x).Standard_devRequired. The standard deviation of ln(x).CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, LOGNORM.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n4 | Value at which to evaluate the function (x)\n3.5 | Mean of ln(x) | \n1.2 | Standard deviation of ln(x) | \nFormula | Description | Result\n=LOGNORM.DIST(A2,A3,A4,TRUE) | Cumulative lognormal distribution at 4, using the arguments in A2:A4. | 0.0390836\n=LOGNORM.DIST(A2,A3,A4,FALSE) | Probability lognormal distribution at 4, using the same arguments. | 0.0176176"
+        ]
+    },
+    {
+        "function": "LOGNORM.INV function",
+        "url": "https://support.microsoft.com/en-us/office/lognorm-inv-function-fe79751a-f1f2-4af8-a0a1-e151b2d4f600",
+        "short_summary": "Returns the inverse of the lognormal cumulative distribution",
+        "syntax_guide": "LOGNORM.INV(probability, mean, standard_dev)\n\nThe LOGNORM.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability associated with the lognormal distribution.MeanRequired. The mean of ln(x).Standard_devRequired. The standard deviation of ln(x).",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.039084 | Probability associated with the lognormal distribution\n3.5 | Mean of ln(x) | \n1.2 | Standard deviation of ln(x) | \nFormula | Description | Result\n=LOGNORM.INV(A2, A3, A4) | Inverse of the lognormal cumulative distribution function for the terms above | 4.0000252"
+        ]
+    },
+    {
+        "function": "MAX function",
+        "url": "https://support.microsoft.com/en-us/office/max-function-e0012414-9ac8-4b34-9a47-73e662c08098",
+        "short_summary": "Returns the maximum value in a list of arguments",
+        "syntax_guide": "MAX(number1, [number2], ...)\n\nTheMAXfunction syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 numbers for which you want to find the maximum value.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n10 |  | \n7 |  | \n9 |  | \n27 |  | \n2 |  | \nFormula | Description | Result\n=MAX(A2:A6) | Largest value in the range A2:A6. | 27\n=MAX(A2:A6, 30) | Largest value in the range A2:A6 and the value 30. | 30"
+        ]
+    },
+    {
+        "function": "MAXA function",
+        "url": "https://support.microsoft.com/en-us/office/maxa-function-814bda1e-3840-4bff-9365-2f59ac2ee62d",
+        "short_summary": "Returns the maximum value in a list of arguments, including numbers, text, and logical values",
+        "syntax_guide": "MAXA(value1,[value2],...)\n\nThe MAXA function syntax has the following arguments:\n\nValue1Required. The first number argument for which you want to find the largest value.Value2,...Optional. Number arguments 2 to 255 for which you want to find the largest value.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n0 |  | \n0.2 |  | \n0.5 |  | \n0.4 |  | \nTRUE |  | \nFormula | Description | Result\n=MAXA(A2:A6) | The largest number in the range A2:A6. Because a TRUE value evaluates to 1, it is the largest. | 1"
+        ]
+    },
+    {
+        "function": "MAXIFS function",
+        "url": "https://support.microsoft.com/en-us/office/maxifs-function-dfd611e6-da2c-488a-919b-9b6376b28883",
+        "short_summary": "Returns the maximum value among cells specified by a given set of conditions or criteria",
+        "syntax_guide": "MAXIFS(max_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)\n\nArgument | Description\nmax_range(required) | The actual range of cells in which the maximum will be determined.\ncriteria_range1(required) | Is the set of cells to evaluate with the criteria.\ncriteria1(required) | Is the criteria in the form of a number, expression, or text that defines which cells will be evaluated as maximum. The same set of criteria works for theMINIFS,SUMIFS, andAVERAGEIFSfunctions.\ncriteria_range2,criteria2, ...(optional) | Additional ranges and their associated criteria. You can enter up to 126 range/criteria pairs.",
+        "usage_examples": [
+            "Copy the example data in each of the following tables, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Example 1",
+            "Table:\nGrade | Weight\n89 | 1\n93 | 2\n96 | 2\n85 | 3\n91 | 1\n88 | 1\nFormula | Result\n=MAXIFS(A2:A7,B2:B7,1) | 91In criteria_range1 the cells B2, B6, and B7 match the criteria of 1. Of the corresponding cells in max_range, A6 has the maximum value. The result is therefore 91.",
+            "Example 2",
+            "Table:\nWeight | Grade\n10 | b\n1 | a\n100 | a\n1 | b\n1 | a\n1 | a\nFormula | Result\n=MAXIFS(A2:A5,B3:B6,\"a\") | 10Note:The criteria_range and max_range aren't aligned, but they are the same shape and size.In criteria_range1, the 1st, 2nd, and 4th cells match the criteria of \"a.\" Of the corresponding cells in max_range, A2 has the maximum value. The result is therefore 10.",
+            "Example 3",
+            "Table:\nWeight | Grade | Class | Level\n10 | b | Business | 100\n1 | a | Technical | 100\n100 | a | Business | 200\n1 | b | Technical | 300\n1 | a | Technical | 100\n50 | b | Business | 400\n |  |  | \nFormula | Result |  | \n=MAXIFS(A2:A7,B2:B7,\"b\",D2:D7,\">100\") | 50In criteria_range1, B2, B5, and B7 match the criteria of \"b.\" Of the corresponding cells in criteria_range2, D5 and D7 match the criteria of >100. Finally, of the corresponding cells in max_range, A7 has the maximum value. The result is therefore 50. |  | ",
+            "Example 4",
+            "Table:\nWeight | Grade | Class | Level\n10 | b | Business | 8\n1 | a | Technical | 8\n100 | a | Business | 8\n11 | b | Technical | 0\n1 | a | Technical | 8\n12 | b | Business | 0\n |  |  | \nFormula | Result |  | \n=MAXIFS(A2:A7,B2:B7,\"b\",D2:D7,A8) | 12The criteria2 argument is A8. However, because A8 is empty, it is treated as 0 (zero). The cells in criteria_range2 that match 0 are D5 and D7. Finally, of the corresponding cells in max_range, A7 has the maximum value. The result is therefore 12. |  | ",
+            "Example 5",
+            "Table:\nWeight | Grade\n10 | b\n1 | a\n100 | a\n1 | b\n1 | a\n1 | a\n | \nFormula | Result\n=MAXIFS(A2:A5,B2:c6,\"a\") | #VALUE!Because the size and shape of the max_range and criteria_range aren't the same, MAXIFS returns the #VALUE! error.",
+            "Example 6",
+            "Table:\nWeight | Grade | Class | Level\n10 | b | Business | 100\n1 | a | Technical | 100\n100 | a | Business | 200\n1 | b | Technical | 300\n1 | a | Technical | 100\n1 | a | Business | 400\n |  |  | \nFormula | Result |  | \n=MAXIFS(A2:A6,B2:B6,\"a\",D2:D6,\">200\") | 0No cells match the criteria. |  | "
+        ]
+    },
+    {
+        "function": "MEDIAN function",
+        "url": "https://support.microsoft.com/en-us/office/median-function-d0916313-4753-414c-8537-ce85bdd967d2",
+        "short_summary": "Returns the median of the given numbers",
+        "syntax_guide": "MEDIAN(number1, [number2], ...)\n\nThe MEDIAN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 numbers for which you want the median.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n1 |  | \n2 |  | \n3 |  | \n4 |  | \n5 |  | \n6 |  | \nFormula | Description | Result\n=MEDIAN(A2:A6) | Median of the 5 numbers in the range A2:A6. Because there are 5 values, the third is the median. | 3\n=MEDIAN(A2:A7) | Median of  the 6 numbers in the range A2:A7. Because there are six numbers, the median is the midway point between the third and fourth numbers. | 3.5"
+        ]
+    },
+    {
+        "function": "MIN function",
+        "url": "https://support.microsoft.com/en-us/office/min-function-61635d12-920f-4ce2-a70f-96f202dcc152",
+        "short_summary": "Returns the minimum value in a list of arguments",
+        "syntax_guide": "MIN(number1, [number2], ...)\n\nThe MIN function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is optional, subsequent numbers are optional. 1 to 255 numbers for which you want to find the minimum value.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n10 |  | \n7 |  | \n9 |  | \n27 |  | \n2 |  | \nFormula | Description | Result\n=MIN(A2:A6) | Smallest of the numbers in the range A2:A6. | 2\n=MIN(A2:A6,0) | Smallest of the numbers in the range A2:A6 and 0. | 0"
+        ]
+    },
+    {
+        "function": "MINIFS function",
+        "url": "https://support.microsoft.com/en-us/office/minifs-function-6ca1ddaa-079b-4e74-80cc-72eef32e6599",
+        "short_summary": "Returns the minimum value among cells specified by a given set of conditions or criteria.",
+        "syntax_guide": "MINIFS(min_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)\n\nArgument | Description\nmin_range(required) | The actual range of cells in which the minimum value will be determined.\ncriteria_range1(required) | Is the set of cells to evaluate with the criteria.\ncriteria1(required) | Is the criteria in the form of a number, expression, or text that defines which cells will be evaluated as minimum. The same set of criteria works for theMAXIFS,SUMIFSandAVERAGEIFSfunctions.\ncriteria_range2,criteria2, ...(optional) | Additional ranges and their associated criteria. You can enter up to 126 range/criteria pairs.",
+        "usage_examples": [
+            "Copy the example data in each of the following tables, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Example 1",
+            "Table:\nGrade | Weight\n89 | 1\n93 | 2\n96 | 2\n85 | 3\n91 | 1\n88 | 1\nFormula | Result\n=MINIFS(A2:A7,B2:B7,1) | 88In criteria_range1 the cell B2, B6, and B7 match the criteria of 1. Of the corresponding cells in min_range, A7 has the minimum value. The result is therefore 88.",
+            "Example 2",
+            "Table:\nWeight | Grade\n10 | b\n11 | a\n100 | a\n111 | b\n1 | a\n1 | a\nFormula | Result\n=MINIFS(A2:A5,B3:B6,\"a\") | 10Note:The criteria_range and min_range aren't aligned, but they are the same shape and size.In criteria_range1, the 1st, 2nd, and 4th cells match the criteria of \"a.\" Of the corresponding cells in min_range, A2 has the minimum value. The result is therefore 10.",
+            "Example 3",
+            "Table:\nWeight | Grade | Class | Level\n10 | b | Business | 100\n11 | a | Technical | 100\n12 | a | Business | 200\n13 | b | Technical | 300\n14 | b | Technical | 300\n15 | b | Business | 400\n |  |  | \nFormula | Result |  | \n=MINIFS(A2:A7,B2:B7,\"b\",D2:D7,\">100\") | 13In criteria_range1, B2, B5, B6 and B7 match the criteria of \"b.\" Of the corresponding cells in criteria_range2, D5, D6, and D7 match the criteria of >100. Finally, of the corresponding cells in min_range, D5 has the minimum value. The result is therefore 13. |  | ",
+            "Example 4",
+            "Table:\nWeight | Grade | Class | Level\n10 | b | Business | 8\n1 | a | Technical | 8\n100 | a | Business | 8\n11 | b | Technical | 0\n1 | a | Technical | 8\n1 | b | Business | 0\n |  |  | \nFormula | Result |  | \n=MINIFS(A2:A7,B2:B7,\"b\",D2:D7,A8) | 1The criteria2 argument is A8. However, because A8 is empty, it is treated as 0 (zero). The cells in criteria_range2 that match 0 are D5 and D7. Finally, of the corresponding cells in min_range, A7 has the minimum value. The result is therefore 1. |  | ",
+            "Example 5",
+            "Table:\nWeight | Grade\n10 | b\n1 | a\n100 | a\n1 | b\n1 | a\n1 | a\n | \nFormula | Result\n=MINIFS(A2:A5,B2:C6,\"a\") | #VALUE!Because the size and shape of the min_range and criteria_range aren't the same, MINIFS returns the #VALUE! error.",
+            "Example 6",
+            "Table:\nWeight | Grade | Class | Level\n10 | b | Business | 100\n1 | a | Technical | 100\n100 | a | Business | 200\n1 | b | Technical | 300\n1 | a | Technical | 100\n1 | a | Business | 400\n |  |  | \nFormula | Result |  | \n=MINIFS(A2:A6,B2:B6,\"a\",D2:D6,\">200\") | 0No cells match the criteria. |  | "
+        ]
+    },
+    {
+        "function": "MINA function",
+        "url": "https://support.microsoft.com/en-us/office/mina-function-245a6f46-7ca5-4dc7-ab49-805341bc31d3",
+        "short_summary": "Returns the smallest value in a list of arguments, including numbers, text, and logical values",
+        "syntax_guide": "MINA(value1, [value2], ...)\n\nThe MINA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 values for which you want to find the smallest value.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nFALSE |  | \n0.2 |  | \n0.5 |  | \n0.4 |  | \n0.8 |  | \nFormula | Description | Result\n=MINA(A2:A6) | Smallest of the numbers in the range A2:A6. Because a value of FALSE evaluates to 0, it is the smallest. | 0"
+        ]
+    },
+    {
+        "function": "MODE.MULT function",
+        "url": "https://support.microsoft.com/en-us/office/mode-mult-function-50fd9464-b2ba-4191-b57a-39446689ae8c",
+        "short_summary": "Returns a vertical array of the most frequently occurring, or repetitive values in an array or range of data",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "MODE.SNGL function",
+        "url": "https://support.microsoft.com/en-us/office/mode-sngl-function-f1267c16-66c6-4386-959f-8fba5f8bb7f8",
+        "short_summary": "Returns the most common value in a data set",
+        "syntax_guide": "MODE.SNGL(number1,[number2],...)\n\nThe MODE.SNGL function syntax has the following arguments:\n\nNumber1Required. The first argument for which you want to calculate the mode.Number2, ...Optional. Arguments 2 to 254 for which you want to calculate the mode. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n5.6 |  | \n4 |  | \n4 |  | \n3 |  | \n2 |  | \n4 |  | \nFormula | Description | Result\n=MODE.SNGL(A2:A7) | Mode, or most frequently occurring number above | 4"
+        ]
+    },
+    {
+        "function": "NEGBINOM.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/negbinom-dist-function-c8239f89-c2d0-45bd-b6af-172e570f8599",
+        "short_summary": "Returns the negative binomial distribution",
+        "syntax_guide": "NEGBINOM.DIST(number_f,number_s,probability_s,cumulative)\n\nThe NEGBINOM.DIST function syntax has the following arguments:\n\nNumber_fRequired. The number of failures.Number_sRequired. The threshold number of successes.Probability_sRequired. The probability of a success.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, NEGBINOM.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n10 | Number of failures | \n5 | Threshold number of successes\n0.25 | Probability of a success | \nFormula | Description | Result\n=NEGBINOM.DIST(A2,A3,A4,TRUE) | Cumulative negative binomial distribution for the terms above | 0.3135141\n=NEGBINOM.DIST(A2,A3,A4,FALSE) | Probability negative binomial distribution for the terms above | 0.0550487"
+        ]
+    },
+    {
+        "function": "NORM.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/norm-dist-function-edb1cc14-a21c-4e53-839d-8082074c9f8d",
+        "short_summary": "Returns the normal cumulative distribution",
+        "syntax_guide": "NORM.DIST(x,mean,standard_dev,cumulative)\n\nThe NORM.DIST function syntax has the following arguments:\n\nXRequired. The value for which you want the distribution.MeanRequired. The arithmetic mean of the distribution.Standard_devRequired. The standard deviation of the distribution.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, NORM.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n42 | Value for which you want the distribution\n40 | Arithmetic mean of the distribution\n1.5 | Standard deviation of the distribution\nFormula | Description | Result\n=NORM.DIST(A2,A3,A4,TRUE) | Cumulative distribution function for the terms above | 0.9087888\n=NORM.DIST(A2,A3,A4,FALSE) | Probability mass function for the terms above | 0.10934"
+        ]
+    },
+    {
+        "function": "NORM.INV function",
+        "url": "https://support.microsoft.com/en-us/office/norm-inv-function-54b30935-fee7-493c-bedb-2278a9db7e13",
+        "short_summary": "Returns the inverse of the normal cumulative distribution",
+        "syntax_guide": "",
+        "usage_examples": []
+    },
+    {
+        "function": "NORM.S.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/norm-s-dist-function-1e787282-3832-4520-a9ae-bd2a8d99ba88",
+        "short_summary": "Returns the standard normal cumulative distribution",
+        "syntax_guide": "For a standard normal distribution, this is the syntax:\n\nNORM.S.DIST(z,cumulative)\n\nThis function syntax uses the following arguments:\n\nzRequired. This is the value for which you want the distribution.cumulativeRequired. Thecumulativeargument can be eitherTRUEorFALSE. This logical value determines the form of the function. If cumulative is TRUE then NORM.S.DIST returns thecumulativedistributionfunction. If it is FALSE, it returns theprobability massfunction.",
+        "usage_examples": [
+            "Copy the following entire table. Paste it into cell A1 (and adjacent cells) in a new Excel worksheet. If you do not automatically see results, select the formula, press F2 and press Enter. Adjust column widths if needed to see everything.",
+            "Table:\nFormula | Description | Result\n=NORM.S.DIST(1.333333,TRUE) | Normal cumulative distribution function at 1.333333 | 0.908788726\n=NORM.S.DIST(1.333333,FALSE) | Normal probability distribution function at 1.333333 | 0.164010148"
+        ]
+    },
+    {
+        "function": "NORM.S.INV function",
+        "url": "https://support.microsoft.com/en-us/office/norm-s-inv-function-d6d556b4-ab7f-49cd-b526-5a20918452b1",
+        "short_summary": "Returns the inverse of the standard normal cumulative distribution",
+        "syntax_guide": "NORM.S.INV(probability)\n\nThe NORM.S.INV function syntax has the following arguments:\n\nProbabilityRequired. A probability corresponding to the normal distribution.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Live Result\n=NORM.S.INV(0.908789) | Inverse of the standard normal cumulative distribution, with a probability of 0.908789 | 1.3333347"
+        ]
+    },
+    {
+        "function": "PEARSON function",
+        "url": "https://support.microsoft.com/en-us/office/pearson-function-0c3e30fc-e5af-49c4-808a-3ef66e034c18",
+        "short_summary": "Returns the Pearson product moment correlation coefficient",
+        "syntax_guide": "PEARSON(array1, array2)\n\nThe PEARSON function syntax has the following arguments:\n\nArray1Required. A set of independent values.Array2Required. A set of dependent values.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nIndependent values | Dependent values | \n9 | 10 | \n7 | 6 | \n5 | 1 | \n3 | 5 | \n1 | 3 | \nFormula | Description (Result) | Result\n=PEARSON(A3:A7,B3:B7) | Pearson product moment correlation coefficient for the data sets above (0.699379) | 0.699379"
+        ]
+    },
+    {
+        "function": "PERCENTILE.EXC function",
+        "url": "https://support.microsoft.com/en-us/office/percentile-exc-function-bbaa7204-e9e1-4010-85bf-c31dc5dce4ba",
+        "short_summary": "Returns the k-th percentile of values in a range, where k is in the range 0 to 1, exclusive.",
+        "syntax_guide": "=PERCENTILE.EXC(array,k)The PERCENTILE.EXC function syntax has the following arguments:ArgumentDescriptionarrayRequiredThe array or range of data that defines relative standing.kRequiredThe array or range of data that defines relative standing.",
+        "usage_examples": []
+    },
+    {
+        "function": "PERCENTILE.INC function",
+        "url": "https://support.microsoft.com/en-us/office/percentile-inc-function-680f9539-45eb-410b-9a5e-c1355e5fe2ed",
+        "short_summary": "Returns the k-th percentile of values in a range",
+        "syntax_guide": "PERCENTILE.INC(array,k)\n\nThe PERCENTILE.INC function syntax has the following arguments:\n\nArrayRequired. The array or range of data that defines relative standing.KRequired. The percentile value in the range 0 to 1, inclusive.",
+        "usage_examples": [
+            "Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n1 |  | \n3 |  | \n2 |  | \n4 |  | \nFormula | Description | Result\n=PERCENTILE.INC(A2:A5,0.3) | 30th percentile of the list in the range A2:A5. | 1.9"
+        ]
+    },
+    {
+        "function": "PERCENTRANK.EXC function",
+        "url": "https://support.microsoft.com/en-us/office/percentrank-exc-function-d8afee96-b7e2-4a2f-8c01-8fcdedaa6314",
+        "short_summary": "Returns the rank of a value in a data set as a percentage (0 to 1, exclusive) of the data set",
+        "syntax_guide": "PERCENTRANK.EXC(array,x,[significance])\n\nThe PERCENTRANK.EXC function syntax has the following arguments:\n\nArrayRequired. The array or range of data with numeric values that defines relative standingXRequired. The value for which you want to know the rank.SignificanceOptional. A value that identifies the number of significant digits for the returned percentage value. If omitted, PERCENTRANK.EXC uses three digits (0.xxx).",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n1 |  | \n2 |  | \n3 |  | \n6 |  | \n6 |  | \n6 |  | \n7 |  | \n8 |  | \n9 |  | \nFormula | Description | Result\n=PERCENTRANK.EXC(A2:A10, 7) | Returns the rank of the value 7 from the array contained in A2:A10. | 0.7\n=PERCENTRANK.EXC(A2:A10,5.43) | Returns the rank of the value 5.43 in the same array. | 0.381\n=PERCENTRANK.EXC(A2:A10,5.43,1) | Returns the rank of the value 5.43 in the same array, displaying only 1 significant digit in the result (the default is 3). | 0.3"
+        ]
+    },
+    {
+        "function": "PERCENTRANK.INC function",
+        "url": "https://support.microsoft.com/en-us/office/percentrank-inc-function-149592c9-00c0-49ba-86c1-c1f45b80463a",
+        "short_summary": "Returns the percentage rank of a value in a data set",
+        "syntax_guide": "PERCENTRANK.INC(array,x,[significance])\n\nThe PERCENTRANK.INC function syntax has the following arguments:\n\nArrayRequired. The array or range of data with numeric values that defines relative standing.XRequired. The value for which you want to know the rank.SignificanceOptional. A value that identifies the number of significant digits for the returned percentage value. If omitted, PERCENTRANK.INC uses three digits (0.xxx).",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n13 |  | \n12 |  | \n11 |  | \n8 |  | \n4 |  | \n3 |  | \n2 |  | \n1 |  | \n1 |  | \n1 |  | \nFormula | Description | Result\n=PERCENTRANK.INC(A2:A11,2) | Percent rank of 2 in the range A2:A11 (0.333, because 3 values in the set are smaller than 2, and 6 are larger than 2; 3/(3+6)=0.333). | 0.333\n=PERCENTRANK.INC(A2:A11,4) | Percent rank of 4 in the range A2:A11. | 0.555\n=PERCENTRANK.INC(A2:A11,8) | Percent rank of 8 in the range A2:A11. | 0.666\n=PERCENTRANK.INC(A2:A11,5) | Percent rank of 5 in the range A2:A11 (0.583, one-quarter of the way between the PERCENTRANK.INC of 4 and the PERCENTRANK.INC of 8). | 0.583"
+        ]
+    },
+    {
+        "function": "PERMUT function",
+        "url": "https://support.microsoft.com/en-us/office/permut-function-3bd1cb9a-2880-41ab-a197-f246a7a602d3",
+        "short_summary": "Returns the number of permutations for a given number of objects",
+        "syntax_guide": "PERMUT(number, number_chosen)\n\nThe PERMUT function syntax has the following arguments:\n\nNumberRequired. An integer that describes the number of objects.Number_chosenRequired. An integer that describes the number of objects in each permutation.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n100 | Number of objects | \n3 | Number of objects in each permutation | \nFormula | Description | Result\n=PERMUT(A2,A3) | Permutations possible for the arguments specified in A2:A3. | 970200\n=PERMUT(3,2) | Permutations possible for a group of 3 objects where 2 are chosen. | 6"
+        ]
+    },
+    {
+        "function": "PERMUTATIONA function",
+        "url": "https://support.microsoft.com/en-us/office/permutationa-function-6c7d7fdc-d657-44e6-aa19-2857b25cae4e",
+        "short_summary": "Returns the number of permutations for a given number of objects (with repetitions) that can be selected from the total objects",
+        "syntax_guide": "PERMUTATIONA(number, number-chosen)\n\nThe PERMUTATIONA function syntax has the following arguments:\n\nNumberRequired. An integer that describes the total number of objects.Number_chosenRequired. An integer that describes the number of objects in each permutation.\n\nPERMUTATIONA uses the following equation:",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=PERMUTATIONA(3,2) | Suppose there are 3 objects in the group, [4,5,6]. Using PERMUTATIONA with 2 of the 3 objects, there are 9 ways the numbers can be arranged with repetition: | 9\n | 4,4 | \n | 4,5 | \n | 4,6 | \n | 5,4 | \n | 5,5 | \n | 5,6 | \n | 6,4 | \n | 6,5 | \n | 6,6 | \n |  | \n=PERMUTATIONA(2,2) | Suppose there are 2 objects in the group, [3,5]. Using PERMUTATIONA with both of the objects, there are 4 ways the numbers can be arranged with repetition: | 4\n | 3,3 | \n | 3,5 | \n | 5,3 | \n | 5,5 | ",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "PHI function",
+        "url": "https://support.microsoft.com/en-us/office/phi-function-23e49bc6-a8e8-402d-98d3-9ded87f6295c",
+        "short_summary": "Returns the value of the density function for a standard normal distribution",
+        "syntax_guide": "PHI(x)\n\nThe PHI function syntax has the following arguments.\n\nXRequired. X is the number for which you want the density of the standard normal distribution.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=PHI(0.75) | The value of the density function for a standard normal distribution. | 0.301137432",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "POISSON.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/poisson-dist-function-8fe148ff-39a2-46cb-abf3-7772695d9636",
+        "short_summary": "Returns the Poisson distribution",
+        "syntax_guide": "POISSON.DIST(x,mean,cumulative)\n\nThe POISSON.DIST function syntax has the following arguments:\n\nXRequired. The number of events.MeanRequired. The expected numeric value.CumulativeRequired. A logical value that determines the form of the probability distribution returned. If cumulative is TRUE, POISSON.DIST returns the cumulative Poisson probability that the number of random events occurring will be between zero and x inclusive; if FALSE, it returns the Poisson probability mass function that the number of events occurring will be exactly x.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n2 | Number of events | \n5 | Expected mean | \nFormula | Description | Result\n=POISSON.DIST(A2,A3,TRUE) | Cumulative Poisson probability with the arguments specified in A2 and A3. | 0.124652\n=POISSON.DIST(A2,A3,FALSE) | Poisson probability mass function with the arguments specified in A2 and A3. | 0.084224"
+        ]
+    },
+    {
+        "function": "PROB function",
+        "url": "https://support.microsoft.com/en-us/office/prob-function-9ac30561-c81c-4259-8253-34f0a238fc49",
+        "short_summary": "Returns the probability that values in a range are between two limits",
+        "syntax_guide": "PROB(x_range, prob_range, [lower_limit], [upper_limit])\n\nThe PROB function syntax has the following arguments:\n\nX_rangeRequired. The range of numeric values of x with which there are associated probabilities.Prob_rangeRequired. A set of probabilities associated with values in x_range.Lower_limitOptional. The lower bound on the value for which you want a probability.Upper_limitOptional. The optional upper bound on the value for which you want a probability.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nValue of x | Probability | \n0 | 0.2 | \n1 | 0.3 | \n2 | 0.1 | \n3 | 0.4 | \nFormula | Description | Result\n=PROB(A3:A6,B3:B6,2) | Probability that x is 2. | 0.1\n=PROB(A3:A6,B3:B6,1,3) | Probability that x is between 1 and 3. | 0.8"
+        ]
+    },
+    {
+        "function": "QUARTILE.EXC function",
+        "url": "https://support.microsoft.com/en-us/office/quartile-exc-function-5a355b7a-840b-4a01-b0f1-f538c2864cad",
+        "short_summary": "Returns the quartile of the data set, based on percentile values from 0 to 1, exclusive",
+        "syntax_guide": "QUARTILE.EXC(array, quart)\n\nThe QUARTILE.EXC function syntax has the following arguments:\n\nArrayRequired. The array or cell range of numeric values for which you want the quartile value.QuartRequired. Indicates which value to return.",
+        "usage_examples": [
+            "Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n6 |  | \n7 |  | \n15 |  | \n36 |  | \n39 |  | \n40 |  | \n41 |  | \n42 |  | \n43 |  | \n47 |  | \n49 |  | \nFormula | Description | Result\n=QUARTILE.EXC(A2:A12,1) | Locates the position of the first quartile (15). | 15\n=QUARTILE.EXC(A2:A12,3) | Locates the position of the third quartile (43). | 43"
+        ]
+    },
+    {
+        "function": "QUARTILE.INC function",
+        "url": "https://support.microsoft.com/en-us/office/quartile-inc-function-1bbacc80-5075-42f1-aed6-47d735c4819d",
+        "short_summary": "Returns the quartile of a data set",
+        "syntax_guide": "QUARTILE.INC(array,quart)\n\nThe QUARTILE.INC function syntax has the following arguments:\n\nArrayRequired. The array or cell range of numeric values for which you want the quartile value.QuartRequired. Indicates which value to return.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n1 |  | \n2 |  | \n4 |  | \n7 |  | \n8 |  | \n9 |  | \n10 |  | \n12 |  | \nFormula | Description (Result) | Result\n=QUARTILE.INC(A2:A9,1) | First quartile (25th percentile) of the data above (3.5) | 3.5"
+        ]
+    },
+    {
+        "function": "RANK.AVG function",
+        "url": "https://support.microsoft.com/en-us/office/rank-avg-function-bd406a6f-eb38-4d73-aa8e-6d1c3c72e83a",
+        "short_summary": "Returns the rank of a number in a list of numbers",
+        "syntax_guide": "RANK.AVG(number,ref,[order])\n\nThe RANK.AVG function syntax has the following arguments:\n\nNumberRequired. The number whose rank you want to find.RefRequired. An array of, or a reference to, a list of numbers. Nonnumeric values in Ref are ignored.OrderOptional. A number specifying how to rank number.",
+        "usage_examples": [
+            "Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nDay | Temp (F) | \n7/1/2011 | 89 | \n7/2/2011 | 88 | \n7/3/2011 | 92 | \n7/4/2011 | 101 | \n7/5/2011 | 94 | \n7/6/2011 | 97 | \n7/7/2011 | 95 | \nFormula | Description | Result\n=RANK.AVG(94,B2:B8) | Finds the rank (the position) of the value 94 in the cell range B2:B8. In this case, 7/5/11, when the temperature reached 94, was the 4th hottest day of the days listed. | 4"
+        ]
+    },
+    {
+        "function": "RANK.EQ function",
+        "url": "https://support.microsoft.com/en-us/office/rank-eq-function-284858ce-8ef6-450e-b662-26245be04a40",
+        "short_summary": "Returns the rank of a number in a list of numbers",
+        "syntax_guide": "RANK.EQ(number,ref,[order])\n\nThe RANK.EQ function syntax has the following arguments:\n\nNumberRequired. The number whose rank you want to find.RefRequired. An array of, or a reference to, a list of numbers. Non-numeric values in Ref are ignored.OrderOptional. A number specifying how to rank number.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n7 |  | \n3.5 |  | \n3.5 |  | \n1 |  | \n2 |  | \nFormula | Description | Result\n=RANK.EQ(A2,A2:A6,1) | Rank of 7 in the list contained in the range A2:A6. Because the Order argument (1) is a non-zero value, the list is sorted lowest to highest. | 5\n=RANK.EQ(A6,A2:A6) | Rank of 2 in the same list. Because the Order argument is omitted, the list is sorted, by default, highest to lowest. | 4\n=RANK.EQ(A3,A2:A6,1) | Rank of 3.5 in the same list. | 3"
+        ]
+    },
+    {
+        "function": "RSQ function",
+        "url": "https://support.microsoft.com/en-us/office/rsq-function-d7161715-250d-4a01-b80d-a8364f2be08f",
+        "short_summary": "Returns the square of the Pearson product moment correlation coefficient",
+        "syntax_guide": "RSQ(known_y's,known_x's)\n\nThe RSQ function syntax has the following arguments:\n\nKnown_y'sRequired. An array or range of data points.Known_x'sRequired. An array or range of data points.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nKnown y | Known x | \n2 | 6 | \n3 | 5 | \n9 | 11 | \n1 | 7 | \n8 | 5 | \n7 | 4 | \n5 | 4 | \nFormula | Description | Result\n=RSQ(A3:A9, B3:B9) | Square of the Pearson product moment correlation coefficient through data points in A3:A9 and B3:B9. | 0.05795"
+        ]
+    },
+    {
+        "function": "SKEW function",
+        "url": "https://support.microsoft.com/en-us/office/skew-function-bdf49d86-b1ef-4804-a046-28eaea69c9fa",
+        "short_summary": "Returns the skewness of a distribution",
+        "syntax_guide": "SKEW(number1, [number2], ...)\n\nThe SKEW function syntax has the following arguments:\n\nNumber1, number2, ...Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want to calculate skewness. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n3 |  | \n4 |  | \n5 |  | \n2 |  | \n3 |  | \n4 |  | \n5 |  | \n6 |  | \n4 |  | \n7 |  | \nFormula | Description | Result\n=SKEW(A2:A11) | Skewness of a distribution of the data set in A2:A11. | 0.359543"
+        ]
+    },
+    {
+        "function": "SKEW.P function",
+        "url": "https://support.microsoft.com/en-us/office/skew-p-function-76530a5c-99b9-48a1-8392-26632d542fcb",
+        "short_summary": "Returns the skewness of a distribution based on a population: a characterization of the degree of asymmetry of a distribution around its mean",
+        "syntax_guide": "SKEW.P(number 1, [number 2],…)\n\nThe SKEW.P function syntax has the following arguments.\n\nNumber 1, number 2,…Number 1 is required, subsequent numbers are optional. Number 1, number 2,… are 1 to 254 numbers or names, arrays, or reference that contain numbers for which you want the population skewness.\n\nSKEW.P uses the following equation:",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nPopulation Data Set |  | \n3 |  | \n4 |  | \n5 |  | \n2 |  | \n3 |  | \n4 |  | \n5 |  | \n6 |  | \n4 |  | \n7 |  | \nFormula | Description | Result\n=SKEW.P(A2:A11) | Skewness of a distribution based on the population of the data set in A2:A11 (0.303193). | 0.303193",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "SLOPE function",
+        "url": "https://support.microsoft.com/en-us/office/slope-function-11fb8f97-3117-4813-98aa-61d7e01276b9",
+        "short_summary": "Returns the slope of the linear regression line",
+        "syntax_guide": "SLOPE(known_y's, known_x's)\n\nThe SLOPE function syntax has the following arguments:\n\nKnown_y'sRequired. An array or cell range of numeric dependent data points.Known_x'sRequired. The set of independent data points.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nKnown y | Known x | \n1/2/1900 | 6 | \n1/3/1900 | 5 | \n1/9/1900 | 11 | \n1/1/1900 | 7 | \n1/8/1900 | 5 | \n1/7/1900 | 4 | \n1/5/1900 | 4 | \nFormula | Description | Result\n=SLOPE(A3:A9,B3:B9) | Slope of the linear regression line through the data points in A3:A9 and B3:B9. | 0.305556"
+        ]
+    },
+    {
+        "function": "SMALL function",
+        "url": "https://support.microsoft.com/en-us/office/small-function-17da8222-7c82-42b2-961b-14c45384df07",
+        "short_summary": "Returns the k-th smallest value in a data set",
+        "syntax_guide": "SMALL(array, k)\n\nThe SMALL function syntax has the following arguments:\n\nArrayRequired. An array or range of numerical data for which you want to determine the k-th smallest value.KRequired. The position (from the smallest) in the array or range of data to return.",
+        "usage_examples": [
+            "Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData 1 | Data 2 | \n3 | 1 | \n4 | 4 | \n5 | 8 | \n2 | 3 | \n3 | 7 | \n4 | 12 | \n6 | 54 | \n4 | 8 | \n7 | 23 | \nFormula | Description (Result) | Result\n=SMALL(A2:A10,4) | 4th smallest number in first column (4) | 4\n=SMALL(B2:B10,2) | 2nd smallest number in the second column (3) | 3"
+        ]
+    },
+    {
+        "function": "STANDARDIZE function",
+        "url": "https://support.microsoft.com/en-us/office/standardize-function-81d66554-2d54-40ec-ba83-6437108ee775",
+        "short_summary": "Returns a normalized value",
+        "syntax_guide": "STANDARDIZE(x, mean, standard_dev)\n\nThe STANDARDIZE function syntax has the following arguments:\n\nXRequired. The value you want to normalize.MeanRequired. The arithmetic mean of the distribution.Standard_devRequired. The standard deviation of the distribution.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n42 | Value to normalize. | \n40 | Arithmetic mean of the distribution.\n1.5 | Standard deviation of the distribution.\nFormula | Description | Result\n=STANDARDIZE(A2,A3,A4) | Normalized value of 42, using 40 as the arithmetic mean and 1.5 as the standard deviation. | 1.33333333"
+        ]
+    },
+    {
+        "function": "STDEV.P function",
+        "url": "https://support.microsoft.com/en-us/office/stdev-p-function-6e917c05-31a0-496f-ade7-4f4e7462f285",
+        "short_summary": "Calculates standard deviation based on the entire population",
+        "syntax_guide": "STDEV.P(number1,[number2],...)\n\nThe STDEV.P function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a population.Number2, ...Optional. Number arguments 2 to 254 corresponding to a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nStrength |  | \n1345 |  | \n1301 |  | \n1368 |  | \n1322 |  | \n1310 |  | \n1370 |  | \n1318 |  | \n1350 |  | \n1303 |  | \n1299 |  | \nFormula | Description | Result\n=STDEV.P(A3:A12) | Standard deviation of breaking strength, assuming only 10 tools are produced. | 26.05455814"
+        ]
+    },
+    {
+        "function": "STDEV.S function",
+        "url": "https://support.microsoft.com/en-us/office/stdev-s-function-7d69cf97-0c1f-4acf-be27-f3e83904cc23",
+        "short_summary": "Estimates standard deviation based on a sample",
+        "syntax_guide": "STDEV.S(number1,[number2],...)\n\nThe STDEV.S function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.Number2, ...Optional. Number arguments 2 to 254 corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. (Do not copy the cell containing the word \"Data\".) For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nStrength |  | \n1345 |  | \n1301 |  | \n1368 |  | \n1322 |  | \n1310 |  | \n1370 |  | \n1318 |  | \n1350 |  | \n1303 |  | \n1299 |  | \nFormula | Description | Result\n=STDEV.S(A2:A11) | Standard deviation of breaking strength. | 27.46391572"
+        ]
+    },
+    {
+        "function": "STDEVA function",
+        "url": "https://support.microsoft.com/en-us/office/stdeva-function-5ff38888-7ea5-48de-9a6d-11ed73b29e9d",
+        "short_summary": "Estimates standard deviation based on a sample, including numbers, text, and logical values",
+        "syntax_guide": "STDEVA(value1, [value2], ...)\n\nThe STDEVA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 values corresponding to a sample of a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nStrength |  | \n1345 |  | \n1301 |  | \n1368 |  | \n1322 |  | \n1310 |  | \n1370 |  | \n1318 |  | \n1350 |  | \n1303 |  | \n1299 |  | \nFormula | Description (Result) | Result\n=STDEVA(A3:A12) | Standard deviation of breaking strength for all the tools (27.46391572) | 27.46391572"
+        ]
+    },
+    {
+        "function": "STDEVPA function",
+        "url": "https://support.microsoft.com/en-us/office/stdevpa-function-5578d4d6-455a-4308-9991-d405afe2c28c",
+        "short_summary": "Calculates standard deviation based on the entire population, including numbers, text, and logical values",
+        "syntax_guide": "STDEVPA(value1, [value2], ...)\n\nThe STDEVPA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 values corresponding to a population. You can also use a single array or a reference to an array instead of arguments separated by commas.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nStrength |  | \n1345 |  | \n1301 |  | \n1368 |  | \n1322 |  | \n1310 |  | \n1370 |  | \n1318 |  | \n1350 |  | \n1303 |  | \n1299 |  | \nFormula | Description (Result) | Result\n=STDEVPA(A3:A12) | Standard deviation of breaking strength, assuming only 10 tools are produced (26.05455814) | 26.05456"
+        ]
+    },
+    {
+        "function": "STEYX function",
+        "url": "https://support.microsoft.com/en-us/office/steyx-function-6ce74b2c-449d-4a6e-b9ac-f9cef5ba48ab",
+        "short_summary": "Returns the standard error of the predicted y-value for each x in the regression",
+        "syntax_guide": "STEYX(known_y's, known_x's)\n\nThe STEYX function syntax has the following arguments:\n\nKnown_y'sRequired. An array or range of dependent data points.Known_x'sRequired. An array or range of independent data points.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \nKnown y | Known x | \n2 | 6 | \n3 | 5 | \n9 | 11 | \n1 | 7 | \n8 | 5 | \n7 | 4 | \n5 | 4 | \nFormula | Description (Result) | Result\n=STEYX(A3:A9,B3:B9) | Standard error of the predicted y-value for each x in the regression (3.305719) | 3.305719"
+        ]
+    },
+    {
+        "function": "T.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/t-dist-function-4329459f-ae91-48c2-bba8-1ead1c6c21b2",
+        "short_summary": "Returns the Percentage Points (probability) for the Student t-distribution",
+        "syntax_guide": "T.DIST(x,deg_freedom, cumulative)\n\nThe T.DIST function syntax has the following arguments:\n\nXRequired. The numeric value at which to evaluate the distributionDeg_freedomRequired. An integer indicating the number of degrees of freedom.CumulativeRequired. A logical value that determines the form of the function. If cumulative is TRUE, T.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=T.DIST(60,1,TRUE) | Student's left-tailed t-distribution for 60, returned as the cumulative distribution function, using 1 degree of freedom. | 0.99469533\n=T.DIST(8,3,FALSE) | Student's left-tailed t-distribution for 8, returned as the probability density function, using 3 degrees of freedom. | 0.00073691",
+            "Top of Page"
+        ]
+    },
+    {
+        "function": "T.DIST.2T function",
+        "url": "https://support.microsoft.com/en-us/office/t-dist-2t-function-198e9340-e360-4230-bd21-f52f22ff5c28",
+        "short_summary": "Returns the Percentage Points (probability) for the Student t-distribution",
+        "syntax_guide": "T.DIST.2T(x,deg_freedom)\n\nThe T.DIST.2T function syntax has the following arguments:\n\nXRequired. The numeric value at which to evaluate the distribution.Deg_freedomRequired. An integer indicating the number of degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n1.959999998 | Value at which to evaluate the distribution\n60 | Degrees of freedom | \nFormula | Description (Result) | Result\n=T.DIST.2T(A2,A3) | Two-tailed distribution (0.054645, or 5.46 percent) | 5.46%"
+        ]
+    },
+    {
+        "function": "T.DIST.RT function",
+        "url": "https://support.microsoft.com/en-us/office/t-dist-rt-function-20a30020-86f9-4b35-af1f-7ef6ae683eda",
+        "short_summary": "Returns the Student's t-distribution",
+        "syntax_guide": "T.DIST.RT(x,deg_freedom)\n\nThe T.DIST.RT function syntax has the following arguments:\n\nXRequired. The numeric value at which to evaluate the distribution.Deg_freedomRequired. An integer indicating the number of degrees of freedom.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n1.959999998 | Value at which to evaluate the distribution\n60 | Degrees of freedom | \nFormula | Description (Result) | Result\n=T.DIST.RT(A2,A3) | Right-tailed distribution (0.027322, or 2.73 percent) | 0.027322"
+        ]
+    },
+    {
+        "function": "T.INV function",
+        "url": "https://support.microsoft.com/en-us/office/t-inv-function-2908272b-4e61-4942-9df9-a25fec9b0e2e",
+        "short_summary": "Returns the t-value of the Student's t-distribution as a function of the probability and the degrees of freedom",
+        "syntax_guide": "T.INV(probability,deg_freedom)\n\nThe T.INV function syntax has the following arguments:\n\nProbabilityRequired. The probability associated with the Student's t-distribution.Deg_freedomRequired. The number of degrees of freedom with which to characterize the distribution.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nFormula | Description | Result\n=T.INV(0.75,2) | The left-tailed inverse of the Student's t-distribution with a probability of 75% and 2 degrees of freedom. | 0.8164966"
+        ]
+    },
+    {
+        "function": "T.INV.2T function",
+        "url": "https://support.microsoft.com/en-us/office/t-inv-2t-function-ce72ea19-ec6c-4be7-bed2-b9baf2264f17",
+        "short_summary": "Returns the inverse of the Student's t-distribution",
+        "syntax_guide": "T.INV.2T(probability,deg_freedom)\n\nThe T.INV.2T function syntax has the following arguments:\n\nProbabilityRequired. The probability associated with the Student's t-distribution.Deg_freedomRequired. The number of degrees of freedom with which to characterize the distribution.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n0.546449 | Probability associated with the two-tailed Student's t-distribution\n60 | Degrees of freedom | \nFormula | Description (Result) | Result\n=T.INV.2T(A2,A3) | T-value of the Student's t-distribution for the terms above (0.606533076) | 0.606533"
+        ]
+    },
+    {
+        "function": "T.TEST function",
+        "url": "https://support.microsoft.com/en-us/office/t-test-function-d4e08ec3-c545-485f-962e-276f7cbed055",
+        "short_summary": "Returns the probability associated with a Student's t-test",
+        "syntax_guide": "T.TEST(array1,array2,tails,type)\n\nThe T.TEST function syntax has the following arguments:\n\nArray1Required. The first data set.Array2Required. The second data set.TailsRequired. Specifies the number of distribution tails. If tails = 1, T.TEST uses the one-tailed distribution. If tails = 2, T.TEST uses the two-tailed distribution.TypeRequired. The kind of t-Test to perform.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData 1 | Data 2 | \n3 | 6 | \n4 | 19 | \n5 | 3 | \n8 | 2 | \n9 | 14 | \n1 | 4 | \n2 | 5 | \n4 | 17 | \n5 | 1 | \nFormula | Description | Result\n=T.TEST(A2:A10,B2:B10,2,1) | Probability associated with a Student's paired t-Test, with a two-tailed distribution. | 0.196016"
+        ]
+    },
+    {
+        "function": "TREND function",
+        "url": "https://support.microsoft.com/en-us/office/trend-function-e2f135f0-8827-4096-9873-9a7cf7b51ef1",
+        "short_summary": "Returns values along a linear trend",
+        "syntax_guide": "=TREND(known_y's, [known_x's], [new_x's], [const])The TREND function syntax has the following arguments:ArgumentDescriptionknown_y'sRequiredThe set of y-values you already know in the relationship y = mx + bIf the array known_y's is in a single column, then each column of known_x's is interpreted as a separate variable.If the array known_y's is in a single row, then each row of known_x's is interpreted as a separate variable.known_x'sOptionalAn optional set of x-values that you may already know in the relationship y = mx + bThe array known_x's can include one or more sets of variables. If only one variable is used, known_y's and known_x's can be ranges of any shape, as long as they have equal dimensions. If more than one variable is used, known_y's must be a vector (that is, a range with a height of one row or a width of one column).If known_x's is omitted, it is assumed to be the array {1,2,3,...} that is the same size as known_y's.new_x'sOptionalNew x-values for which you want TREND to return corresponding y-valuesNew_x's must include a column (or row) for each independent variable, just as known_x's does. So, if known_y's is in a single column, known_x's and new_x's must have the same number of columns. If known_y's is in a single row, known_x's and new_x's must have the same number of rows.If you omit new_x's, it is assumed to be the same as known_x's.If you omit both known_x's and new_x's, they are assumed to be the array {1,2,3,...} that is the same size as known_y's.constOptionalA logical value specifying whether to force the constant b to equal 0If const is TRUE or omitted, b is calculated normally.If const is FALSE, b is set equal to 0 (zero), and the m-values are adjusted so that y = mx.",
+        "usage_examples": []
+    },
+    {
+        "function": "TRIMMEAN function",
+        "url": "https://support.microsoft.com/en-us/office/trimmean-function-d90c9878-a119-4746-88fa-63d988f511d3",
+        "short_summary": "Returns the mean of the interior of a data set",
+        "syntax_guide": "TRIMMEAN(array, percent)\n\nThe TRIMMEAN function syntax has the following arguments:\n\nArrayRequired. The array or range of values to trim and average.PercentRequired. The fractional number of data points to exclude from the calculation. For example, if percent = 0.2, 4 points are trimmed from a data set of 20 points (20 x 0.2): 2 from the top and 2 from the bottom of the set.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n4 |  | \n5 |  | \n6 |  | \n7 |  | \n2 |  | \n3 |  | \n4 |  | \n5 |  | \n1 |  | \n2 |  | \n3 |  | \nFormula | Description | Result\n=TRIMMEAN(A2:A12,0.2) | Mean of the interior of the data set contained in A2:A12, with 20 percent excluded from calculation. | 3.778"
+        ]
+    },
+    {
+        "function": "VAR.P function",
+        "url": "https://support.microsoft.com/en-us/office/var-p-function-73d1285c-108c-4843-ba5d-a51f90656f3a",
+        "short_summary": "Calculates variance based on the entire population",
+        "syntax_guide": "VAR.P(number1,[number2],...)\n\nThe VAR.P function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a population.Number2, ...Optional. Number arguments 2 to 254 corresponding to a population.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nStrength |  | \n1,345 |  | \n1,301 |  | \n1,368 |  | \n1,322 |  | \n1,310 |  | \n1,370 |  | \n1,318 |  | \n1,350 |  | \n1,303 |  | \n1,299 |  | \nFormula | Description | Result\n=VAR.P(A2:A11) | Variance of breaking strengths for all the tools, assuming that only 10 tools are produced (the entire population is used). | 678.84\n=VAR.S(A2:A11) | The variance, using the VAR.S function, which assumes only a sample of the population is tested. The result is different from VAR.P. | 754.27"
+        ]
+    },
+    {
+        "function": "VAR.S function",
+        "url": "https://support.microsoft.com/en-us/office/var-s-function-913633de-136b-449d-813e-65a00b2b990b",
+        "short_summary": "Estimates variance based on a sample",
+        "syntax_guide": "VAR.S(number1,[number2],...)\n\nThe VAR.S function syntax has the following arguments:\n\nNumber1Required. The first number argument corresponding to a sample of a population.Number2, ...Optional. Number arguments 2 to 254 corresponding to a sample of a population.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nStrength |  | \n1345 |  | \n1301 |  | \n1368 |  | \n1322 |  | \n1310 |  | \n1370 |  | \n1318 |  | \n1350 |  | \n1303 |  | \n1299 |  | \nFormula | Description | Result\n=VAR.S(A2:A11) | Variance for the breaking strength of the tools, when the values in A2:A11 represent only a sample of all the data. VAR.S returns a different result than VAR.P, which treats the range of data as the entire population. | 754.27\n=VAR.P(A2:A11) | The variance based on the entire population, using the VAR.P function, returns a different result. | 678.84"
+        ]
+    },
+    {
+        "function": "VARA function",
+        "url": "https://support.microsoft.com/en-us/office/vara-function-3de77469-fa3a-47b4-85fd-81758a1e1d07",
+        "short_summary": "Estimates variance based on a sample, including numbers, text, and logical values",
+        "syntax_guide": "VARA(value1, [value2], ...)\n\nThe VARA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 value arguments corresponding to a sample of a population.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nStrength |  | \n1345 |  | \n1301 |  | \n1368 |  | \n1322 |  | \n1310 |  | \n1370 |  | \n1318 |  | \n1350 |  | \n1303 |  | \n1299 |  | \nFormula | Description | Result\n=VARA(A2:A11) | Estimates the variance for the breaking strength of the tools being tested. VARA assumes a population sample. | 754.26667"
+        ]
+    },
+    {
+        "function": "VARPA function",
+        "url": "https://support.microsoft.com/en-us/office/varpa-function-59a62635-4e89-4fad-88ac-ce4dc0513b96",
+        "short_summary": "Calculates variance based on the entire population, including numbers, text, and logical values",
+        "syntax_guide": "VARPA(value1, [value2], ...)\n\nThe VARPA function syntax has the following arguments:\n\nValue1, value2, ...Value1 is required, subsequent values are optional. 1 to 255 value arguments corresponding to a population.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nStrength |  | \n1345 |  | \n1301 |  | \n1368 |  | \n1322 |  | \n1310 |  | \n1370 |  | \n1318 |  | \n1350 |  | \n1303 |  | \n1299 |  | \nFormula | Description | Result\n=VARPA(A2:A11) | Variance of breaking strengths for all the tools, assuming that only 10 tools are produced (entire population). | 678.84\n=VAR(A2:A11) | This example uses the VAR function, which assumes a sample of the population, and returns a different result. | 754.27"
+        ]
+    },
+    {
+        "function": "WEIBULL.DIST function",
+        "url": "https://support.microsoft.com/en-us/office/weibull-dist-function-4e783c39-9325-49be-bbc9-a83ef82b45db",
+        "short_summary": "Returns the Weibull distribution",
+        "syntax_guide": "WEIBULL.DIST(x,alpha,beta,cumulative)\n\nThe WEIBULL.DIST function syntax has the following arguments:\n\nXRequired. The value at which to evaluate the function.AlphaRequired. A parameter to the distribution.BetaRequired. A parameter to the distribution.CumulativeRequired. Determines the form of the function.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData | Description | \n105 | Value at which to evaluate the function | \n20 | Alpha parameter to the distribution | \n100 | Beta parameter to the distribution | \nFormula | Description (Result) | Result\n=WEIBULL.DIST(A2,A3,A4,TRUE) | Weibull cumulative distribution function for the terms above (0.929581) | 0.929581\n=WEIBULL.DIST(A2,A3,A4,FALSE) | Weibull probability density function for the terms above (0.035589) | 0.035589"
+        ]
+    },
+    {
+        "function": "Z.TEST function",
+        "url": "https://support.microsoft.com/en-us/office/z-test-function-d633d5a3-2031-4614-a016-92180ad82bee",
+        "short_summary": "Returns the one-tailed probability-value of a z-test",
+        "syntax_guide": "Z.TEST(array,x,[sigma])\n\nThe Z.TEST function syntax has the following arguments:\n\nArrayRequired. The array or range of data against which to test x.xRequired. The value to test.SigmaOptional. The population (known) standard deviation. If omitted, the sample standard deviation is used.",
+        "usage_examples": [
+            "Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.",
+            "Table:\nData |  | \n3 |  | \n6 |  | \n7 |  | \n8 |  | \n6 |  | \n5 |  | \n4 |  | \n2 |  | \n1 |  | \n9 |  | \nFormula | Description (Result) | Result\n=Z.TEST(A2:A11,4) | One-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 4 (0.090574) | 0.090574\n=2 * MIN(Z.TEST(A2:A11,4), 1 - Z.TEST(A2:A11,4)) | Two-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 4 (0.181148) | 0.181148\n=Z.TEST(A2:A11,6) | One-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 6 (0.863043) | 0.863043\n=2 * MIN(Z.TEST(A2:A11,6), 1 - Z.TEST(A2:A11,6)) | Two-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 6 (0.273913) | 0.273913"
+        ]
+    }
+]
