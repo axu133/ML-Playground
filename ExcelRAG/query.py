@@ -1,13 +1,6 @@
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
-from langchain_ollama import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
-import os
 import re
 
-embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-CHROMA_PATH = "chroma_split"
-model = ChatOllama(model="mistral")
 PROMPT_TEMPLATE = """[INST] You are a statistical consultant. Use the provided context to answer the user's request.
 
 ### Step 1: Evidence
@@ -42,9 +35,7 @@ REASON: [one sentence explanation]
 [/INST]
 """
 
-db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
-
-def query(query_text):
+def dbquery(query_text, db):
 
     results = db.similarity_search_with_relevance_scores(query_text, k=3)
 
@@ -57,7 +48,11 @@ def query(query_text):
     
     context = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     sources = {doc.metadata.get("source", "unknown") for doc, _score in results}
+    
+    return context, sources
+    
 
+def modelquery(query_text, model, context, sources):
     chain = model | StrOutputParser()
     prompt = PROMPT_TEMPLATE.format(context = context, query = query_text)
     response = chain.invoke(prompt) 
@@ -72,7 +67,3 @@ def query(query_text):
     metadata = f"--- METADATA ---\nGrounding Score: {grounding_score}%\nSources: {sources}\nJudge Logic: {judge_response.split('REASON:')[-1].strip() if 'REASON:' in judge_response else judge_response}"
 
     return final_output, metadata
-
-answer = query("I have data on consumer spending patterns, give me some suggestions on how I can analyze the data. The data is what they purchased, how much they purchased it for, and what quantity.")
-print(answer[0]) # type: ignore
-print(answer[1]) #type: ignore
