@@ -1,0 +1,4 @@
+FILENAME: test-package-compiler\cases\import_cycle\src\one.gleam
+EXTENSION: .gleam
+
+import one

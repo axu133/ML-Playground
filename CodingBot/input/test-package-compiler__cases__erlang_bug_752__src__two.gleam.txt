@@ -1,0 +1,8 @@
+FILENAME: test-package-compiler\cases\erlang_bug_752\src\two.gleam
+EXTENSION: .gleam
+
+import one.{type One}
+
+pub type Two(b) {
+  Two(thing: One(Int))
+}

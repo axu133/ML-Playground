@@ -1,0 +1,8 @@
+FILENAME: test\running_modules\dev\wrong_dev_arity.gleam
+EXTENSION: .gleam
+
+import gleam/io
+
+pub fn main(something) {
+  io.println(something)
+}

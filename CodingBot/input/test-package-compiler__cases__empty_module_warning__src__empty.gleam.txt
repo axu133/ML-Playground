@@ -1,0 +1,4 @@
+FILENAME: test-package-compiler\cases\empty_module_warning\src\empty.gleam
+EXTENSION: .gleam
+
+// This is an empty module

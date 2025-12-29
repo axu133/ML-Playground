@@ -1,0 +1,9 @@
+FILENAME: test-package-compiler\cases\erlang_import\src\one.gleam
+EXTENSION: .gleam
+
+import two
+
+pub fn unbox(x) {
+  let two.Box(i) = x
+  i
+}

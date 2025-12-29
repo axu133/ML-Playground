@@ -1,0 +1,5 @@
+FILENAME: test-output\src\lib.rs
+EXTENSION: .rs
+
+#[cfg(test)]
+mod tests;

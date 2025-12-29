@@ -1,0 +1,6 @@
+FILENAME: test\multi_namespace\src\multi_namespace.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  "Hello from multi_namespace!"
+}

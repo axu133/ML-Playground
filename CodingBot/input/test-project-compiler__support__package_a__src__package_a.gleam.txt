@@ -1,0 +1,6 @@
+FILENAME: test-project-compiler\support\package_a\src\package_a.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  "package_a"
+}

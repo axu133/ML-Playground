@@ -1,0 +1,6 @@
+FILENAME: test\hextarball\src\hextarball.gleam
+EXTENSION: .gleam
+
+pub fn something() {
+  "Just a thing to export"
+}

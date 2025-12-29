@@ -1,0 +1,6 @@
+FILENAME: test-package-compiler\cases\import_shadowed_name_warning\src\one.gleam
+EXTENSION: .gleam
+
+// https://github.com/gleam-lang/otp/pull/22
+
+pub type Port

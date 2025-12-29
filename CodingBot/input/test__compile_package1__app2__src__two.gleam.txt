@@ -1,0 +1,10 @@
+FILENAME: test\compile_package1\app2\src\two.gleam
+EXTENSION: .gleam
+
+import one
+import one/nested
+
+pub fn main() {
+  one.hello()
+  |> nested.id
+}

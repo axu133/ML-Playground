@@ -1,0 +1,6 @@
+FILENAME: test\language\test\record_update.gleam
+EXTENSION: .gleam
+
+pub type Box(a) {
+  Box(tag: String, value: a)
+}

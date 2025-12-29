@@ -1,0 +1,7 @@
+FILENAME: test-output\cases\echo_bool\src\main.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  echo True
+  echo False
+}

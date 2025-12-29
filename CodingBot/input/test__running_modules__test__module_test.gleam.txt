@@ -1,0 +1,8 @@
+FILENAME: test\running_modules\test\module_test.gleam
+EXTENSION: .gleam
+
+import gleam/io
+
+pub fn main() {
+  io.println("Default test module")
+}

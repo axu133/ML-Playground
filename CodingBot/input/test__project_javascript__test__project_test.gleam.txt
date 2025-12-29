@@ -1,0 +1,8 @@
+FILENAME: test\project_javascript\test\project_test.gleam
+EXTENSION: .gleam
+
+import project
+
+pub fn main() {
+  project.main()
+}

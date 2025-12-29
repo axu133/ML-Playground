@@ -1,0 +1,8 @@
+FILENAME: test-output\cases\echo_importing_module_named_inspect\src\main.gleam
+EXTENSION: .gleam
+
+import inspect
+
+pub fn main() {
+  echo inspect.x
+}

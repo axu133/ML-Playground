@@ -1,0 +1,6 @@
+FILENAME: test-output\cases\echo_singleton\src\thing.gleam
+EXTENSION: .gleam
+
+pub type Thing {
+  Thing
+}

@@ -1,0 +1,6 @@
+FILENAME: test\language\src\language.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  Nil
+}

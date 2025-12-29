@@ -1,0 +1,6 @@
+FILENAME: test\compile_package1\app1\src\one.gleam
+EXTENSION: .gleam
+
+pub fn hello() -> String {
+  "Hello"
+}

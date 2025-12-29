@@ -1,0 +1,10 @@
+FILENAME: test\language\test\shadowed_module.gleam
+EXTENSION: .gleam
+
+pub type ShadowPerson {
+  ShadowPerson(age: Int)
+}
+
+pub fn celebrate_birthday(person: ShadowPerson) -> ShadowPerson {
+  ShadowPerson(age: person.age + 1)
+}

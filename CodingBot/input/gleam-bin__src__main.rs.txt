@@ -1,0 +1,6 @@
+FILENAME: gleam-bin\src\main.rs
+EXTENSION: .rs
+
+pub fn main() {
+    gleam_cli::main();
+}

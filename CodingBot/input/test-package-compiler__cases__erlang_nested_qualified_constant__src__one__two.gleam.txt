@@ -1,0 +1,6 @@
+FILENAME: test-package-compiler\cases\erlang_nested_qualified_constant\src\one\two.gleam
+EXTENSION: .gleam
+
+pub type A {
+  A
+}

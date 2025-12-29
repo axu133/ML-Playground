@@ -1,0 +1,4 @@
+FILENAME: test-package-compiler\cases\erlang_app_generation_with_argument\src\main.gleam
+EXTENSION: .gleam
+
+

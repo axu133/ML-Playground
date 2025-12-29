@@ -1,0 +1,7 @@
+FILENAME: test-output\cases\echo_list\src\main.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  echo []
+  echo [1, 2, 3]
+}

@@ -1,0 +1,6 @@
+FILENAME: test-project-compiler\cases\with_dev_dep\src\example.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  0
+}

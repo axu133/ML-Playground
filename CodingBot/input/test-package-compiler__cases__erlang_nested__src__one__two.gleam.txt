@@ -1,0 +1,6 @@
+FILENAME: test-package-compiler\cases\erlang_nested\src\one\two.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  "Hi there"
+}

@@ -1,0 +1,6 @@
+FILENAME: test-package-compiler\cases\empty_module_warning\src\private.gleam
+EXTENSION: .gleam
+
+fn private_function() -> Nil {
+  Nil
+}

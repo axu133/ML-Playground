@@ -1,0 +1,7 @@
+FILENAME: test-output\cases\echo_tuple\src\main.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  echo #()
+  echo #(True, 1, "hello")
+}

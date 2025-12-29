@@ -1,0 +1,6 @@
+FILENAME: test\publishing_default_main\src\default_main\one.gleam
+EXTENSION: .gleam
+
+pub fn one() {
+  "hello from one!"
+}

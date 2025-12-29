@@ -1,0 +1,4 @@
+FILENAME: test\running_modules\src\module\no_main_function.gleam
+EXTENSION: .gleam
+
+

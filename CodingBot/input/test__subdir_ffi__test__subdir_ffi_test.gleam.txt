@@ -1,0 +1,8 @@
+FILENAME: test\subdir_ffi\test\subdir_ffi_test.gleam
+EXTENSION: .gleam
+
+import project
+
+pub fn main() {
+  project.main()
+}

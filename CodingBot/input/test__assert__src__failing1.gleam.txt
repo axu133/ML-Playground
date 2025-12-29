@@ -1,0 +1,7 @@
+FILENAME: test\assert\src\failing1.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  let x = True
+  assert !x
+}

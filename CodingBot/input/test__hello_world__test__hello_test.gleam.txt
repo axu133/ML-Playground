@@ -1,0 +1,8 @@
+FILENAME: test\hello_world\test\hello_test.gleam
+EXTENSION: .gleam
+
+import hello_world
+
+fn run(x, y) {
+  x + y
+}

@@ -1,0 +1,4 @@
+FILENAME: test-output\cases\echo_importing_module_named_inspect\src\inspect.gleam
+EXTENSION: .gleam
+
+pub const x = Nil

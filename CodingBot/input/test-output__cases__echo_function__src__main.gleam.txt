@@ -1,0 +1,11 @@
+FILENAME: test-output\cases\echo_function\src\main.gleam
+EXTENSION: .gleam
+
+pub fn main() {
+  echo fn(n) { n + 1 }
+  echo private
+}
+
+fn private() {
+  1
+}

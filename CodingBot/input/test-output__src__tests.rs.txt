@@ -1,0 +1,5 @@
+FILENAME: test-output\src\tests.rs
+EXTENSION: .rs
+
+#[cfg(test)]
+mod echo;

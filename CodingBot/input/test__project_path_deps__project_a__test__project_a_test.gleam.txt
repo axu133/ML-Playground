@@ -1,0 +1,15 @@
+FILENAME: test\project_path_deps\project_a\test\project_a_test.gleam
+EXTENSION: .gleam
+
+import gleeunit
+import gleeunit/should
+
+pub fn main() {
+  gleeunit.main()
+}
+
+// gleeunit test functions end in `_test`
+pub fn hello_world_test() {
+  1
+  |> should.equal(1)
+}

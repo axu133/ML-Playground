@@ -1,0 +1,6 @@
+FILENAME: test\running_modules\src\module\wrong_arity.gleam
+EXTENSION: .gleam
+
+pub fn main(arg: Int) -> Nil {
+  Nil
+}

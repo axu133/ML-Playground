@@ -1,0 +1,7 @@
+FILENAME: test\errors\type_unify_int_string\src\type_unify_int_string.gleam
+EXTENSION: .gleam
+
+pub fn hello_world() {
+  let x: Int = "Eh?"
+  x
+}
