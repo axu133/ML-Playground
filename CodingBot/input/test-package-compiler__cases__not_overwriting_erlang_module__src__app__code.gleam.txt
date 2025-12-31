@@ -1,8 +1,0 @@
-FILENAME: test-package-compiler\cases\not_overwriting_erlang_module\src\app\code.gleam
-EXTENSION: .gleam
-
-// This module is named "app/code".
-//
-// The last segment is the same as a built in Erlang module, but it is in the
-// "app" namespace, so it doesn't clash with Erlang. This should compile
-// successfully.

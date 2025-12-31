@@ -1,6 +1,0 @@
-FILENAME: test-output\cases\echo_charlist\src\main.gleam
-EXTENSION: .gleam
-
-pub fn main() {
-  echo [72, 101, 108, 108, 111, 44, 32, 74, 111, 101, 33]
-}

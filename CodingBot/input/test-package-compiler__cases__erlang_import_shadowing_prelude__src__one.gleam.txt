@@ -1,7 +1,0 @@
-FILENAME: test-package-compiler\cases\erlang_import_shadowing_prelude\src\one.gleam
-EXTENSION: .gleam
-
-pub type Error {
-  // This constructor shadows the Error constructor in the prelude.
-  Error
-}

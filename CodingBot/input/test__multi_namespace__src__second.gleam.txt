@@ -1,6 +1,0 @@
-FILENAME: test\multi_namespace\src\second.gleam
-EXTENSION: .gleam
-
-pub fn main() {
-  "Hello from second!"
-}

@@ -1,4 +1,0 @@
-FILENAME: test-package-compiler\cases\src_importing_dev\dev\two.gleam
-EXTENSION: .gleam
-
-

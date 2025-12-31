@@ -1,9 +1,0 @@
-FILENAME: test\compile_package0\test\three.gleam
-EXTENSION: .gleam
-
-import one
-import two
-
-pub fn test_() -> Bool {
-  one.hello() == two.main()
-}

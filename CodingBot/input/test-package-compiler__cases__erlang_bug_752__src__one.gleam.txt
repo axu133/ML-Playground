@@ -1,6 +1,0 @@
-FILENAME: test-package-compiler\cases\erlang_bug_752\src\one.gleam
-EXTENSION: .gleam
-
-pub type One(a) {
-  One(a)
-}

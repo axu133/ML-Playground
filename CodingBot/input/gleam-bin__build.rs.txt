@@ -1,7 +1,0 @@
-FILENAME: gleam-bin\build.rs
-EXTENSION: .rs
-
-fn main() {
-    #[cfg(windows)]
-    static_vcruntime::metabuild();
-}

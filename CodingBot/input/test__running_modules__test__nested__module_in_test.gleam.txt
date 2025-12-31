@@ -1,8 +1,0 @@
-FILENAME: test\running_modules\test\nested\module_in_test.gleam
-EXTENSION: .gleam
-
-import gleam/io
-
-pub fn main() {
-  io.println("Hello from test/nested!")
-}

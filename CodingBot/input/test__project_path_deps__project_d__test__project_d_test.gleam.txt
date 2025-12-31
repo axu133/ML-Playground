@@ -1,8 +1,0 @@
-FILENAME: test\project_path_deps\project_d\test\project_d_test.gleam
-EXTENSION: .gleam
-
-import gleam/bitwise
-
-pub fn main() {
-  bitwise.and(1, 2)
-}

@@ -1,4 +1,0 @@
-FILENAME: test-package-compiler\cases\unknown_module_field_in_import\src\two.gleam
-EXTENSION: .gleam
-
-import one.{B}

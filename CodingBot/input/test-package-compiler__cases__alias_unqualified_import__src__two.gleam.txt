@@ -1,9 +1,0 @@
-FILENAME: test-package-compiler\cases\alias_unqualified_import\src\two.gleam
-EXTENSION: .gleam
-
-// https://github.com/gleam-lang/gleam/issues/303
-import one.{Empty as E, id as i}
-
-pub fn make() {
-  i(E)
-}

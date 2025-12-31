@@ -1,4 +1,0 @@
-FILENAME: test-package-compiler\cases\javascript_empty\src\empty.gleam
-EXTENSION: .gleam
-
-

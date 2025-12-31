@@ -1,7 +1,0 @@
-FILENAME: test-package-compiler\cases\duplicate_module_test_dev\test\main.gleam
-EXTENSION: .gleam
-
-// There is another module with the same name in the `dev` directory.
-pub fn main() {
-  "Hello, Joe!"
-}

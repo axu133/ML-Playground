@@ -1,6 +1,0 @@
-FILENAME: test\project_path_deps\project_d\src\project_d.gleam
-EXTENSION: .gleam
-
-pub type TypeD {
-  ConstructorD(String)
-}

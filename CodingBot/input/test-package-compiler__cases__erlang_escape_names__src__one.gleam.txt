@@ -1,7 +1,0 @@
-FILENAME: test-package-compiler\cases\erlang_escape_names\src\one.gleam
-EXTENSION: .gleam
-
-// https://github.com/gleam-lang/gleam/issues/340
-pub fn receive(x) {
-  x
-}

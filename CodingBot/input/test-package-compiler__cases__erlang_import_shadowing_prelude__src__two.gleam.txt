@@ -1,9 +1,0 @@
-FILENAME: test-package-compiler\cases\erlang_import_shadowing_prelude\src\two.gleam
-EXTENSION: .gleam
-
-// This import shadows the Error type in the prelude.
-import one.{Error}
-
-pub fn main() {
-  Error
-}

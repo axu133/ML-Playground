@@ -1,6 +1,0 @@
-FILENAME: test-package-compiler\cases\erlang_import\src\two.gleam
-EXTENSION: .gleam
-
-pub type Box {
-  Box(Int)
-}

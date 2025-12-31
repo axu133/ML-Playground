@@ -1,8 +1,0 @@
-FILENAME: test-community-packages\src\test_community_packages.gleam
-EXTENSION: .gleam
-
-import gleam/io
-
-pub fn main() {
-  io.println("Hello from test_community_packages!")
-}

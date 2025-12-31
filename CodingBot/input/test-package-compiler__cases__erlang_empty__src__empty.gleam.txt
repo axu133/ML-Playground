@@ -1,4 +1,0 @@
-FILENAME: test-package-compiler\cases\erlang_empty\src\empty.gleam
-EXTENSION: .gleam
-
-

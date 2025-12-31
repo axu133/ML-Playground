@@ -1,6 +1,0 @@
-FILENAME: test-package-compiler\cases\javascript_import\src\two.gleam
-EXTENSION: .gleam
-
-import one/two
-
-pub const x = two.A

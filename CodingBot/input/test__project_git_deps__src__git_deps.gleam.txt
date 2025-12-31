@@ -1,9 +1,0 @@
-FILENAME: test\project_git_deps\src\git_deps.gleam
-EXTENSION: .gleam
-
-import gleam/io
-
-pub fn main() {
-  // gleam/io is provided via a git dependency
-  io.println("Hello, world!")
-}

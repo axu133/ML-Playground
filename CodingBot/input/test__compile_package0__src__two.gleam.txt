@@ -1,8 +1,0 @@
-FILENAME: test\compile_package0\src\two.gleam
-EXTENSION: .gleam
-
-import one
-
-pub fn main() -> String {
-  one.hello()
-}

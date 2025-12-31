@@ -1,8 +1,0 @@
-FILENAME: test\running_modules\src\module\sub_module.gleam
-EXTENSION: .gleam
-
-import gleam/io
-
-pub fn main() {
-  io.println("sub module")
-}

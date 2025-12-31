@@ -1,4 +1,0 @@
-FILENAME: test\hello_world\src\nest\bird!.gleam
-EXTENSION: .gleam
-
-

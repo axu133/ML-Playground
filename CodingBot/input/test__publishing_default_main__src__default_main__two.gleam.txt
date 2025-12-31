@@ -1,6 +1,0 @@
-FILENAME: test\publishing_default_main\src\default_main\two.gleam
-EXTENSION: .gleam
-
-pub fn two() {
-  "hello from two!"
-}

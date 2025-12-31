@@ -1,4 +1,0 @@
-FILENAME: test\project_erlang\priv\hello.txt
-EXTENSION: .txt
-
-Hello, Joe!

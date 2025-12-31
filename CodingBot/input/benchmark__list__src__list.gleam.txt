@@ -1,6 +1,0 @@
-FILENAME: benchmark\list\src\list.gleam
-EXTENSION: .gleam
-
-pub fn main() {
-  Nil
-}

@@ -1,4 +1,0 @@
-FILENAME: test-package-compiler\cases\import_cycle_multi\src\two.gleam
-EXTENSION: .gleam
-
-import three

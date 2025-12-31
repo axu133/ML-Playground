@@ -1,4 +1,0 @@
-FILENAME: test\language\test\port.gleam
-EXTENSION: .gleam
-
-pub type Port

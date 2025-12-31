@@ -1,6 +1,0 @@
-FILENAME: test-package-compiler\cases\javascript_import\src\one\two.gleam
-EXTENSION: .gleam
-
-pub type A {
-  A
-}

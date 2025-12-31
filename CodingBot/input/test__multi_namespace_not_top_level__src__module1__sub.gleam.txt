@@ -1,6 +1,0 @@
-FILENAME: test\multi_namespace_not_top_level\src\module1\sub.gleam
-EXTENSION: .gleam
-
-pub fn main() {
-  "Hello from multi_namespace!"
-}

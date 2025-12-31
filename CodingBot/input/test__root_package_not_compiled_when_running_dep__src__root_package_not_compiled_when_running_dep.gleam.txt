@@ -1,6 +1,0 @@
-FILENAME: test\root_package_not_compiled_when_running_dep\src\root_package_not_compiled_when_running_dep.gleam
-EXTENSION: .gleam
-
-pub fn main() {
-  compilation_error
-}

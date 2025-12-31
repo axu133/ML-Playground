@@ -1,6 +1,0 @@
-FILENAME: test-package-compiler\cases\unknown_module_field_in_constant\src\one.gleam
-EXTENSION: .gleam
-
-pub type A {
-  A
-}

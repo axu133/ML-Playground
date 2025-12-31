@@ -1,4 +1,0 @@
-FILENAME: test\hello_world\src\hello_world.gleam
-EXTENSION: .gleam
-
-

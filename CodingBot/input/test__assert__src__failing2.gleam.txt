@@ -1,8 +1,0 @@
-FILENAME: test\assert\src\failing2.gleam
-EXTENSION: .gleam
-
-import gleam/int
-
-pub fn main() {
-  assert int.is_even(47)
-}
