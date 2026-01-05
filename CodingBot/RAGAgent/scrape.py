@@ -10,26 +10,26 @@ SOURCE_DIR = "Data/GleamRAGAgent"
 DB_PATH = "CodingBot/RAGAgent/chroma_db_gleam"
 EMBED_MODEL_NAME = "nomic-embed-text"
 
-# Define all the extensions you want to capture
 TARGET_EXTENSIONS = [
     ".md",      # Markdown docs
     ".djot",    # Djot docs (Gleam specific)
-    ".gleam",   # Gleam source code
+    ".gleam",   # Gleam source code (Whole File)
     ".toml",    # Configuration files
     ".yaml",    # CI/CD workflows
-    ".rs",      # Rust source (Compiler internals)
     ".erl"      # Erlang source (FFI internals)
 ]
+
+# Extensions to not be split
+WHOLE_FILE_EXTENSIONS = [".gleam"]
 
 def load_documents(source_dir):
     print(f"Scanning {source_dir} for {TARGET_EXTENSIONS}...")
     documents = []
     
     all_files = []
-    # Loop through all extensions and gather files
     for ext in TARGET_EXTENSIONS:
         found = glob.glob(os.path.join(source_dir, f"**/*{ext}"), recursive=True)
-        print(f"   Found {len(found)} files with extension {ext}")
+        print(f"  Found {len(found)} files with extension {ext}")
         all_files.extend(found)
     
     print(f"Total raw files found: {len(all_files)}. Filtering now...")
@@ -44,7 +44,6 @@ def load_documents(source_dir):
         # Filter out tests and build artifacts
         is_test_file = False
         for part in path_parts:
-            # Added 'target' to filter list (common in Rust/Gleam builds)
             if part.lower() in ['test', 'build', 'tests', 'target']:
                 is_test_file = True
                 break
@@ -58,12 +57,11 @@ def load_documents(source_dir):
             documents.extend(loader.load())
             kept_count += 1
         except Exception as e:
-            # Silently skip binary/encoding errors usually associated with weird files
             print(f"Error reading {file_path}: {e}")
 
     print(f"\nSummary:")
-    print(f"   Skipped {skipped_count} test/build files.")
-    print(f"   Kept {kept_count} valid files.")
+    print(f"  Skipped {skipped_count} test/build files.")
+    print(f"  Kept {kept_count} valid files.")
     
     if kept_count == 0:
         print("WARNING: No documents were kept! Check your folder structure.")
@@ -71,17 +69,86 @@ def load_documents(source_dir):
     return documents
 
 def split_documents(documents):
-    print("Splitting documents into chunks...")
+    print("Splitting documents...")
     
-    text_splitter = RecursiveCharacterTextSplitter.from_language(
+    # 1. Prose Splitter (Markdown)
+    prose_splitter = RecursiveCharacterTextSplitter.from_language(
         language=Language.MARKDOWN,
         chunk_size=1000,
         chunk_overlap=200
     )
     
-    chunks = text_splitter.split_documents(documents)
-    print(f"Created {len(chunks)} chunks.")
-    return chunks
+    # 2. Code Splitter (Strict Safety)
+    # 2000 chars is well within the 2k token limit
+    code_splitter = RecursiveCharacterTextSplitter.from_language(
+        language=Language.GO,
+        chunk_size=2000, 
+        chunk_overlap=400
+    )
+
+    # STRICT LIMIT: 6000 Characters
+    # This ensures we fit inside the standard 2048 token context window.
+    MAX_CHARS_SAFE_LIMIT = 5000
+    
+    final_chunks = []
+    prose_docs = []
+    code_docs_to_split = []
+
+    # 3. Sort documents
+    for doc in documents:
+        file_source = doc.metadata.get("source", "")
+        _, ext = os.path.splitext(file_source)
+        content_len = len(doc.page_content)
+
+        if ext == ".gleam":
+            # Convert "Data/.../gleam/result.gleam" -> "gleam/result"
+            # This is a rough heuristic; adjust split('/') indices based on your folder structure
+            filename = os.path.basename(file_source)
+            module_name = filename.replace(".gleam", "") 
+            
+            # We inject a clear header at the top of the content
+            # This ensures queries for "gleam/result" hit this file hard.
+            header = f"Module: gleam/{module_name}\nFile: {filename}\nSource Code:\n"
+            doc.page_content = header + doc.page_content
+        
+        # LOGIC:
+        if ext in WHOLE_FILE_EXTENSIONS:
+            if content_len < MAX_CHARS_SAFE_LIMIT:
+                # Small enough to keep whole (e.g., result.gleam)
+                final_chunks.append(doc)
+            else:
+                # Too big -> Send to Code Splitter (e.g., list.gleam)
+                code_docs_to_split.append(doc)
+        else:
+            prose_docs.append(doc)
+
+    # 4. Process Splits
+    if prose_docs:
+        print(f"  Splitting {len(prose_docs)} prose documents...")
+        final_chunks.extend(prose_splitter.split_documents(prose_docs))
+        
+    if code_docs_to_split:
+        print(f"  Splitting {len(code_docs_to_split)} large code documents...")
+        final_chunks.extend(code_splitter.split_documents(code_docs_to_split))
+
+    # 5. PARANOIA CHECK (The "Filter")
+    safe_chunks = []
+    dropped_count = 0
+    
+    for chunk in final_chunks:
+        c_len = len(chunk.page_content)
+        # Final safety net: If a chunk is still > 6000, drop it to save the build.
+        if c_len > MAX_CHARS_SAFE_LIMIT:
+            print(f"  CRITICAL DROP: Chunk from {chunk.metadata.get('source')} is {c_len} chars. Dropping.")
+            dropped_count += 1
+        else:
+            safe_chunks.append(chunk)
+
+    print(f"Total chunks created: {len(safe_chunks)}")
+    if dropped_count > 0:
+        print(f"WARNING: Dropped {dropped_count} chunks to prevent crash.")
+    
+    return safe_chunks
 
 def create_vector_db(chunks):
     if os.path.exists(DB_PATH):
@@ -89,9 +156,9 @@ def create_vector_db(chunks):
         shutil.rmtree(DB_PATH)
 
     print(f"Initializing Ollama Embeddings ({EMBED_MODEL_NAME})...")
-    embeddings = OllamaEmbeddings(model=EMBED_MODEL_NAME)
+    embeddings = OllamaEmbeddings(model=EMBED_MODEL_NAME, num_ctx=8192)
 
-    print("Creating/Indexing Chroma database (this may take a moment)...")
+    print(f"Creating/Indexing Chroma database with {len(chunks)} chunks...")
     db = Chroma.from_documents(
         documents=chunks, 
         embedding=embeddings, 
